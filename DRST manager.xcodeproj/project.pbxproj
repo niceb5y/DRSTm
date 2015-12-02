@@ -1,0 +1,743 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A93E28D41C005E9C009342F3 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A93E28D31C005E9C009342F3 /* NotificationCenter.framework */; };
+		A93E28D81C005E9C009342F3 /* TodayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A93E28D71C005E9C009342F3 /* TodayViewController.m */; };
+		A93E28DB1C005E9C009342F3 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A93E28D91C005E9C009342F3 /* MainInterface.storyboard */; };
+		A93E28DF1C005E9C009342F3 /* DRST manager.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = A93E28D11C005E9C009342F3 /* DRST manager.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		A94BFFB81C019FE100F6C966 /* DataController.m in Sources */ = {isa = PBXBuildFile; fileRef = A94BFFB71C019FE100F6C966 /* DataController.m */; };
+		A94BFFBB1C01C92600F6C966 /* DataController.m in Sources */ = {isa = PBXBuildFile; fileRef = A94BFFBA1C01C92600F6C966 /* DataController.m */; };
+		A957F60D1C01D510009EBDA5 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A957F60C1C01D510009EBDA5 /* SecondViewController.m */; };
+		A96BE6661C0053260091A86E /* EditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A96BE6651C0053260091A86E /* EditViewController.m */; };
+		A96BE6681C0055190091A86E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A96BE6671C0055190091A86E /* Main.storyboard */; };
+		A9D955591BFF748300B583B4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A9D955581BFF748300B583B4 /* main.m */; };
+		A9D9555C1BFF748300B583B4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A9D9555B1BFF748300B583B4 /* AppDelegate.m */; };
+		A9D9555F1BFF748300B583B4 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9D9555E1BFF748300B583B4 /* FirstViewController.m */; };
+		A9D955671BFF748300B583B4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A9D955661BFF748300B583B4 /* Assets.xcassets */; };
+		A9D9556A1BFF748300B583B4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9D955681BFF748300B583B4 /* LaunchScreen.storyboard */; };
+		A9D955751BFF748300B583B4 /* DRST_managerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A9D955741BFF748300B583B4 /* DRST_managerTests.m */; };
+		A9D955801BFF748300B583B4 /* DRST_managerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = A9D9557F1BFF748300B583B4 /* DRST_managerUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A93E28DD1C005E9C009342F3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A9D9554C1BFF748300B583B4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A93E28D01C005E9C009342F3;
+			remoteInfo = "DRSTm Widget";
+		};
+		A9D955711BFF748300B583B4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A9D9554C1BFF748300B583B4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A9D955531BFF748300B583B4;
+			remoteInfo = "DRST manager";
+		};
+		A9D9557C1BFF748300B583B4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A9D9554C1BFF748300B583B4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A9D955531BFF748300B583B4;
+			remoteInfo = "DRST manager";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		A928DC761C0466680017F554 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A93E28E31C005E9C009342F3 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				A93E28DF1C005E9C009342F3 /* DRST manager.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A93E29121C00615B009342F3 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		A93E28D11C005E9C009342F3 /* DRST manager.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "DRST manager.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A93E28D31C005E9C009342F3 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
+		A93E28D61C005E9C009342F3 /* TodayViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TodayViewController.h; sourceTree = "<group>"; };
+		A93E28D71C005E9C009342F3 /* TodayViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TodayViewController.m; sourceTree = "<group>"; };
+		A93E28DA1C005E9C009342F3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		A93E28DC1C005E9C009342F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A93E29131C007999009342F3 /* DRSTm.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = DRSTm.entitlements; sourceTree = "<group>"; };
+		A94BFFB61C019FE100F6C966 /* DataController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataController.h; sourceTree = "<group>"; };
+		A94BFFB71C019FE100F6C966 /* DataController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataController.m; sourceTree = "<group>"; };
+		A94BFFB91C01C92600F6C966 /* DataController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataController.h; sourceTree = "<group>"; };
+		A94BFFBA1C01C92600F6C966 /* DataController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataController.m; sourceTree = "<group>"; };
+		A957F60B1C01D510009EBDA5 /* SecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
+		A957F60C1C01D510009EBDA5 /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		A96BE6641C0053260091A86E /* EditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditViewController.h; sourceTree = "<group>"; };
+		A96BE6651C0053260091A86E /* EditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditViewController.m; sourceTree = "<group>"; };
+		A96BE6671C0055190091A86E /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		A9C6BCB11C00B7FD00EE6526 /* DRST manager.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "DRST manager.entitlements"; sourceTree = "<group>"; };
+		A9D955541BFF748300B583B4 /* DRSTm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DRSTm.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A9D955581BFF748300B583B4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A9D9555A1BFF748300B583B4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		A9D9555B1BFF748300B583B4 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		A9D9555D1BFF748300B583B4 /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
+		A9D9555E1BFF748300B583B4 /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
+		A9D955661BFF748300B583B4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A9D955691BFF748300B583B4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A9D9556B1BFF748300B583B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A9D955701BFF748300B583B4 /* DRST managerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "DRST managerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A9D955741BFF748300B583B4 /* DRST_managerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DRST_managerTests.m; sourceTree = "<group>"; };
+		A9D955761BFF748300B583B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A9D9557B1BFF748300B583B4 /* DRST managerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "DRST managerUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A9D9557F1BFF748300B583B4 /* DRST_managerUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DRST_managerUITests.m; sourceTree = "<group>"; };
+		A9D955811BFF748300B583B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A93E28CE1C005E9C009342F3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A93E28D41C005E9C009342F3 /* NotificationCenter.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A9D955511BFF748300B583B4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A9D9556D1BFF748300B583B4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A9D955781BFF748300B583B4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A93E28D21C005E9C009342F3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A93E28D31C005E9C009342F3 /* NotificationCenter.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A93E28D51C005E9C009342F3 /* DRSTm Widget */ = {
+			isa = PBXGroup;
+			children = (
+				A9C6BCB11C00B7FD00EE6526 /* DRST manager.entitlements */,
+				A93E28D61C005E9C009342F3 /* TodayViewController.h */,
+				A93E28D71C005E9C009342F3 /* TodayViewController.m */,
+				A94BFFB91C01C92600F6C966 /* DataController.h */,
+				A94BFFBA1C01C92600F6C966 /* DataController.m */,
+				A93E28D91C005E9C009342F3 /* MainInterface.storyboard */,
+				A93E28DC1C005E9C009342F3 /* Info.plist */,
+			);
+			path = "DRSTm Widget";
+			sourceTree = "<group>";
+		};
+		A9D9554B1BFF748300B583B4 = {
+			isa = PBXGroup;
+			children = (
+				A9D955561BFF748300B583B4 /* DRST manager */,
+				A9D955731BFF748300B583B4 /* DRST managerTests */,
+				A9D9557E1BFF748300B583B4 /* DRST managerUITests */,
+				A93E28D51C005E9C009342F3 /* DRSTm Widget */,
+				A93E28D21C005E9C009342F3 /* Frameworks */,
+				A9D955551BFF748300B583B4 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A9D955551BFF748300B583B4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A9D955541BFF748300B583B4 /* DRSTm.app */,
+				A9D955701BFF748300B583B4 /* DRST managerTests.xctest */,
+				A9D9557B1BFF748300B583B4 /* DRST managerUITests.xctest */,
+				A93E28D11C005E9C009342F3 /* DRST manager.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A9D955561BFF748300B583B4 /* DRST manager */ = {
+			isa = PBXGroup;
+			children = (
+				A93E29131C007999009342F3 /* DRSTm.entitlements */,
+				A9D9555A1BFF748300B583B4 /* AppDelegate.h */,
+				A9D9555B1BFF748300B583B4 /* AppDelegate.m */,
+				A9D9555D1BFF748300B583B4 /* FirstViewController.h */,
+				A9D9555E1BFF748300B583B4 /* FirstViewController.m */,
+				A957F60B1C01D510009EBDA5 /* SecondViewController.h */,
+				A957F60C1C01D510009EBDA5 /* SecondViewController.m */,
+				A96BE6641C0053260091A86E /* EditViewController.h */,
+				A96BE6651C0053260091A86E /* EditViewController.m */,
+				A9D955661BFF748300B583B4 /* Assets.xcassets */,
+				A96BE6671C0055190091A86E /* Main.storyboard */,
+				A9D955681BFF748300B583B4 /* LaunchScreen.storyboard */,
+				A9D9556B1BFF748300B583B4 /* Info.plist */,
+				A9D955571BFF748300B583B4 /* Supporting Files */,
+				A94BFFB71C019FE100F6C966 /* DataController.m */,
+				A94BFFB61C019FE100F6C966 /* DataController.h */,
+			);
+			path = "DRST manager";
+			sourceTree = "<group>";
+		};
+		A9D955571BFF748300B583B4 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A9D955581BFF748300B583B4 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A9D955731BFF748300B583B4 /* DRST managerTests */ = {
+			isa = PBXGroup;
+			children = (
+				A9D955741BFF748300B583B4 /* DRST_managerTests.m */,
+				A9D955761BFF748300B583B4 /* Info.plist */,
+			);
+			path = "DRST managerTests";
+			sourceTree = "<group>";
+		};
+		A9D9557E1BFF748300B583B4 /* DRST managerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				A9D9557F1BFF748300B583B4 /* DRST_managerUITests.m */,
+				A9D955811BFF748300B583B4 /* Info.plist */,
+			);
+			path = "DRST managerUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A93E28D01C005E9C009342F3 /* DRSTm Widget */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A93E28E21C005E9C009342F3 /* Build configuration list for PBXNativeTarget "DRSTm Widget" */;
+			buildPhases = (
+				A93E28CD1C005E9C009342F3 /* Sources */,
+				A93E28CE1C005E9C009342F3 /* Frameworks */,
+				A93E28CF1C005E9C009342F3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "DRSTm Widget";
+			productName = "DRSTm Widget";
+			productReference = A93E28D11C005E9C009342F3 /* DRST manager.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		A9D955531BFF748300B583B4 /* DRST manager */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A9D955841BFF748300B583B4 /* Build configuration list for PBXNativeTarget "DRST manager" */;
+			buildPhases = (
+				A9D955501BFF748300B583B4 /* Sources */,
+				A9D955511BFF748300B583B4 /* Frameworks */,
+				A9D955521BFF748300B583B4 /* Resources */,
+				A93E28E31C005E9C009342F3 /* Embed App Extensions */,
+				A93E29121C00615B009342F3 /* Embed Watch Content */,
+				A928DC761C0466680017F554 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A93E28DE1C005E9C009342F3 /* PBXTargetDependency */,
+			);
+			name = "DRST manager";
+			productName = "DRST manager";
+			productReference = A9D955541BFF748300B583B4 /* DRSTm.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A9D9556F1BFF748300B583B4 /* DRST managerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A9D955871BFF748300B583B4 /* Build configuration list for PBXNativeTarget "DRST managerTests" */;
+			buildPhases = (
+				A9D9556C1BFF748300B583B4 /* Sources */,
+				A9D9556D1BFF748300B583B4 /* Frameworks */,
+				A9D9556E1BFF748300B583B4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A9D955721BFF748300B583B4 /* PBXTargetDependency */,
+			);
+			name = "DRST managerTests";
+			productName = "DRST managerTests";
+			productReference = A9D955701BFF748300B583B4 /* DRST managerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		A9D9557A1BFF748300B583B4 /* DRST managerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A9D9558A1BFF748300B583B4 /* Build configuration list for PBXNativeTarget "DRST managerUITests" */;
+			buildPhases = (
+				A9D955771BFF748300B583B4 /* Sources */,
+				A9D955781BFF748300B583B4 /* Frameworks */,
+				A9D955791BFF748300B583B4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A9D9557D1BFF748300B583B4 /* PBXTargetDependency */,
+			);
+			name = "DRST managerUITests";
+			productName = "DRST managerUITests";
+			productReference = A9D9557B1BFF748300B583B4 /* DRST managerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A9D9554C1BFF748300B583B4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0710;
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = "Seungho Kim";
+				TargetAttributes = {
+					A93E28D01C005E9C009342F3 = {
+						CreatedOnToolsVersion = 7.1.1;
+						DevelopmentTeam = 5C758YKFY3;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
+					};
+					A9D955531BFF748300B583B4 = {
+						CreatedOnToolsVersion = 7.1.1;
+						DevelopmentTeam = 5C758YKFY3;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
+					};
+					A9D9556F1BFF748300B583B4 = {
+						CreatedOnToolsVersion = 7.1.1;
+						TestTargetID = A9D955531BFF748300B583B4;
+					};
+					A9D9557A1BFF748300B583B4 = {
+						CreatedOnToolsVersion = 7.1.1;
+						TestTargetID = A9D955531BFF748300B583B4;
+					};
+				};
+			};
+			buildConfigurationList = A9D9554F1BFF748300B583B4 /* Build configuration list for PBXProject "DRST manager" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A9D9554B1BFF748300B583B4;
+			productRefGroup = A9D955551BFF748300B583B4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A9D955531BFF748300B583B4 /* DRST manager */,
+				A9D9556F1BFF748300B583B4 /* DRST managerTests */,
+				A9D9557A1BFF748300B583B4 /* DRST managerUITests */,
+				A93E28D01C005E9C009342F3 /* DRSTm Widget */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A93E28CF1C005E9C009342F3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A93E28DB1C005E9C009342F3 /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A9D955521BFF748300B583B4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A96BE6681C0055190091A86E /* Main.storyboard in Resources */,
+				A9D9556A1BFF748300B583B4 /* LaunchScreen.storyboard in Resources */,
+				A9D955671BFF748300B583B4 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A9D9556E1BFF748300B583B4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A9D955791BFF748300B583B4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A93E28CD1C005E9C009342F3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A93E28D81C005E9C009342F3 /* TodayViewController.m in Sources */,
+				A94BFFBB1C01C92600F6C966 /* DataController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A9D955501BFF748300B583B4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A957F60D1C01D510009EBDA5 /* SecondViewController.m in Sources */,
+				A9D9555C1BFF748300B583B4 /* AppDelegate.m in Sources */,
+				A9D9555F1BFF748300B583B4 /* FirstViewController.m in Sources */,
+				A9D955591BFF748300B583B4 /* main.m in Sources */,
+				A96BE6661C0053260091A86E /* EditViewController.m in Sources */,
+				A94BFFB81C019FE100F6C966 /* DataController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A9D9556C1BFF748300B583B4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A9D955751BFF748300B583B4 /* DRST_managerTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A9D955771BFF748300B583B4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A9D955801BFF748300B583B4 /* DRST_managerUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A93E28DE1C005E9C009342F3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A93E28D01C005E9C009342F3 /* DRSTm Widget */;
+			targetProxy = A93E28DD1C005E9C009342F3 /* PBXContainerItemProxy */;
+		};
+		A9D955721BFF748300B583B4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A9D955531BFF748300B583B4 /* DRST manager */;
+			targetProxy = A9D955711BFF748300B583B4 /* PBXContainerItemProxy */;
+		};
+		A9D9557D1BFF748300B583B4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A9D955531BFF748300B583B4 /* DRST manager */;
+			targetProxy = A9D9557C1BFF748300B583B4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A93E28D91C005E9C009342F3 /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A93E28DA1C005E9C009342F3 /* Base */,
+			);
+			name = MainInterface.storyboard;
+			sourceTree = "<group>";
+		};
+		A9D955681BFF748300B583B4 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A9D955691BFF748300B583B4 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A93E28E01C005E9C009342F3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "DRSTm Widget/DRST manager.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = "DRSTm Widget/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.niceb5y.DRST-manager.DRSTm-Widget";
+				PRODUCT_NAME = "DRST manager";
+				PROVISIONING_PROFILE = "";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		A93E28E11C005E9C009342F3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "DRSTm Widget/DRST manager.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = "DRSTm Widget/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.niceb5y.DRST-manager.DRSTm-Widget";
+				PRODUCT_NAME = "DRST manager";
+				PROVISIONING_PROFILE = "";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		A9D955821BFF748300B583B4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A9D955831BFF748300B583B4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A9D955851BFF748300B583B4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "DRST manager/DRSTm.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = "DRST manager/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.niceb5y.DRST-manager";
+				PRODUCT_NAME = DRSTm;
+				PROVISIONING_PROFILE = "";
+			};
+			name = Debug;
+		};
+		A9D955861BFF748300B583B4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "DRST manager/DRSTm.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = "DRST manager/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.niceb5y.DRST-manager";
+				PRODUCT_NAME = DRSTm;
+				PROVISIONING_PROFILE = "";
+			};
+			name = Release;
+		};
+		A9D955881BFF748300B583B4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "DRST managerTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.niceb5y.DRST-managerTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DRST manager.app/DRST manager";
+			};
+			name = Debug;
+		};
+		A9D955891BFF748300B583B4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "DRST managerTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.niceb5y.DRST-managerTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DRST manager.app/DRST manager";
+			};
+			name = Release;
+		};
+		A9D9558B1BFF748300B583B4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "DRST managerUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.niceb5y.DRST-managerUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "DRST manager";
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		A9D9558C1BFF748300B583B4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "DRST managerUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.niceb5y.DRST-managerUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "DRST manager";
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A93E28E21C005E9C009342F3 /* Build configuration list for PBXNativeTarget "DRSTm Widget" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A93E28E01C005E9C009342F3 /* Debug */,
+				A93E28E11C005E9C009342F3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A9D9554F1BFF748300B583B4 /* Build configuration list for PBXProject "DRST manager" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A9D955821BFF748300B583B4 /* Debug */,
+				A9D955831BFF748300B583B4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A9D955841BFF748300B583B4 /* Build configuration list for PBXNativeTarget "DRST manager" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A9D955851BFF748300B583B4 /* Debug */,
+				A9D955861BFF748300B583B4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A9D955871BFF748300B583B4 /* Build configuration list for PBXNativeTarget "DRST managerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A9D955881BFF748300B583B4 /* Debug */,
+				A9D955891BFF748300B583B4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A9D9558A1BFF748300B583B4 /* Build configuration list for PBXNativeTarget "DRST managerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A9D9558B1BFF748300B583B4 /* Debug */,
+				A9D9558C1BFF748300B583B4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A9D9554C1BFF748300B583B4 /* Project object */;
+}
