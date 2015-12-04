@@ -387,7 +387,6 @@
                                                     <rect key="frame" x="543" y="6" width="51" height="31"/>
                                                     <animations/>
                                                     <connections>
-                                                        <action selector="accountSwitchTouched:" destination="VRl-ib-7gX" eventType="valueChanged" id="SGl-Vh-j4T"/>
                                                         <action selector="notificationSwitchTouched:" destination="VRl-ib-7gX" eventType="valueChanged" id="2Ss-cv-KPc"/>
                                                     </connections>
                                                 </switch>
@@ -424,12 +423,66 @@
                                         </tableViewCellContentView>
                                         <animations/>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="Rut-GL-oBT">
+                                        <rect key="frame" x="0.0" y="201.5" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Rut-GL-oBT" id="wSS-zO-aQL">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="iCloud 사용" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wLs-H4-mbn">
+                                                    <rect key="frame" x="15" y="6" width="78.5" height="19.5"/>
+                                                    <animations/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Nvx-bj-MGc">
+                                                    <rect key="frame" x="543" y="6" width="51" height="31"/>
+                                                    <animations/>
+                                                    <connections>
+                                                        <action selector="icloudSwitchTouched:" destination="VRl-ib-7gX" eventType="valueChanged" id="QcI-hE-dYJ"/>
+                                                    </connections>
+                                                </switch>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="iCloud를 통해 데이터를 백업하고, 연동합니다." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uth-C3-1oQ">
+                                                    <rect key="frame" x="15" y="22.5" width="205" height="14"/>
+                                                    <animations/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <animations/>
+                                            <constraints>
+                                                <constraint firstItem="Nvx-bj-MGc" firstAttribute="top" secondItem="wSS-zO-aQL" secondAttribute="topMargin" constant="-2" id="143-gf-BMm"/>
+                                                <constraint firstItem="wLs-H4-mbn" firstAttribute="top" secondItem="wSS-zO-aQL" secondAttribute="top" constant="6" id="1b7-iI-jnb"/>
+                                                <constraint firstItem="Uth-C3-1oQ" firstAttribute="leading" secondItem="wSS-zO-aQL" secondAttribute="leadingMargin" constant="15" id="Eka-Ld-C5p"/>
+                                                <constraint firstItem="Nvx-bj-MGc" firstAttribute="trailing" secondItem="wSS-zO-aQL" secondAttribute="trailingMargin" id="KNS-Ph-ePt"/>
+                                                <constraint firstItem="Uth-C3-1oQ" firstAttribute="top" secondItem="wSS-zO-aQL" secondAttribute="top" constant="22.5" id="Nye-Uq-ods"/>
+                                                <constraint firstItem="wLs-H4-mbn" firstAttribute="top" secondItem="wSS-zO-aQL" secondAttribute="topMargin" constant="4" id="Wk8-EE-c39"/>
+                                                <constraint firstItem="wLs-H4-mbn" firstAttribute="leading" secondItem="wSS-zO-aQL" secondAttribute="leading" constant="15" id="XqJ-7X-cXf"/>
+                                                <constraint firstItem="Uth-C3-1oQ" firstAttribute="top" secondItem="wSS-zO-aQL" secondAttribute="topMargin" constant="6" id="bNh-41-HzK"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="Nvx-bj-MGc" secondAttribute="bottom" constant="-1.5" id="bdB-iW-2Jd"/>
+                                                <constraint firstItem="wLs-H4-mbn" firstAttribute="leading" secondItem="wSS-zO-aQL" secondAttribute="leadingMargin" constant="19.5" id="sm1-oB-7yY"/>
+                                                <constraint firstItem="Uth-C3-1oQ" firstAttribute="leading" secondItem="wSS-zO-aQL" secondAttribute="leading" constant="15" id="wFy-IS-g3H"/>
+                                            </constraints>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="sm1-oB-7yY"/>
+                                                    <exclude reference="Wk8-EE-c39"/>
+                                                    <exclude reference="bNh-41-HzK"/>
+                                                    <exclude reference="Eka-Ld-C5p"/>
+                                                </mask>
+                                            </variation>
+                                        </tableViewCellContentView>
+                                        <animations/>
+                                    </tableViewCell>
                                 </cells>
                             </tableViewSection>
                             <tableViewSection headerTitle="기타 정보" id="Aw3-Nv-cMp">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="fFe-C9-jma" style="IBUITableViewCellStyleDefault" id="Gxy-vu-dBX">
-                                        <rect key="frame" x="0.0" y="251.5" width="600" height="44"/>
+                                        <rect key="frame" x="0.0" y="295.5" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Gxy-vu-dBX" id="EG7-lz-uim">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
@@ -453,7 +506,7 @@
                             <tableViewSection headerTitle="App 정보" footerTitle="のヮの" id="U2F-kq-al9">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="HTA-Hd-t6Y" style="IBUITableViewCellStyleDefault" id="dje-pD-2QC">
-                                        <rect key="frame" x="0.0" y="345.5" width="600" height="44"/>
+                                        <rect key="frame" x="0.0" y="389.5" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dje-pD-2QC" id="PiA-Xj-KGx">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
@@ -483,6 +536,7 @@
                     <navigationItem key="navigationItem" title="더 보기" id="NGv-2y-cfP"/>
                     <connections>
                         <outlet property="accountSwitch" destination="c9a-V0-gjz" id="Mqn-i0-h0j"/>
+                        <outlet property="icloudSwitch" destination="Nvx-bj-MGc" id="fwH-SM-ZPS"/>
                         <outlet property="notificationSwitch" destination="lC7-D6-Jqv" id="mWv-Zc-tFU"/>
                     </connections>
                 </tableViewController>

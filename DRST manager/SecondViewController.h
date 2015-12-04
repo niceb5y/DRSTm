@@ -13,7 +13,9 @@
 
 @property (weak, nonatomic) IBOutlet UISwitch *accountSwitch;
 @property (weak, nonatomic) IBOutlet UISwitch *notificationSwitch;
+@property (weak, nonatomic) IBOutlet UISwitch *icloudSwitch;
 - (IBAction)accountSwitchTouched:(id)sender;
 - (IBAction)notificationSwitchTouched:(id)sender;
+- (IBAction)icloudSwitchTouched:(id)sender;
 
 @end

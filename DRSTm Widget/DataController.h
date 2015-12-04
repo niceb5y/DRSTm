@@ -7,18 +7,22 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 @interface DataController : NSObject
 
 @property (readonly) NSUserDefaults *defaults;
+@property (readonly) NSUbiquitousKeyValueStore *store;
 @property (readonly, copy) NSMutableArray *stamina_max;
 @property (readonly, copy) NSMutableArray *stamina_current;
 @property BOOL notification;
 @property NSDate *date;
 @property BOOL dualAccount;
-- (void)setMaxStaminaAtIndex:(int)index withValue:(int) value;
+@property BOOL iCloudEnabled;
+
+- (void)setMaxStaminaAtIndex:(int)index withValue:(int)value;
 - (int)maxStaminaAtIndex:(int)index;
-- (void)setCurrentStaminaAtIndex:(int)index withValue:(int) value;
+- (void)setCurrentStaminaAtIndex:(int)index withValue:(int)value;
 - (int)currentStaminaAtIndex:(int)index;
 - (int)estimatedCurrentStaminaAtIndex:(int)index;
 - (int)estimatedSecondLeftAtIndex:(int)index;

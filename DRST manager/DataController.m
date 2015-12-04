@@ -14,6 +14,7 @@
 	if (self) {
 		self = [super init];
 		_defaults = [[NSUserDefaults alloc] initWithSuiteName:@"group.com.niceb5y.drstm"];
+		_store = [NSUbiquitousKeyValueStore defaultStore];
 	}
 	return self;
 }
@@ -36,6 +37,34 @@
 		_notification = NO;
 	}
 	return _notification;
+}
+
+- (BOOL)iCloudEnabled {
+	BOOL _iCloudEnabled = [self loadLocalBoolData:@"SetiCloudEnabled"];
+	if (!_iCloudEnabled) {
+		_iCloudEnabled = NO;
+	}
+	return _iCloudEnabled;
+}
+
+- (void)setICloudEnabled:(BOOL)iCloudEnabled {
+	if (iCloudEnabled) {
+		BOOL notification = self.notification;
+		BOOL dualAccount = self.dualAccount;
+		NSDate *date = self.date;
+		NSMutableArray *stemina_max = self.stamina_max;
+		NSMutableArray *stemina_current = self.stamina_current;
+		[self saveLocalBoolData:iCloudEnabled forKey:@"SetiCloudEnabled"];
+		[self setNotification:notification];
+		[self setDualAccount:dualAccount];
+		[self setDate:date];
+		for (int i = 0; i < 2; i++) {
+			[self setCurrentStaminaAtIndex:i withValue:[[stemina_current objectAtIndex:i] intValue]];
+			[self setMaxStaminaAtIndex:i withValue:[[stemina_max objectAtIndex:i] intValue]];
+		}
+	} else {
+		[self saveLocalBoolData:iCloudEnabled forKey:@"SetiCloudEnabled"];
+	}
 }
 
 - (void)setNotification:(BOOL)notification {
@@ -147,20 +176,57 @@
 }
 
 - (id)loadData:(NSString *)key {
+	if (self.iCloudEnabled) {
+		return [_store objectForKey:key];
+	} else {
+		return [self loadLocalData:key];
+	}
+}
+
+- (BOOL)loadBoolData:(NSString *)key {
+	if (self.iCloudEnabled) {
+		return [_store boolForKey:key];
+	} else {
+		return [self loadLocalBoolData:key];
+	}
+}
+
+- (BOOL)saveData:(id)object forKey:(NSString *)key {
+	if (self.iCloudEnabled) {
+		[_store setObject:object forKey:key];
+		[self saveLocalData:object forKey:key];
+		return [_store synchronize];
+	} else {
+		return [self saveLocalData:object forKey:key];
+	}
+}
+
+- (BOOL)saveBoolData:(BOOL)object forKey:(NSString *)key {
+	if (self.iCloudEnabled) {
+		[_store setBool:object forKey:key];
+		[self saveLocalBoolData:object forKey:key];
+		return [_store synchronize];
+	} else {
+		return [self saveLocalBoolData:object forKey:key];
+	}
+}
+
+
+- (id)loadLocalData:(NSString *)key {
 	if (_defaults && key) {
 		return [_defaults objectForKey:key];
 	}
 	else return nil;
 }
 
-- (BOOL)loadBoolData:(NSString *)key {
+- (BOOL)loadLocalBoolData:(NSString *)key {
 	if (_defaults && key) {
 		return [_defaults boolForKey:key];
 	}
 	else return NO;
 }
 
-- (BOOL)saveData:(id)object forKey:(NSString *)key {
+- (BOOL)saveLocalData:(id)object forKey:(NSString *)key {
 	@synchronized(_defaults) {
 		if (_defaults && key && object) {
 			[_defaults setObject:object forKey:key];
@@ -171,7 +237,7 @@
 	}
 }
 
-- (BOOL)saveBoolData:(BOOL)object forKey:(NSString *)key {
+- (BOOL)saveLocalBoolData:(BOOL)object forKey:(NSString *)key {
 	@synchronized(_defaults) {
 		if (_defaults && key && object) {
 			[_defaults setBool:object forKey:key];
@@ -181,5 +247,6 @@
 		return [_defaults synchronize];
 	}
 }
+
 
 @end

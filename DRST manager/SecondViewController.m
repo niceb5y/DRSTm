@@ -21,6 +21,7 @@
     [super viewDidLoad];
 	_data = [[DataController alloc] init];
 	[_accountSwitch setOn:[self.data dualAccount]];
+	[_icloudSwitch setOn:[self.data iCloudEnabled]];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -55,6 +56,10 @@
 	} else {
 		[self.data releaseNotifications];
 	}
+}
+
+- (IBAction)icloudSwitchTouched:(id)sender {
+	[self.data setICloudEnabled:[_icloudSwitch isOn]];
 }
 
 @end

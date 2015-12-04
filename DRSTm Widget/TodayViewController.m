@@ -23,7 +23,7 @@
 	[_lbTimeLeft.titleLabel setLineBreakMode:NSLineBreakByWordWrapping];
 	[_lbTimeLeft .titleLabel setTextAlignment:NSTextAlignmentCenter];
 	[self refresh];
-	_timer = [NSTimer scheduledTimerWithTimeInterval:20 target:self selector:@selector(refresh:) userInfo:nil repeats:YES];
+	_timer = [NSTimer scheduledTimerWithTimeInterval:5 target:self selector:@selector(refresh:) userInfo:nil repeats:YES];
 }
 
 - (void)refresh {
