@@ -10,8 +10,8 @@
 #import <NotificationCenter/NotificationCenter.h>
 
 @interface TodayViewController () <NCWidgetProviding>
-@property NSTimer* timer;
-@property DataController *data;
+@property NSTimer *timer;
+@property DataKit *dk;
 @end
 
 @implementation TodayViewController
@@ -19,7 +19,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-	_data = [[DataController alloc] init];
+	_dk = [[DataKit alloc] init];
 	[_lbTimeLeft.titleLabel setLineBreakMode:NSLineBreakByWordWrapping];
 	[_lbTimeLeft .titleLabel setTextAlignment:NSTextAlignmentCenter];
 	[self refresh];
@@ -28,22 +28,22 @@
 
 - (void)refresh {
 	[_indicator stopAnimating];
-	if ([self.data dualAccount]) {
+	if ([self.dk dualAccountEnabled]) {
 		self.preferredContentSize = CGSizeMake(0, 98);
 		[_lbTimeLeft setTitle:[NSString
 							stringWithFormat:@"기기 1: 스태미너 %d / %d\n%@ 남음\n기기 2: 스태미너 %d / %d\n%@ 남음",
-							[self.data estimatedCurrentStaminaAtIndex:0],
-							[self.data maxStaminaAtIndex:0],
-							[self.data estimatedTimeLeftStringAtIndex:0],
-							[self.data estimatedCurrentStaminaAtIndex:1],
-							[self.data maxStaminaAtIndex:1],
-							[self.data estimatedTimeLeftStringAtIndex:1]] forState:UIControlStateNormal];
+							(int)[self.dk estimatedCurrentStamina:0],
+							(int)[self.dk maxStamina:0],
+							[self.dk estimatedTimeLeftString:0],
+							(int)[self.dk estimatedCurrentStamina:1],
+							(int)[self.dk maxStamina:1],
+							[self.dk estimatedTimeLeftString:1]] forState:UIControlStateNormal];
 	} else {
 		self.preferredContentSize = CGSizeMake(0, 57);
 		[_lbTimeLeft setTitle:[NSString stringWithFormat:@"스태미너 %d / %d\n%@ 남음",
-							[self.data estimatedCurrentStaminaAtIndex:0],
-							[self.data maxStaminaAtIndex:0],
-							[self.data estimatedTimeLeftStringAtIndex:0]] forState:UIControlStateNormal];
+							(int)[self.dk estimatedCurrentStamina:0],
+							(int)[self.dk maxStamina:0],
+							[self.dk estimatedTimeLeftString:0]] forState:UIControlStateNormal];
 	}
 }
 

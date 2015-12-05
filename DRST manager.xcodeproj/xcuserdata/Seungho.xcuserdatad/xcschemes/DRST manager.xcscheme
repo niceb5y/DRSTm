@@ -58,6 +58,26 @@
                ReferencedContainer = "container:DRST manager.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "A9BF254C1C12FFD000A3E2A5"
+               BuildableName = "DRSTKitTests.xctest"
+               BlueprintName = "DRSTKitTests"
+               ReferencedContainer = "container:DRST manager.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "A9BF25701C13010800A3E2A5"
+               BuildableName = "DRSTDataKitTests.xctest"
+               BlueprintName = "DRSTDataKitTests"
+               ReferencedContainer = "container:DRST manager.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference

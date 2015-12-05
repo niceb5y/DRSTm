@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "DataController.h"
+#import "NotificationKit.h"
+
+@import DRSTDataKit;
+@class DataKit;
 
 @interface EditViewController : UIViewController
 

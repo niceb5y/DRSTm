@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "DataController.h"
+
+@import DRSTDataKit;
+@class DataKit;
 
 @interface FirstViewController : UIViewController
 

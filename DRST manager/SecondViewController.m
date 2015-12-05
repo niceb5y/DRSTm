@@ -11,7 +11,7 @@
 
 @interface SecondViewController ()
 
-@property DataController *data;
+@property DataKit *dk;
 
 @end
 
@@ -19,9 +19,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-	_data = [[DataController alloc] init];
-	[_accountSwitch setOn:[self.data dualAccount]];
-	[_icloudSwitch setOn:[self.data iCloudEnabled]];
+	_dk = [[DataKit alloc] init];
+	[_accountSwitch setOn:[self.dk dualAccountEnabled]];
+	[_icloudSwitch setOn:[self.dk iCloudEnabled]];
+	[_notificationSwitch setOn:[self.dk notificationEnabled]];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -43,23 +44,23 @@
 }
 
 - (IBAction)accountSwitchTouched:(id)sender {
-	[self.data setDualAccount:[_accountSwitch isOn]];
+	[self.dk setDualAccountEnabled:[_accountSwitch isOn]];
 }
 
 - (IBAction)notificationSwitchTouched:(id)sender {
-	[self.data setNotification:[_notificationSwitch isOn]];
+	[self.dk setNotificationEnabled:[_notificationSwitch isOn]];
 	if ([_notificationSwitch isOn]) {
 		UIUserNotificationSettings* notificationSettings = [UIUserNotificationSettings settingsForTypes:UIUserNotificationTypeAlert | UIUserNotificationTypeSound categories:nil];
 		[[UIApplication sharedApplication] registerUserNotificationSettings:notificationSettings];
 		[[UIApplication sharedApplication] registerForRemoteNotifications];
-		[self.data registerNotifications];
+		[NotificationKit registerNotification];
 	} else {
-		[self.data releaseNotifications];
+		[NotificationKit clearNotification];
 	}
 }
 
 - (IBAction)icloudSwitchTouched:(id)sender {
-	[self.data setICloudEnabled:[_icloudSwitch isOn]];
+	[self.dk setICloudEnabled:[_icloudSwitch isOn]];
 }
 
 @end

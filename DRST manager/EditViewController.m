@@ -9,7 +9,8 @@
 #import "EditViewController.h"
 
 @interface EditViewController ()
-@property DataController *data;
+
+@property DataKit *dk;
 @property int deviceIndex;
 @property int max;
 @property int cur;
@@ -20,9 +21,9 @@
 
 - (void)viewDidLoad {
 	[super viewDidLoad];
-	_data = [[DataController alloc] init];
+	_dk = [[DataKit alloc] init];
 	_deviceIndex = 0;
-	_segmentedButton.hidden = ![self.data dualAccount];
+	_segmentedButton.hidden = ![self.dk dualAccountEnabled];
 	[self load];
 }
 
@@ -48,13 +49,13 @@
 
 - (void)save {
 	[self.view endEditing:YES];
-	[self.data setMaxStaminaAtIndex:_deviceIndex withValue:_max];
-	[self.data setCurrentStaminaAtIndex:_deviceIndex withValue:_cur];
-	[self.data setDate:[NSDate date]];
-	if ([self.data notification]) {
-		[self.data registerNotifications];
+	[self.dk setMaxStamina:_max atIndex:_deviceIndex];
+	[self.dk setCurrentStamina:_cur atIndex:_deviceIndex];
+	[self.dk setDate:[NSDate date]];
+	if ([self.dk notificationEnabled]) {
+		[NotificationKit registerNotification];
 	} else {
-		[self.data releaseNotifications];
+		[NotificationKit clearNotification];
 	}
 }
 
@@ -70,8 +71,8 @@
 }
 
 - (void)load {
-	[self setMaximumValue:[self.data maxStaminaAtIndex:_deviceIndex]];
-	[self setCurrentValue:[self.data estimatedCurrentStaminaAtIndex:_deviceIndex]];
+	[self setMaximumValue:(int)[self.dk maxStamina:_deviceIndex]];
+	[self setCurrentValue:(int)[self.dk estimatedCurrentStamina:_deviceIndex]];
 }
 
 - (void)setMaximumValue:(int)value {

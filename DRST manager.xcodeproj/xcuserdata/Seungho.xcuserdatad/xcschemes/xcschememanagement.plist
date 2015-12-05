@@ -9,6 +9,16 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>DRSTDataKit.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>3</integer>
+		</dict>
+		<key>DRSTKit.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
 		<key>DRSTm Widget.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -17,6 +27,16 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>A91166CE1C12AD9200383CFA</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A91166D71C12AD9200383CFA</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>A928DC591C0466680017F554</key>
 		<dict>
 			<key>primary</key>
@@ -33,6 +53,26 @@
 			<true/>
 		</dict>
 		<key>A93E28E51C00615B009342F3</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A9BF25431C12FFD000A3E2A5</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A9BF254C1C12FFD000A3E2A5</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A9BF25671C13010800A3E2A5</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A9BF25701C13010800A3E2A5</key>
 		<dict>
 			<key>primary</key>
 			<true/>

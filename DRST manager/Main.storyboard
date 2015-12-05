@@ -36,7 +36,7 @@
                                     <constraint firstAttribute="height" constant="61" id="Wfe-GA-WUT"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="51"/>
-                                <color key="textColor" red="0.1529411765" green="0.26274509800000001" blue="0.82352941180000006" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.15294117647058825" green="0.2627450980392157" blue="0.82352941176470584" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="default">
                                     <mask key="constraints">
@@ -84,6 +84,7 @@
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="tintColor" red="0.1529411765" green="0.26274509800000001" blue="0.82352941180000006" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="FFB-zZ-98W" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" id="24O-9j-l8F"/>
                             <constraint firstItem="zED-SG-EfT" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" id="5hG-f9-MBf"/>
@@ -131,6 +132,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="대시보드" id="QqL-dD-gSI">
                         <barButtonItem key="rightBarButtonItem" title="편집" id="Cdo-bQ-A4m">
+                            <color key="tintColor" red="0.1529411765" green="0.26274509800000001" blue="0.82352941180000006" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <segue destination="D8Q-XD-dvx" kind="show" id="0fY-Wr-tgH"/>
                             </connections>
@@ -468,10 +470,10 @@
                                             </constraints>
                                             <variation key="default">
                                                 <mask key="constraints">
-                                                    <exclude reference="sm1-oB-7yY"/>
                                                     <exclude reference="Wk8-EE-c39"/>
-                                                    <exclude reference="bNh-41-HzK"/>
+                                                    <exclude reference="sm1-oB-7yY"/>
                                                     <exclude reference="Eka-Ld-C5p"/>
+                                                    <exclude reference="bNh-41-HzK"/>
                                                 </mask>
                                             </variation>
                                         </tableViewCellContentView>
