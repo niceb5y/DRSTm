@@ -22,6 +22,7 @@
 		A9BF25861C13012600A3E2A5 /* DataKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9BF25851C13012600A3E2A5 /* DataKit.swift */; };
 		A9BF25871C13015200A3E2A5 /* DRSTDataKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9BF25681C13010800A3E2A5 /* DRSTDataKit.framework */; };
 		A9BF25881C13016700A3E2A5 /* DataKit.swift in Headers */ = {isa = PBXBuildFile; fileRef = A9BF25851C13012600A3E2A5 /* DataKit.swift */; settings = {ATTRIBUTES = (Public, ); }; };
+		A9BF25891C13086B00A3E2A5 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A93E28D31C005E9C009342F3 /* NotificationCenter.framework */; };
 		A9D955591BFF748300B583B4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A9D955581BFF748300B583B4 /* main.m */; };
 		A9D9555C1BFF748300B583B4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A9D9555B1BFF748300B583B4 /* AppDelegate.m */; };
 		A9D9555F1BFF748300B583B4 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9D9555E1BFF748300B583B4 /* FirstViewController.m */; };
@@ -156,6 +157,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A9BF25891C13086B00A3E2A5 /* NotificationCenter.framework in Frameworks */,
 				A9BF25871C13015200A3E2A5 /* DRSTDataKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
