@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A93998A11C2EFBC100F4F51B /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A93998A01C2EFBC100F4F51B /* Charts.framework */; };
+		A93998A21C2EFC0B00F4F51B /* Charts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A93998A01C2EFBC100F4F51B /* Charts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A93E28D81C005E9C009342F3 /* TodayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A93E28D71C005E9C009342F3 /* TodayViewController.m */; };
 		A93E28DB1C005E9C009342F3 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A93E28D91C005E9C009342F3 /* MainInterface.storyboard */; };
 		A93E28DF1C005E9C009342F3 /* DRST manager.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = A93E28D11C005E9C009342F3 /* DRST manager.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -84,6 +86,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				A93998A21C2EFC0B00F4F51B /* Charts.framework in Embed Frameworks */,
 				A9BF257E1C13010800A3E2A5 /* DRSTDataKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -113,6 +116,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		A93998A01C2EFBC100F4F51B /* Charts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Charts.framework; path = "Frameworks/iOS Charts/Charts.framework"; sourceTree = "<group>"; };
 		A93E28D11C005E9C009342F3 /* DRST manager.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "DRST manager.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A93E28D31C005E9C009342F3 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
 		A93E28D61C005E9C009342F3 /* TodayViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TodayViewController.h; sourceTree = "<group>"; };
@@ -181,6 +185,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A93998A11C2EFBC100F4F51B /* Charts.framework in Frameworks */,
 				A9BF257D1C13010800A3E2A5 /* DRSTDataKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -205,6 +210,7 @@
 		A93E28D21C005E9C009342F3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A93998A01C2EFBC100F4F51B /* Charts.framework */,
 				A93E28D31C005E9C009342F3 /* NotificationCenter.framework */,
 			);
 			name = Frameworks;
@@ -874,6 +880,11 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Frameworks/iOS",
+					Charts,
+				);
 				INFOPLIST_FILE = "DRST manager/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -893,6 +904,11 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Frameworks/iOS",
+					Charts,
+				);
 				INFOPLIST_FILE = "DRST manager/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
