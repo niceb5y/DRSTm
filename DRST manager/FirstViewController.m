@@ -61,4 +61,9 @@
 	[self refresh];
 }
 
+- (IBAction)openApp:(id)sender {
+	[NotificationKit clearNotification];
+	[[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"starlightstage://"]];
+}
+
 @end

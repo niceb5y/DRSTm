@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "NotificationKit.h"
 
 @import DRSTDataKit;
 @class DataKit;
@@ -19,6 +20,7 @@
 @property (weak, nonatomic) IBOutlet UIProgressView *progress;
 @property (weak, nonatomic) IBOutlet UISegmentedControl *segmentedButton;
 - (IBAction)segmentedButtonTouched:(id)sender;
+- (IBAction)openApp:(id)sender;
 
 @end
 

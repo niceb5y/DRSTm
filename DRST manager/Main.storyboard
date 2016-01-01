@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -19,7 +19,6 @@
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="스태미너 Max까지" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lv4-gz-5wL">
                                 <rect key="frame" x="20" y="163" width="560" height="29"/>
-                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="29" id="WVp-xx-HoV"/>
                                 </constraints>
@@ -29,7 +28,6 @@
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="72분" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ndp-Mn-9y6">
                                 <rect key="frame" x="20" y="208" width="560" height="61"/>
-                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="61" id="BfY-kf-KXe"/>
                                     <constraint firstAttribute="width" constant="560" id="Faq-xB-cB8"/>
@@ -47,32 +45,27 @@
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="남았습니다." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FFB-zZ-98W">
                                 <rect key="frame" x="20" y="285" width="560" height="29"/>
-                                <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="예상 스태미너 MAX 시간: 1시 12분" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zED-SG-EfT">
                                 <rect key="frame" x="20" y="354" width="560" height="20.5"/>
-                                <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100/100" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PfC-gL-u7A">
                                 <rect key="frame" x="20" y="391" width="62" height="22"/>
-                                <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="JCT-4L-LSm">
                                 <rect key="frame" x="90" y="401" width="490" height="2"/>
-                                <animations/>
                             </progressView>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="y0d-rN-BoC">
-                                <rect key="frame" x="251.5" y="483" width="97" height="29"/>
-                                <animations/>
+                                <rect key="frame" x="251" y="483" width="97" height="29"/>
                                 <segments>
                                     <segment title="기기 1"/>
                                     <segment title="기기 2"/>
@@ -81,12 +74,19 @@
                                     <action selector="segmentedButtonTouched:" destination="9pv-A4-QxB" eventType="valueChanged" id="Rbi-EW-ihG"/>
                                 </connections>
                             </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eqG-cQ-mAc">
+                                <rect key="frame" x="259" y="419" width="82" height="30"/>
+                                <state key="normal" title="데레스테 실행"/>
+                                <connections>
+                                    <action selector="openApp:" destination="9pv-A4-QxB" eventType="touchUpInside" id="RY5-QB-2V7"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <color key="tintColor" red="0.1529411765" green="0.26274509800000001" blue="0.82352941180000006" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="FFB-zZ-98W" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" id="24O-9j-l8F"/>
+                            <constraint firstItem="eqG-cQ-mAc" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="4JN-i9-h0O"/>
                             <constraint firstItem="zED-SG-EfT" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" id="5hG-f9-MBf"/>
                             <constraint firstItem="4ug-Mw-9AY" firstAttribute="top" secondItem="y0d-rN-BoC" secondAttribute="bottom" constant="40" id="7uS-gT-X8C"/>
                             <constraint firstItem="FFB-zZ-98W" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="CmD-bz-Czo"/>
@@ -104,6 +104,7 @@
                             <constraint firstItem="y0d-rN-BoC" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="YDA-HF-GBe"/>
                             <constraint firstItem="JCT-4L-LSm" firstAttribute="trailing" secondItem="tsR-hK-woN" secondAttribute="trailingMargin" id="aTb-3x-b5s"/>
                             <constraint firstItem="PfC-gL-u7A" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" id="bBN-WU-y0o"/>
+                            <constraint firstItem="eqG-cQ-mAc" firstAttribute="top" secondItem="JCT-4L-LSm" secondAttribute="bottom" constant="16" id="bbz-eJ-nLw"/>
                             <constraint firstItem="zED-SG-EfT" firstAttribute="top" secondItem="FFB-zZ-98W" secondAttribute="bottom" constant="40" id="eKa-ur-mEi"/>
                             <constraint firstItem="Ndp-Mn-9y6" firstAttribute="top" secondItem="Lv4-gz-5wL" secondAttribute="bottom" constant="16" id="euV-s6-cdE"/>
                             <constraint firstItem="Lv4-gz-5wL" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="gWM-gh-wh6"/>
@@ -164,7 +165,6 @@
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="최대 스태미너" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="joM-AR-xTA">
                                 <rect key="frame" x="20" y="104" width="100" height="30"/>
-                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="93" id="7qP-Ln-9lG"/>
                                     <constraint firstAttribute="height" constant="21" id="ER5-Fi-6eL"/>
@@ -183,7 +183,6 @@
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="72" borderStyle="roundedRect" textAlignment="right" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dWi-fU-lXp">
                                 <rect key="frame" x="128" y="104" width="344" height="30"/>
-                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="Z2q-iM-RC1"/>
                                 </constraints>
@@ -195,7 +194,6 @@
                             </textField>
                             <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="40" minimumValue="40" maximumValue="200" translatesAutoresizingMaskIntoConstraints="NO" id="Jm7-M4-vSg">
                                 <rect key="frame" x="480" y="104" width="94" height="29"/>
-                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="32d-x0-zpy"/>
                                     <constraint firstAttribute="height" constant="30" id="qyO-cH-Wtm"/>
@@ -206,7 +204,6 @@
                             </stepper>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="현재 스태미너" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9iI-NU-zJ0">
                                 <rect key="frame" x="20" y="158" width="100" height="30"/>
-                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="2ed-cW-WsA"/>
                                     <constraint firstAttribute="height" constant="30" id="SxW-wa-8pD"/>
@@ -225,7 +222,6 @@
                             </label>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="BF6-S6-Fu4">
                                 <rect key="frame" x="252" y="483" width="97" height="29"/>
-                                <animations/>
                                 <segments>
                                     <segment title="기기 1"/>
                                     <segment title="기기 2"/>
@@ -237,7 +233,6 @@
                             </segmentedControl>
                             <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="40" maximumValue="40" translatesAutoresizingMaskIntoConstraints="NO" id="BC0-mX-cIY">
                                 <rect key="frame" x="480" y="158" width="94" height="29"/>
-                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="5Go-sf-miL"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="XMt-yH-7XP"/>
@@ -254,7 +249,6 @@
                             </stepper>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0" borderStyle="roundedRect" textAlignment="right" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nEb-bU-aAW">
                                 <rect key="frame" x="128" y="158" width="344" height="30"/>
-                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="TZa-hP-qKf"/>
                                 </constraints>
@@ -265,7 +259,6 @@
                                 </connections>
                             </textField>
                         </subviews>
-                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="BF6-S6-Fu4" firstAttribute="centerX" secondItem="IZU-xB-q9e" secondAttribute="centerX" id="2tV-HT-Mwn"/>
@@ -312,7 +305,6 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="fGa-2A-Wf2">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <animations/>
                         <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                         <sections>
                             <tableViewSection headerTitle="설정" id="M4g-Eb-iqb">
@@ -326,27 +318,23 @@
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="다중 계정 저장 활성화" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="su3-k9-VA2">
                                                     <rect key="frame" x="15" y="6" width="137.5" height="19.5"/>
-                                                    <animations/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="c9a-V0-gjz">
                                                     <rect key="frame" x="543" y="6" width="51" height="31"/>
-                                                    <animations/>
                                                     <connections>
                                                         <action selector="accountSwitchTouched:" destination="VRl-ib-7gX" eventType="valueChanged" id="uMg-Bw-vSK"/>
                                                     </connections>
                                                 </switch>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="최대 두 개의 계정에 대한 정보를 저장할 수 있도록 합니다." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ApW-kl-GRO">
                                                     <rect key="frame" x="15" y="22.5" width="251" height="13.5"/>
-                                                    <animations/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
-                                            <animations/>
                                             <constraints>
                                                 <constraint firstItem="c9a-V0-gjz" firstAttribute="trailing" secondItem="YsP-xM-05e" secondAttribute="trailingMargin" id="6dM-MG-iWm"/>
                                                 <constraint firstItem="su3-k9-VA2" firstAttribute="leading" secondItem="YsP-xM-05e" secondAttribute="leading" constant="15" id="C4Q-UY-3S7"/>
@@ -369,7 +357,6 @@
                                                 </mask>
                                             </variation>
                                         </tableViewCellContentView>
-                                        <animations/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="mgG-MG-Lqo">
                                         <rect key="frame" x="0.0" y="157.5" width="600" height="44"/>
@@ -380,27 +367,23 @@
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="알림" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1l1-xx-nUj">
                                                     <rect key="frame" x="15" y="6" width="28" height="19.5"/>
-                                                    <animations/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lC7-D6-Jqv">
                                                     <rect key="frame" x="543" y="6" width="51" height="31"/>
-                                                    <animations/>
                                                     <connections>
                                                         <action selector="notificationSwitchTouched:" destination="VRl-ib-7gX" eventType="valueChanged" id="2Ss-cv-KPc"/>
                                                     </connections>
                                                 </switch>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="스태미너가 MAX가 되면 알립니다." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jUC-8c-2e0">
                                                     <rect key="frame" x="15" y="22" width="152" height="13.5"/>
-                                                    <animations/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
-                                            <animations/>
                                             <constraints>
                                                 <constraint firstItem="1l1-xx-nUj" firstAttribute="leading" secondItem="2OY-qe-HYR" secondAttribute="leadingMargin" constant="19.5" id="K0N-yg-SCk"/>
                                                 <constraint firstItem="lC7-D6-Jqv" firstAttribute="top" secondItem="2OY-qe-HYR" secondAttribute="topMargin" constant="-2" id="K2w-R0-fYk"/>
@@ -423,7 +406,6 @@
                                                 </mask>
                                             </variation>
                                         </tableViewCellContentView>
-                                        <animations/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="Rut-GL-oBT">
                                         <rect key="frame" x="0.0" y="201.5" width="600" height="44"/>
@@ -434,27 +416,23 @@
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="iCloud 사용" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wLs-H4-mbn">
                                                     <rect key="frame" x="15" y="6" width="78.5" height="19.5"/>
-                                                    <animations/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Nvx-bj-MGc">
                                                     <rect key="frame" x="543" y="6" width="51" height="31"/>
-                                                    <animations/>
                                                     <connections>
                                                         <action selector="icloudSwitchTouched:" destination="VRl-ib-7gX" eventType="valueChanged" id="QcI-hE-dYJ"/>
                                                     </connections>
                                                 </switch>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="iCloud를 통해 데이터를 백업하고, 연동합니다." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uth-C3-1oQ">
                                                     <rect key="frame" x="15" y="22.5" width="205" height="14"/>
-                                                    <animations/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
-                                            <animations/>
                                             <constraints>
                                                 <constraint firstItem="Nvx-bj-MGc" firstAttribute="top" secondItem="wSS-zO-aQL" secondAttribute="topMargin" constant="-2" id="143-gf-BMm"/>
                                                 <constraint firstItem="wLs-H4-mbn" firstAttribute="top" secondItem="wSS-zO-aQL" secondAttribute="top" constant="6" id="1b7-iI-jnb"/>
@@ -477,7 +455,6 @@
                                                 </mask>
                                             </variation>
                                         </tableViewCellContentView>
-                                        <animations/>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -493,15 +470,12 @@
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="이벤트 순위 정보" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="fFe-C9-jma">
                                                     <rect key="frame" x="15" y="0.0" width="570" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <animations/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
-                                            <animations/>
                                         </tableViewCellContentView>
-                                        <animations/>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -517,15 +491,12 @@
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="App 피드백" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="HTA-Hd-t6Y">
                                                     <rect key="frame" x="15" y="0.0" width="570" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <animations/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
-                                            <animations/>
                                         </tableViewCellContentView>
-                                        <animations/>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -554,7 +525,6 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="0Pa-GW-v0j">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <animations/>
                     </navigationBar>
                     <connections>
                         <segue destination="VRl-ib-7gX" kind="relationship" relationship="rootViewController" id="rSL-PI-xfU"/>
@@ -572,7 +542,6 @@
                     <tabBar key="tabBar" contentMode="scaleToFill" id="W28-zg-YXA">
                         <rect key="frame" x="0.0" y="975" width="768" height="49"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                        <animations/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
@@ -593,7 +562,6 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="nhv-me-STt">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <animations/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
