@@ -113,7 +113,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		A93998A01C2EFBC100F4F51B /* Charts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Charts.framework; path = "Frameworks/iOS Charts/Charts.framework"; sourceTree = "<group>"; };
 		A93E28D11C005E9C009342F3 /* DRST manager.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "DRST manager.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A93E28D31C005E9C009342F3 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
 		A93E28D61C005E9C009342F3 /* TodayViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TodayViewController.h; sourceTree = "<group>"; };
@@ -206,7 +205,6 @@
 		A93E28D21C005E9C009342F3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				A93998A01C2EFBC100F4F51B /* Charts.framework */,
 				A93E28D31C005E9C009342F3 /* NotificationCenter.framework */,
 			);
 			name = Frameworks;
