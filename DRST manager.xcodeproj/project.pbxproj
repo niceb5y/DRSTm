@@ -15,6 +15,7 @@
 		A924C4C21C58F78300A5F507 /* EXP.swift in Sources */ = {isa = PBXBuildFile; fileRef = A924C4BD1C58F78300A5F507 /* EXP.swift */; };
 		A924C4C31C58F78300A5F507 /* ScreenPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = A924C4BE1C58F78300A5F507 /* ScreenPosition.swift */; };
 		A924C4C41C58F78300A5F507 /* Stamina.swift in Sources */ = {isa = PBXBuildFile; fileRef = A924C4BF1C58F78300A5F507 /* Stamina.swift */; };
+		A924C4C61C58FB0D00A5F507 /* tessdata in Resources */ = {isa = PBXBuildFile; fileRef = A924C4C51C58FB0D00A5F507 /* tessdata */; };
 		A93E28D81C005E9C009342F3 /* TodayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A93E28D71C005E9C009342F3 /* TodayViewController.m */; };
 		A93E28DB1C005E9C009342F3 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A93E28D91C005E9C009342F3 /* MainInterface.storyboard */; };
 		A93E28DF1C005E9C009342F3 /* DRST manager.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = A93E28D11C005E9C009342F3 /* DRST manager.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -151,6 +152,7 @@
 		A924C4BD1C58F78300A5F507 /* EXP.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EXP.swift; sourceTree = "<group>"; };
 		A924C4BE1C58F78300A5F507 /* ScreenPosition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenPosition.swift; sourceTree = "<group>"; };
 		A924C4BF1C58F78300A5F507 /* Stamina.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stamina.swift; sourceTree = "<group>"; };
+		A924C4C51C58FB0D00A5F507 /* tessdata */ = {isa = PBXFileReference; lastKnownFileType = folder; path = tessdata; sourceTree = "<group>"; };
 		A93E28D11C005E9C009342F3 /* DRST manager.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "DRST manager.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A93E28D31C005E9C009342F3 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
 		A93E28D61C005E9C009342F3 /* TodayViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TodayViewController.h; sourceTree = "<group>"; };
@@ -337,6 +339,7 @@
 			isa = PBXGroup;
 			children = (
 				A93E29131C007999009342F3 /* DRSTm.entitlements */,
+				A924C4C51C58FB0D00A5F507 /* tessdata */,
 				A9D9555A1BFF748300B583B4 /* AppDelegate.h */,
 				A9D9555B1BFF748300B583B4 /* AppDelegate.m */,
 				A9D9555D1BFF748300B583B4 /* FirstViewController.h */,
@@ -661,6 +664,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A96BE6681C0055190091A86E /* Main.storyboard in Resources */,
+				A924C4C61C58FB0D00A5F507 /* tessdata in Resources */,
 				A9D9556A1BFF748300B583B4 /* LaunchScreen.storyboard in Resources */,
 				A9D955671BFF748300B583B4 /* Assets.xcassets in Resources */,
 			);
