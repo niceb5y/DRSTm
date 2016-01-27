@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A924C4A11C58F72300A5F507 /* DRSTKit.h in Headers */ = {isa = PBXBuildFile; fileRef = A924C4A01C58F72300A5F507 /* DRSTKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A924C4A81C58F72300A5F507 /* DRSTKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A924C49E1C58F72300A5F507 /* DRSTKit.framework */; };
+		A924C4B31C58F72300A5F507 /* DRSTKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A924C49E1C58F72300A5F507 /* DRSTKit.framework */; };
+		A924C4B41C58F72300A5F507 /* DRSTKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A924C49E1C58F72300A5F507 /* DRSTKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A924C4C11C58F78300A5F507 /* DeviceData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A924C4BC1C58F78300A5F507 /* DeviceData.swift */; };
+		A924C4C21C58F78300A5F507 /* EXP.swift in Sources */ = {isa = PBXBuildFile; fileRef = A924C4BD1C58F78300A5F507 /* EXP.swift */; };
+		A924C4C31C58F78300A5F507 /* ScreenPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = A924C4BE1C58F78300A5F507 /* ScreenPosition.swift */; };
+		A924C4C41C58F78300A5F507 /* Stamina.swift in Sources */ = {isa = PBXBuildFile; fileRef = A924C4BF1C58F78300A5F507 /* Stamina.swift */; };
 		A93E28D81C005E9C009342F3 /* TodayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A93E28D71C005E9C009342F3 /* TodayViewController.m */; };
 		A93E28DB1C005E9C009342F3 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A93E28D91C005E9C009342F3 /* MainInterface.storyboard */; };
 		A93E28DF1C005E9C009342F3 /* DRST manager.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = A93E28D11C005E9C009342F3 /* DRST manager.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -16,7 +24,6 @@
 		A9BF253E1C12FB9100A3E2A5 /* NotificationKit.m in Sources */ = {isa = PBXBuildFile; fileRef = A9BF253D1C12FB9100A3E2A5 /* NotificationKit.m */; };
 		A9BF256B1C13010800A3E2A5 /* DRSTDataKit.h in Headers */ = {isa = PBXBuildFile; fileRef = A9BF256A1C13010800A3E2A5 /* DRSTDataKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A9BF25721C13010800A3E2A5 /* DRSTDataKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9BF25681C13010800A3E2A5 /* DRSTDataKit.framework */; };
-		A9BF25791C13010800A3E2A5 /* DRSTDataKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9BF25781C13010800A3E2A5 /* DRSTDataKitTests.swift */; };
 		A9BF257D1C13010800A3E2A5 /* DRSTDataKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9BF25681C13010800A3E2A5 /* DRSTDataKit.framework */; };
 		A9BF257E1C13010800A3E2A5 /* DRSTDataKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A9BF25681C13010800A3E2A5 /* DRSTDataKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A9BF25861C13012600A3E2A5 /* DataKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9BF25851C13012600A3E2A5 /* DataKit.swift */; };
@@ -28,11 +35,31 @@
 		A9D9555F1BFF748300B583B4 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9D9555E1BFF748300B583B4 /* FirstViewController.m */; };
 		A9D955671BFF748300B583B4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A9D955661BFF748300B583B4 /* Assets.xcassets */; };
 		A9D9556A1BFF748300B583B4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9D955681BFF748300B583B4 /* LaunchScreen.storyboard */; };
-		A9D955751BFF748300B583B4 /* DRST_managerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A9D955741BFF748300B583B4 /* DRST_managerTests.m */; };
-		A9D955801BFF748300B583B4 /* DRST_managerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = A9D9557F1BFF748300B583B4 /* DRST_managerUITests.m */; };
+		EF62B8D9EB885DF05031986E /* Pods_DRST_manager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42E3AB0433B1D5F285952A71 /* Pods_DRST_manager.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		A924C4A91C58F72300A5F507 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A9D9554C1BFF748300B583B4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A924C49D1C58F72300A5F507;
+			remoteInfo = DRSTKit;
+		};
+		A924C4AB1C58F72300A5F507 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A9D9554C1BFF748300B583B4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A9D955531BFF748300B583B4;
+			remoteInfo = "DRST manager";
+		};
+		A924C4B11C58F72300A5F507 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A9D9554C1BFF748300B583B4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A924C49D1C58F72300A5F507;
+			remoteInfo = DRSTKit;
+		};
 		A93E28DD1C005E9C009342F3 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = A9D9554C1BFF748300B583B4 /* Project object */;
@@ -84,6 +111,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				A924C4B41C58F72300A5F507 /* DRSTKit.framework in Embed Frameworks */,
 				A9BF257E1C13010800A3E2A5 /* DRSTDataKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -113,6 +141,16 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		42E3AB0433B1D5F285952A71 /* Pods_DRST_manager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DRST_manager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		952AFB32BECF5A5CD2D3D693 /* Pods-DRST manager.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DRST manager.release.xcconfig"; path = "Pods/Target Support Files/Pods-DRST manager/Pods-DRST manager.release.xcconfig"; sourceTree = "<group>"; };
+		A924C49E1C58F72300A5F507 /* DRSTKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DRSTKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A924C4A01C58F72300A5F507 /* DRSTKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DRSTKit.h; sourceTree = "<group>"; };
+		A924C4A21C58F72300A5F507 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A924C4A71C58F72300A5F507 /* DRSTKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DRSTKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A924C4BC1C58F78300A5F507 /* DeviceData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceData.swift; sourceTree = "<group>"; };
+		A924C4BD1C58F78300A5F507 /* EXP.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EXP.swift; sourceTree = "<group>"; };
+		A924C4BE1C58F78300A5F507 /* ScreenPosition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenPosition.swift; sourceTree = "<group>"; };
+		A924C4BF1C58F78300A5F507 /* Stamina.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stamina.swift; sourceTree = "<group>"; };
 		A93E28D11C005E9C009342F3 /* DRST manager.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "DRST manager.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A93E28D31C005E9C009342F3 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
 		A93E28D61C005E9C009342F3 /* TodayViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TodayViewController.h; sourceTree = "<group>"; };
@@ -131,8 +169,6 @@
 		A9BF256A1C13010800A3E2A5 /* DRSTDataKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DRSTDataKit.h; sourceTree = "<group>"; };
 		A9BF256C1C13010800A3E2A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A9BF25711C13010800A3E2A5 /* DRSTDataKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DRSTDataKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		A9BF25781C13010800A3E2A5 /* DRSTDataKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DRSTDataKitTests.swift; sourceTree = "<group>"; };
-		A9BF257A1C13010800A3E2A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A9BF25851C13012600A3E2A5 /* DataKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataKit.swift; sourceTree = "<group>"; };
 		A9C6BCB11C00B7FD00EE6526 /* DRST manager.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "DRST manager.entitlements"; sourceTree = "<group>"; };
 		A9D955541BFF748300B583B4 /* DRSTm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DRSTm.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -145,14 +181,26 @@
 		A9D955691BFF748300B583B4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A9D9556B1BFF748300B583B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A9D955701BFF748300B583B4 /* DRST managerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "DRST managerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		A9D955741BFF748300B583B4 /* DRST_managerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DRST_managerTests.m; sourceTree = "<group>"; };
-		A9D955761BFF748300B583B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A9D9557B1BFF748300B583B4 /* DRST managerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "DRST managerUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		A9D9557F1BFF748300B583B4 /* DRST_managerUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DRST_managerUITests.m; sourceTree = "<group>"; };
-		A9D955811BFF748300B583B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AEC0A9CA1CFDC73A6D400A62 /* Pods-DRST manager.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DRST manager.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DRST manager/Pods-DRST manager.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		A924C49A1C58F72300A5F507 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A924C4A41C58F72300A5F507 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A924C4A81C58F72300A5F507 /* DRSTKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A93E28CE1C005E9C009342F3 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -182,6 +230,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				A9BF257D1C13010800A3E2A5 /* DRSTDataKit.framework in Frameworks */,
+				A924C4B31C58F72300A5F507 /* DRSTKit.framework in Frameworks */,
+				EF62B8D9EB885DF05031986E /* Pods_DRST_manager.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -202,10 +252,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		31DED2FB2117BAAFA7F88502 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AEC0A9CA1CFDC73A6D400A62 /* Pods-DRST manager.debug.xcconfig */,
+				952AFB32BECF5A5CD2D3D693 /* Pods-DRST manager.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		A924C49F1C58F72300A5F507 /* DRSTKit */ = {
+			isa = PBXGroup;
+			children = (
+				A924C4A01C58F72300A5F507 /* DRSTKit.h */,
+				A924C4BC1C58F78300A5F507 /* DeviceData.swift */,
+				A924C4BD1C58F78300A5F507 /* EXP.swift */,
+				A924C4BE1C58F78300A5F507 /* ScreenPosition.swift */,
+				A924C4BF1C58F78300A5F507 /* Stamina.swift */,
+				A924C4A21C58F72300A5F507 /* Info.plist */,
+			);
+			path = DRSTKit;
+			sourceTree = "<group>";
+		};
 		A93E28D21C005E9C009342F3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				A93E28D31C005E9C009342F3 /* NotificationCenter.framework */,
+				42E3AB0433B1D5F285952A71 /* Pods_DRST_manager.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -232,26 +305,16 @@
 			path = DRSTDataKit;
 			sourceTree = "<group>";
 		};
-		A9BF25771C13010800A3E2A5 /* DRSTDataKitTests */ = {
-			isa = PBXGroup;
-			children = (
-				A9BF25781C13010800A3E2A5 /* DRSTDataKitTests.swift */,
-				A9BF257A1C13010800A3E2A5 /* Info.plist */,
-			);
-			path = DRSTDataKitTests;
-			sourceTree = "<group>";
-		};
 		A9D9554B1BFF748300B583B4 = {
 			isa = PBXGroup;
 			children = (
 				A9D955561BFF748300B583B4 /* DRST manager */,
-				A9D955731BFF748300B583B4 /* DRST managerTests */,
-				A9D9557E1BFF748300B583B4 /* DRST managerUITests */,
 				A93E28D51C005E9C009342F3 /* DRSTm Widget */,
 				A9BF25691C13010800A3E2A5 /* DRSTDataKit */,
-				A9BF25771C13010800A3E2A5 /* DRSTDataKitTests */,
+				A924C49F1C58F72300A5F507 /* DRSTKit */,
 				A93E28D21C005E9C009342F3 /* Frameworks */,
 				A9D955551BFF748300B583B4 /* Products */,
+				31DED2FB2117BAAFA7F88502 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -264,6 +327,8 @@
 				A93E28D11C005E9C009342F3 /* DRST manager.appex */,
 				A9BF25681C13010800A3E2A5 /* DRSTDataKit.framework */,
 				A9BF25711C13010800A3E2A5 /* DRSTDataKitTests.xctest */,
+				A924C49E1C58F72300A5F507 /* DRSTKit.framework */,
+				A924C4A71C58F72300A5F507 /* DRSTKitTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -299,27 +364,17 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		A9D955731BFF748300B583B4 /* DRST managerTests */ = {
-			isa = PBXGroup;
-			children = (
-				A9D955741BFF748300B583B4 /* DRST_managerTests.m */,
-				A9D955761BFF748300B583B4 /* Info.plist */,
-			);
-			path = "DRST managerTests";
-			sourceTree = "<group>";
-		};
-		A9D9557E1BFF748300B583B4 /* DRST managerUITests */ = {
-			isa = PBXGroup;
-			children = (
-				A9D9557F1BFF748300B583B4 /* DRST_managerUITests.m */,
-				A9D955811BFF748300B583B4 /* Info.plist */,
-			);
-			path = "DRST managerUITests";
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		A924C49B1C58F72300A5F507 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A924C4A11C58F72300A5F507 /* DRSTKit.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A9BF25651C13010800A3E2A5 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -332,6 +387,43 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		A924C49D1C58F72300A5F507 /* DRSTKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A924C4B91C58F72300A5F507 /* Build configuration list for PBXNativeTarget "DRSTKit" */;
+			buildPhases = (
+				A924C4991C58F72300A5F507 /* Sources */,
+				A924C49A1C58F72300A5F507 /* Frameworks */,
+				A924C49B1C58F72300A5F507 /* Headers */,
+				A924C49C1C58F72300A5F507 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DRSTKit;
+			productName = DRSTKit;
+			productReference = A924C49E1C58F72300A5F507 /* DRSTKit.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		A924C4A61C58F72300A5F507 /* DRSTKitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A924C4BA1C58F72300A5F507 /* Build configuration list for PBXNativeTarget "DRSTKitTests" */;
+			buildPhases = (
+				A924C4A31C58F72300A5F507 /* Sources */,
+				A924C4A41C58F72300A5F507 /* Frameworks */,
+				A924C4A51C58F72300A5F507 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A924C4AA1C58F72300A5F507 /* PBXTargetDependency */,
+				A924C4AC1C58F72300A5F507 /* PBXTargetDependency */,
+			);
+			name = DRSTKitTests;
+			productName = DRSTKitTests;
+			productReference = A924C4A71C58F72300A5F507 /* DRSTKitTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		A93E28D01C005E9C009342F3 /* DRSTm Widget */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = A93E28E21C005E9C009342F3 /* Build configuration list for PBXNativeTarget "DRSTm Widget" */;
@@ -390,18 +482,22 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A9D955841BFF748300B583B4 /* Build configuration list for PBXNativeTarget "DRST manager" */;
 			buildPhases = (
+				1FD959FDC63DAB920394172B /* Check Pods Manifest.lock */,
 				A9D955501BFF748300B583B4 /* Sources */,
 				A9D955511BFF748300B583B4 /* Frameworks */,
 				A9D955521BFF748300B583B4 /* Resources */,
 				A93E28E31C005E9C009342F3 /* Embed App Extensions */,
 				A93E29121C00615B009342F3 /* Embed Watch Content */,
 				A928DC761C0466680017F554 /* Embed Frameworks */,
+				867AA193E813CFA05D3BFA6B /* Embed Pods Frameworks */,
+				24952F409DD4A852D9A50765 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 				A93E28DE1C005E9C009342F3 /* PBXTargetDependency */,
 				A9BF257C1C13010800A3E2A5 /* PBXTargetDependency */,
+				A924C4B21C58F72300A5F507 /* PBXTargetDependency */,
 			);
 			name = "DRST manager";
 			productName = "DRST manager";
@@ -450,10 +546,18 @@
 		A9D9554C1BFF748300B583B4 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0710;
+				LastSwiftUpdateCheck = 0720;
 				LastUpgradeCheck = 0710;
 				ORGANIZATIONNAME = "Seungho Kim";
 				TargetAttributes = {
+					A924C49D1C58F72300A5F507 = {
+						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = 5C758YKFY3;
+					};
+					A924C4A61C58F72300A5F507 = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = A9D955531BFF748300B583B4;
+					};
 					A93E28D01C005E9C009342F3 = {
 						CreatedOnToolsVersion = 7.1.1;
 						DevelopmentTeam = 5C758YKFY3;
@@ -509,11 +613,27 @@
 				A93E28D01C005E9C009342F3 /* DRSTm Widget */,
 				A9BF25671C13010800A3E2A5 /* DRSTDataKit */,
 				A9BF25701C13010800A3E2A5 /* DRSTDataKitTests */,
+				A924C49D1C58F72300A5F507 /* DRSTKit */,
+				A924C4A61C58F72300A5F507 /* DRSTKitTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		A924C49C1C58F72300A5F507 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A924C4A51C58F72300A5F507 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A93E28CF1C005E9C009342F3 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -562,7 +682,73 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1FD959FDC63DAB920394172B /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		24952F409DD4A852D9A50765 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DRST manager/Pods-DRST manager-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		867AA193E813CFA05D3BFA6B /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DRST manager/Pods-DRST manager-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
+		A924C4991C58F72300A5F507 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A924C4C31C58F78300A5F507 /* ScreenPosition.swift in Sources */,
+				A924C4C41C58F78300A5F507 /* Stamina.swift in Sources */,
+				A924C4C21C58F78300A5F507 /* EXP.swift in Sources */,
+				A924C4C11C58F78300A5F507 /* DeviceData.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A924C4A31C58F72300A5F507 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A93E28CD1C005E9C009342F3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -583,7 +769,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A9BF25791C13010800A3E2A5 /* DRSTDataKitTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -604,7 +789,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A9D955751BFF748300B583B4 /* DRST_managerTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -612,13 +796,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A9D955801BFF748300B583B4 /* DRST_managerUITests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		A924C4AA1C58F72300A5F507 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A924C49D1C58F72300A5F507 /* DRSTKit */;
+			targetProxy = A924C4A91C58F72300A5F507 /* PBXContainerItemProxy */;
+		};
+		A924C4AC1C58F72300A5F507 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A9D955531BFF748300B583B4 /* DRST manager */;
+			targetProxy = A924C4AB1C58F72300A5F507 /* PBXContainerItemProxy */;
+		};
+		A924C4B21C58F72300A5F507 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A924C49D1C58F72300A5F507 /* DRSTKit */;
+			targetProxy = A924C4B11C58F72300A5F507 /* PBXContainerItemProxy */;
+		};
 		A93E28DE1C005E9C009342F3 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = A93E28D01C005E9C009342F3 /* DRSTm Widget */;
@@ -671,6 +869,78 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		A924C4B51C58F72300A5F507 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = DRSTKit/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.niceb5y.DRSTKit;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		A924C4B61C58F72300A5F507 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = DRSTKit/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.niceb5y.DRSTKit;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		A924C4B71C58F72300A5F507 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = DRSTKitTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.niceb5y.DRSTKitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DRSTm.app/DRSTm";
+			};
+			name = Debug;
+		};
+		A924C4B81C58F72300A5F507 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = DRSTKitTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.niceb5y.DRSTKitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DRSTm.app/DRSTm";
+			};
+			name = Release;
+		};
 		A93E28E01C005E9C009342F3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -867,6 +1137,7 @@
 		};
 		A9D955851BFF748300B583B4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AEC0A9CA1CFDC73A6D400A62 /* Pods-DRST manager.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -887,6 +1158,7 @@
 		};
 		A9D955861BFF748300B583B4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 952AFB32BECF5A5CD2D3D693 /* Pods-DRST manager.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -955,6 +1227,22 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		A924C4B91C58F72300A5F507 /* Build configuration list for PBXNativeTarget "DRSTKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A924C4B51C58F72300A5F507 /* Debug */,
+				A924C4B61C58F72300A5F507 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		A924C4BA1C58F72300A5F507 /* Build configuration list for PBXNativeTarget "DRSTKitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A924C4B71C58F72300A5F507 /* Debug */,
+				A924C4B81C58F72300A5F507 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		A93E28E21C005E9C009342F3 /* Build configuration list for PBXNativeTarget "DRSTm Widget" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
