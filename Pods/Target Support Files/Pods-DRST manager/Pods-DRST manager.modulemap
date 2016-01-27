@@ -1,6 +1,0 @@
-framework module Pods_DRST_manager {
-  umbrella header "Pods-DRST manager-umbrella.h"
-
-  export *
-  module * { export * }
-}
