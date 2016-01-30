@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@import DRSTDataKit;
+@import DRSTKit;
 @class DataKit;
 
 @interface TodayViewController : UIViewController
