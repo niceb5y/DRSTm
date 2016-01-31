@@ -9,7 +9,16 @@
 import UIKit
 import DRSTKit
 
+/**
+Notification helper class for DRST manager
+- author: niceb5y
+*/
 class DRSTNotification: NSObject {
+	
+	/**
+	Register notification(s)
+	- author: niceb5y
+	*/
 	static func register() {
 		self.clear()
 		let dk = DataKit()
@@ -27,6 +36,11 @@ class DRSTNotification: NSObject {
 			UIApplication.sharedApplication().scheduleLocalNotification(noti)
 		}
 	}
+	
+	/**
+	Clear notification(s)
+	- author: niceb5y
+	*/
 	static func clear() {
 		UIApplication.sharedApplication().cancelAllLocalNotifications()
 	}

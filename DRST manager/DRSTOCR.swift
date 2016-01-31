@@ -10,6 +10,10 @@ import UIKit
 import DRSTKit
 import TesseractOCR
 
+/**
+OCR helper class for DRST manager
+- author: niceb5y
+*/
 class DRSTOCR: NSObject, G8TesseractDelegate {
 	let tesseract = G8Tesseract(language: "eng")
 	
@@ -22,6 +26,14 @@ class DRSTOCR: NSObject, G8TesseractDelegate {
 		tesseract.delegate = self
 	}
 	
+	/**
+	Recognize Level from Screenshot.
+	- author: niceb5y
+	- parameters:
+		- image: Screenshot to recognize.
+	- returns: Level
+	- throws: RecognitionError.Level
+	*/
 	func getLevelOf(image:UIImage) throws -> Int {
 		tesseract.charWhitelist = "01234567890"
 		tesseract.image = image.convertToGrayScale()
@@ -36,6 +48,14 @@ class DRSTOCR: NSObject, G8TesseractDelegate {
 		}
 	}
 	
+	/**
+	Recognize Stamina from Screenshot.
+	- author: niceb5y
+	- parameters:
+		- image: Screenshot to recognize.
+	- returns: Stamina
+	- throws: RecognitionError.Stamina
+	*/
 	func getStaminaOf(image:UIImage) throws -> Int {
 		tesseract.charWhitelist = "01234567890/"
 		tesseract.image = image.convertToGrayScale()
@@ -53,6 +73,16 @@ class DRSTOCR: NSObject, G8TesseractDelegate {
 		throw RecognitionError.Stamina
 	}
 
+	/**
+	Recognize EXP from Screenshot.
+	- author: niceb5y
+	- parameters:
+		- image: Screenshot to recognize.
+	- returns: EXP
+	- warning:
+	It can't recognize well.
+	- throws: RecognitionError.EXP
+	*/
 	func getEXPOf(image:UIImage) throws -> Int {
 		tesseract.charWhitelist = "01234567890/"
 		tesseract.image = image.convertToGrayScale()
@@ -72,6 +102,11 @@ class DRSTOCR: NSObject, G8TesseractDelegate {
 }
 
 extension UIImage {
+	/**
+	Convert image into grayscale.
+	- author: niceb5y
+	- returns: Grayscaled image
+	*/
 	func convertToGrayScale() -> UIImage {
 		let imageRect = CGRectMake(0, 0, self.size.width, self.size.height)
 		let colorSpace = CGColorSpaceCreateDeviceGray()
