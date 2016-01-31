@@ -92,7 +92,7 @@ public class DeviceData: NSObject, NSCoding {
 	}
 	
 	public func encodeWithCoder(aCoder: NSCoder) {
-		aCoder.encodeInteger(version, forKey: "level")
+		aCoder.encodeInteger(version, forKey: "version")
 		aCoder.encodeInteger(_level, forKey: "level")
 		aCoder.encodeInteger(_exp, forKey: "exp")
 		aCoder.encodeInteger(_stamina, forKey: "stamina")
