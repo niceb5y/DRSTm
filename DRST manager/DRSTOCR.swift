@@ -11,13 +11,18 @@ import DRSTKit
 import TesseractOCR
 
 class DRSTOCR: NSObject, G8TesseractDelegate {
+	let tesseract = G8Tesseract(language: "eng")
+	
 	enum RecognitionError:ErrorType {
 		case Level, Stamina, EXP
 	}
 	
-	func getLevelOf(image:UIImage) throws -> Int {
-		let tesseract = G8Tesseract(language: "eng")
+	override init() {
+		super.init()
 		tesseract.delegate = self
+	}
+	
+	func getLevelOf(image:UIImage) throws -> Int {
 		tesseract.charWhitelist = "01234567890"
 		tesseract.image = image.convertToGrayScale()
 		let devicetype = tesseract.image.size.width / tesseract.image.size.height < 1.5 ? ScreenPosition.DeviceType.pad : ScreenPosition.DeviceType.phone_pod
@@ -32,8 +37,6 @@ class DRSTOCR: NSObject, G8TesseractDelegate {
 	}
 	
 	func getStaminaOf(image:UIImage) throws -> Int {
-		let tesseract = G8Tesseract(language: "eng")
-		tesseract.delegate = self
 		tesseract.charWhitelist = "01234567890/"
 		tesseract.image = image.convertToGrayScale()
 		let devicetype = tesseract.image.size.width / tesseract.image.size.height < 1.5 ? ScreenPosition.DeviceType.pad : ScreenPosition.DeviceType.phone_pod
@@ -51,8 +54,6 @@ class DRSTOCR: NSObject, G8TesseractDelegate {
 	}
 
 	func getEXPOf(image:UIImage) throws -> Int {
-		let tesseract = G8Tesseract(language: "eng")
-		tesseract.delegate = self
 		tesseract.charWhitelist = "01234567890/"
 		tesseract.image = image.convertToGrayScale()
 		let devicetype = tesseract.image.size.width / tesseract.image.size.height < 1.5 ? ScreenPosition.DeviceType.pad : ScreenPosition.DeviceType.phone_pod

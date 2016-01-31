@@ -257,9 +257,20 @@
                                     </mask>
                                 </variation>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0qu-l1-NAu">
+                                <rect key="frame" x="259" y="212" width="82" height="30"/>
+                                <state key="normal" title="스크린샷 인식"/>
+                                <connections>
+                                    <action selector="recognizeScreenshot:" destination="D8Q-XD-dvx" eventType="touchUpInside" id="CGQ-KV-k0X"/>
+                                </connections>
+                            </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="mHB-5B-x6r">
+                                <rect key="frame" x="290" y="290" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="0qu-l1-NAu" firstAttribute="centerX" secondItem="IZU-xB-q9e" secondAttribute="centerX" id="0XG-Mv-m1M"/>
                             <constraint firstItem="BF6-S6-Fu4" firstAttribute="centerX" secondItem="IZU-xB-q9e" secondAttribute="centerX" id="2tV-HT-Mwn"/>
                             <constraint firstItem="nEb-bU-aAW" firstAttribute="leading" secondItem="9iI-NU-zJ0" secondAttribute="trailing" constant="8" id="34i-Ro-ZzQ"/>
                             <constraint firstItem="BC0-mX-cIY" firstAttribute="top" secondItem="Jm7-M4-vSg" secondAttribute="bottom" constant="24" id="DGP-me-cf6"/>
@@ -269,13 +280,16 @@
                             <constraint firstItem="9iI-NU-zJ0" firstAttribute="top" secondItem="joM-AR-xTA" secondAttribute="bottom" constant="24" id="NWD-1W-7LU"/>
                             <constraint firstItem="Jm7-M4-vSg" firstAttribute="leading" secondItem="dWi-fU-lXp" secondAttribute="trailing" constant="8" id="Qhr-EB-52f"/>
                             <constraint firstItem="nEb-bU-aAW" firstAttribute="top" secondItem="dWi-fU-lXp" secondAttribute="bottom" constant="24" id="Rjx-kf-KbJ"/>
+                            <constraint firstItem="mHB-5B-x6r" firstAttribute="centerX" secondItem="IZU-xB-q9e" secondAttribute="centerX" id="Rns-xL-qkP"/>
                             <constraint firstAttribute="trailingMargin" secondItem="BC0-mX-cIY" secondAttribute="trailing" id="TSc-qb-8Nd"/>
                             <constraint firstItem="9iI-NU-zJ0" firstAttribute="leading" secondItem="IZU-xB-q9e" secondAttribute="leadingMargin" id="Yzg-xI-eut"/>
+                            <constraint firstItem="mHB-5B-x6r" firstAttribute="centerY" secondItem="IZU-xB-q9e" secondAttribute="centerY" id="c4t-rh-vF6"/>
                             <constraint firstItem="dWi-fU-lXp" firstAttribute="leading" secondItem="joM-AR-xTA" secondAttribute="trailing" constant="8" id="iMn-6a-Pzk"/>
                             <constraint firstItem="joM-AR-xTA" firstAttribute="leading" secondItem="IZU-xB-q9e" secondAttribute="leadingMargin" id="lr6-F1-rU9"/>
                             <constraint firstItem="Jm7-M4-vSg" firstAttribute="top" secondItem="RIM-aD-NgM" secondAttribute="bottom" constant="40" id="lyY-K4-p0j"/>
                             <constraint firstItem="dWi-fU-lXp" firstAttribute="top" secondItem="RIM-aD-NgM" secondAttribute="bottom" constant="40" id="s3e-jF-4Uz"/>
                             <constraint firstItem="BC0-mX-cIY" firstAttribute="leading" secondItem="nEb-bU-aAW" secondAttribute="trailing" constant="8" id="s87-AZ-tsg"/>
+                            <constraint firstItem="0qu-l1-NAu" firstAttribute="top" secondItem="nEb-bU-aAW" secondAttribute="bottom" constant="24" id="vi7-6M-WB0"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="편집" id="VYV-MV-phi">
@@ -288,6 +302,7 @@
                     <connections>
                         <outlet property="currentStepper" destination="BC0-mX-cIY" id="YZR-0z-yjR"/>
                         <outlet property="currentText" destination="nEb-bU-aAW" id="wcx-NJ-qZi"/>
+                        <outlet property="indicator" destination="mHB-5B-x6r" id="qSd-rD-BCX"/>
                         <outlet property="maxStepper" destination="Jm7-M4-vSg" id="15n-hs-wKs"/>
                         <outlet property="maxText" destination="dWi-fU-lXp" id="kzw-W2-RdO"/>
                         <outlet property="segmentedButton" destination="BF6-S6-Fu4" id="BFQ-0v-J75"/>

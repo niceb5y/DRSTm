@@ -9,7 +9,7 @@
 import UIKit
 import DRSTKit
 
-class EditViewController: UIViewController {
+class EditViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 	var deviceIndex = 0
 	var stamina = (max:40, current:0)
 	let dk = DataKit.init()
@@ -19,9 +19,11 @@ class EditViewController: UIViewController {
 	@IBOutlet weak var maxStepper: UIStepper!
 	@IBOutlet weak var currentStepper: UIStepper!
 	@IBOutlet weak var segmentedButton: UISegmentedControl!
+	@IBOutlet weak var indicator: UIActivityIndicatorView!
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
+		indicator.stopAnimating()
 		deviceIndex = 0
 		segmentedButton.hidden = !dk.dualAccountEnabled
 		load()
@@ -86,6 +88,41 @@ class EditViewController: UIViewController {
 	}
 	
 	@IBAction func segmentedButtonTouched(sender: AnyObject) {
-		
+		save()
+		deviceIndex = segmentedButton.selectedSegmentIndex
+		load()
+	}
+	
+	@IBAction func recognizeScreenshot(sender: AnyObject) {
+		let imagePickerController = UIImagePickerController()
+		imagePickerController.delegate = self
+		imagePickerController.sourceType = UIImagePickerControllerSourceType.PhotoLibrary
+		imagePickerController.allowsEditing = false
+		presentViewController(imagePickerController, animated: true, completion: nil)
+	}
+	
+	func imagePickerController(picker: UIImagePickerController, didFinishPickingImage image: UIImage, editingInfo: [String : AnyObject]?) {
+		dismissViewControllerAnimated(true, completion: nil)
+		let ocr = DRSTOCR()
+		do {
+			indicator.startAnimating()
+			let level = try? ocr.getLevelOf(image)
+			if level != nil {
+				setMaximumValue(Stamina.staminaAtLevel(level!))
+			} else {
+				let alertController = UIAlertController(title: "인식 에러", message: "레벨을 인식할 수 없습니다.", preferredStyle: UIAlertControllerStyle.Alert)
+				alertController.addAction(UIAlertAction(title: "확인", style: UIAlertActionStyle.Default,handler: nil))
+				self.presentViewController(alertController, animated: true, completion: nil)
+			}
+			let stamina = try? ocr.getStaminaOf(image)
+			if stamina != nil {
+				setCurrentValue(stamina!)
+			} else {
+				let alertController = UIAlertController(title: "인식 에러", message: "스태미너를 인식할 수 없습니다.", preferredStyle: UIAlertControllerStyle.Alert)
+				alertController.addAction(UIAlertAction(title: "확인", style: UIAlertActionStyle.Default,handler: nil))
+				self.presentViewController(alertController, animated: true, completion: nil)
+			}
+			indicator.stopAnimating()
+		}
 	}
 }
