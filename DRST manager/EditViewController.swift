@@ -106,11 +106,13 @@ class EditViewController: UIViewController, UIImagePickerControllerDelegate, UIN
 		let image = info[UIImagePickerControllerOriginalImage] as! UIImage
 		let ocr = DRSTOCR()
 		indicator.startAnimating()
-		dispatch_async(dispatch_get_main_queue()) { () -> Void in
+		dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)) { () -> Void in
 			do {
 				let level = try? ocr.getLevelOf(image)
 				if level != nil {
-					self.setMaximumValue(Stamina.staminaAtLevel(level!))
+					dispatch_async(dispatch_get_main_queue(), { () -> Void in
+						self.setMaximumValue(Stamina.staminaAtLevel(level!))
+					})
 				} else {
 					let alertController = UIAlertController(title: "인식 에러", message: "레벨을 인식할 수 없습니다.", preferredStyle: UIAlertControllerStyle.Alert)
 					alertController.addAction(UIAlertAction(title: "확인", style: UIAlertActionStyle.Default,handler: nil))
@@ -118,13 +120,17 @@ class EditViewController: UIViewController, UIImagePickerControllerDelegate, UIN
 				}
 				let stamina = try? ocr.getStaminaOf(image)
 				if stamina != nil {
-					self.setCurrentValue(stamina!)
+					dispatch_async(dispatch_get_main_queue(), { () -> Void in
+						self.setCurrentValue(stamina!)
+					})
 				} else {
 					let alertController = UIAlertController(title: "인식 에러", message: "스태미너를 인식할 수 없습니다.", preferredStyle: UIAlertControllerStyle.Alert)
 					alertController.addAction(UIAlertAction(title: "확인", style: UIAlertActionStyle.Default,handler: nil))
 					self.presentViewController(alertController, animated: true, completion: nil)
 				}
-				self.indicator.stopAnimating()
+				dispatch_async(dispatch_get_main_queue(), { () -> Void in
+					self.indicator.stopAnimating()
+				})
 			}
 		}
 	}
