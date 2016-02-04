@@ -11,7 +11,7 @@ import DRSTKit
 import TesseractOCR
 
 /**
-OCR helper class for DRST manager
+OCR class for DRST manager
 - author: niceb5y
 */
 class DRSTOCR: NSObject, G8TesseractDelegate {
@@ -36,7 +36,7 @@ class DRSTOCR: NSObject, G8TesseractDelegate {
 	*/
 	func getLevelOf(image:UIImage) throws -> Int {
 		tesseract.charWhitelist = "01234567890"
-		tesseract.image = image.convertToGrayScale()
+		tesseract.image = Helper.Image.convertToGrayScale(image)
 		let devicetype = tesseract.image.size.width / tesseract.image.size.height < 1.5 ? ScreenPosition.DeviceType.pad : ScreenPosition.DeviceType.phone_pod
 		tesseract.rect = ScreenPosition.levelArea(Double(image.size.width), type: devicetype)
 		tesseract.recognize()
@@ -58,7 +58,7 @@ class DRSTOCR: NSObject, G8TesseractDelegate {
 	*/
 	func getStaminaOf(image:UIImage) throws -> Int {
 		tesseract.charWhitelist = "01234567890/"
-		tesseract.image = image.convertToGrayScale()
+		tesseract.image = Helper.Image.convertToGrayScale(image)
 		let devicetype = tesseract.image.size.width / tesseract.image.size.height < 1.5 ? ScreenPosition.DeviceType.pad : ScreenPosition.DeviceType.phone_pod
 		tesseract.rect = ScreenPosition.staminaArea(Double(image.size.width), type: devicetype)
 		tesseract.recognize()
@@ -85,7 +85,7 @@ class DRSTOCR: NSObject, G8TesseractDelegate {
 	*/
 	func getEXPOf(image:UIImage) throws -> Int {
 		tesseract.charWhitelist = "01234567890/"
-		tesseract.image = image.convertToGrayScale()
+		tesseract.image = Helper.Image.convertToGrayScale(image)
 		let devicetype = tesseract.image.size.width / tesseract.image.size.height < 1.5 ? ScreenPosition.DeviceType.pad : ScreenPosition.DeviceType.phone_pod
 		tesseract.rect = ScreenPosition.expArea(Double(image.size.width), type: devicetype)
 		tesseract.recognize()
@@ -99,20 +99,44 @@ class DRSTOCR: NSObject, G8TesseractDelegate {
 		}
 		throw RecognitionError.EXP
 	}
-}
-
-extension UIImage {
+	
 	/**
-	Convert image into grayscale.
+	Helper class for DRSTOCR
 	- author: niceb5y
-	- returns: Grayscaled image
 	*/
-	func convertToGrayScale() -> UIImage {
-		let imageRect = CGRectMake(0, 0, self.size.width, self.size.height)
-		let colorSpace = CGColorSpaceCreateDeviceGray()
-		let context = CGBitmapContextCreate(nil, Int(self.size.width), Int(self.size.height), 8, 0, colorSpace, 0)
-		CGContextDrawImage(context, imageRect, self.CGImage)
-		let imageRef = CGBitmapContextCreateImage(context)
-		return UIImage.init(CGImage: imageRef!)
+	class Helper {
+		/**
+		Image helper class
+		- author: niceb5y
+		*/
+		class Image {
+			/**
+			Convert Image into grayscaled image.
+			- author: niceb5y
+			- parameters:
+				- image: Image to convert.
+			- returns: Grayscaled image
+			*/
+			static func convertToGrayScale(image:UIImage) -> UIImage {
+				let beginImage = CIImage(image: image)!
+				
+				let blackAndWhite = CIFilter(name: "CIColorControls", withInputParameters: [
+					kCIInputImageKey: beginImage,
+					kCIInputBrightnessKey: 0.0,
+					kCIInputContrastKey: 1.1,
+					kCIInputSaturationKey: 0.0
+					])!.outputImage!
+				
+				let output = CIFilter(name: "CIExposureAdjust", withInputParameters: [
+					kCIInputImageKey: blackAndWhite,
+					kCIInputEVKey: 0.7
+					])!.outputImage!
+				
+				let context = CIContext(options: nil)
+				
+				return UIImage(CGImage: context.createCGImage(output, fromRect: output.extent),
+					scale: 0, orientation: image.imageOrientation)
+			}
+		}
 	}
 }

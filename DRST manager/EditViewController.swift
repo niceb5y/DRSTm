@@ -101,28 +101,31 @@ class EditViewController: UIViewController, UIImagePickerControllerDelegate, UIN
 		presentViewController(imagePickerController, animated: true, completion: nil)
 	}
 	
-	func imagePickerController(picker: UIImagePickerController, didFinishPickingImage image: UIImage, editingInfo: [String : AnyObject]?) {
+	func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
 		dismissViewControllerAnimated(true, completion: nil)
+		let image = info[UIImagePickerControllerOriginalImage] as! UIImage
 		let ocr = DRSTOCR()
-		do {
-			indicator.startAnimating()
-			let level = try? ocr.getLevelOf(image)
-			if level != nil {
-				setMaximumValue(Stamina.staminaAtLevel(level!))
-			} else {
-				let alertController = UIAlertController(title: "인식 에러", message: "레벨을 인식할 수 없습니다.", preferredStyle: UIAlertControllerStyle.Alert)
-				alertController.addAction(UIAlertAction(title: "확인", style: UIAlertActionStyle.Default,handler: nil))
-				self.presentViewController(alertController, animated: true, completion: nil)
+		indicator.startAnimating()
+		dispatch_async(dispatch_get_main_queue()) { () -> Void in
+			do {
+				let level = try? ocr.getLevelOf(image)
+				if level != nil {
+					self.setMaximumValue(Stamina.staminaAtLevel(level!))
+				} else {
+					let alertController = UIAlertController(title: "인식 에러", message: "레벨을 인식할 수 없습니다.", preferredStyle: UIAlertControllerStyle.Alert)
+					alertController.addAction(UIAlertAction(title: "확인", style: UIAlertActionStyle.Default,handler: nil))
+					self.presentViewController(alertController, animated: true, completion: nil)
+				}
+				let stamina = try? ocr.getStaminaOf(image)
+				if stamina != nil {
+					self.setCurrentValue(stamina!)
+				} else {
+					let alertController = UIAlertController(title: "인식 에러", message: "스태미너를 인식할 수 없습니다.", preferredStyle: UIAlertControllerStyle.Alert)
+					alertController.addAction(UIAlertAction(title: "확인", style: UIAlertActionStyle.Default,handler: nil))
+					self.presentViewController(alertController, animated: true, completion: nil)
+				}
+				self.indicator.stopAnimating()
 			}
-			let stamina = try? ocr.getStaminaOf(image)
-			if stamina != nil {
-				setCurrentValue(stamina!)
-			} else {
-				let alertController = UIAlertController(title: "인식 에러", message: "스태미너를 인식할 수 없습니다.", preferredStyle: UIAlertControllerStyle.Alert)
-				alertController.addAction(UIAlertAction(title: "확인", style: UIAlertActionStyle.Default,handler: nil))
-				self.presentViewController(alertController, animated: true, completion: nil)
-			}
-			indicator.stopAnimating()
 		}
 	}
 }
