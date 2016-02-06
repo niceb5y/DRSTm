@@ -1,7 +1,9 @@
 PODS:
+  - MBProgressHUD (0.9.2)
   - TesseractOCRiOS (4.0.0)
 
 DEPENDENCIES:
+  - MBProgressHUD (~> 0.9.2)
   - TesseractOCRiOS (from `https://github.com/gali8/Tesseract-OCR-iOS.git`)
 
 EXTERNAL SOURCES:
@@ -14,6 +16,7 @@ CHECKOUT OPTIONS:
     :git: https://github.com/gali8/Tesseract-OCR-iOS.git
 
 SPEC CHECKSUMS:
+  MBProgressHUD: 1569cf7ace17a8bac47aabfbb8580a49690386d1
   TesseractOCRiOS: 729989db3984bb60ba3addb053569b172d48c409
 
 COCOAPODS: 0.39.0
