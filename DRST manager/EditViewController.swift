@@ -8,6 +8,7 @@
 
 import UIKit
 import DRSTKit
+import JGProgressHUD
 
 class EditViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 	var deviceIndex = 0
@@ -19,11 +20,9 @@ class EditViewController: UIViewController, UIImagePickerControllerDelegate, UIN
 	@IBOutlet weak var maxStepper: UIStepper!
 	@IBOutlet weak var currentStepper: UIStepper!
 	@IBOutlet weak var segmentedButton: UISegmentedControl!
-	@IBOutlet weak var indicator: UIActivityIndicatorView!
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		indicator.stopAnimating()
 		deviceIndex = 0
 		segmentedButton.hidden = !dk.dualAccountEnabled
 		load()
@@ -105,7 +104,8 @@ class EditViewController: UIViewController, UIImagePickerControllerDelegate, UIN
 		dismissViewControllerAnimated(true, completion: nil)
 		let image = info[UIImagePickerControllerOriginalImage] as! UIImage
 		let ocr = DRSTOCR()
-		indicator.startAnimating()
+		let indicator = JGProgressHUD(style: JGProgressHUDStyle.Dark)
+		indicator.showInView(self.view)
 		dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)) { () -> Void in
 			do {
 				let level = try? ocr.getLevelOf(image)
@@ -114,9 +114,13 @@ class EditViewController: UIViewController, UIImagePickerControllerDelegate, UIN
 						self.setMaximumValue(Stamina.staminaAtLevel(level!))
 					})
 				} else {
-					let alertController = UIAlertController(title: "인식 에러", message: "레벨을 인식할 수 없습니다.", preferredStyle: UIAlertControllerStyle.Alert)
-					alertController.addAction(UIAlertAction(title: "확인", style: UIAlertActionStyle.Default,handler: nil))
-					self.presentViewController(alertController, animated: true, completion: nil)
+					dispatch_async(dispatch_get_main_queue(), { () -> Void in
+						let HUD = JGProgressHUD(style: JGProgressHUDStyle.Dark)
+						HUD.textLabel.text = "레벨 인식 에러"
+						HUD.indicatorView = JGProgressHUDErrorIndicatorView()
+						HUD.showInView(self.view)
+						HUD.dismissAfterDelay(1.5)
+					})
 				}
 				let stamina = try? ocr.getStaminaOf(image)
 				if stamina != nil {
@@ -124,12 +128,16 @@ class EditViewController: UIViewController, UIImagePickerControllerDelegate, UIN
 						self.setCurrentValue(stamina!)
 					})
 				} else {
-					let alertController = UIAlertController(title: "인식 에러", message: "스태미너를 인식할 수 없습니다.", preferredStyle: UIAlertControllerStyle.Alert)
-					alertController.addAction(UIAlertAction(title: "확인", style: UIAlertActionStyle.Default,handler: nil))
-					self.presentViewController(alertController, animated: true, completion: nil)
+					dispatch_async(dispatch_get_main_queue(), { () -> Void in
+						let HUD = JGProgressHUD(style: JGProgressHUDStyle.Dark)
+						HUD.textLabel.text = "스태미너 인식 에러"
+						HUD.indicatorView = JGProgressHUDErrorIndicatorView()
+						HUD.showInView(self.view)
+						HUD.dismissAfterDelay(1.5)
+					})
 				}
 				dispatch_async(dispatch_get_main_queue(), { () -> Void in
-					self.indicator.stopAnimating()
+					indicator.dismiss()
 				})
 			}
 		}
