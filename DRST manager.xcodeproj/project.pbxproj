@@ -13,7 +13,6 @@
 		A924C4A11C58F72300A5F507 /* DRSTKit.h in Headers */ = {isa = PBXBuildFile; fileRef = A924C4A01C58F72300A5F507 /* DRSTKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A924C4B31C58F72300A5F507 /* DRSTKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A924C49E1C58F72300A5F507 /* DRSTKit.framework */; };
 		A924C4B41C58F72300A5F507 /* DRSTKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A924C49E1C58F72300A5F507 /* DRSTKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		A924C4C11C58F78300A5F507 /* DeviceData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A924C4BC1C58F78300A5F507 /* DeviceData.swift */; };
 		A924C4C21C58F78300A5F507 /* EXP.swift in Sources */ = {isa = PBXBuildFile; fileRef = A924C4BD1C58F78300A5F507 /* EXP.swift */; };
 		A924C4C31C58F78300A5F507 /* ScreenPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = A924C4BE1C58F78300A5F507 /* ScreenPosition.swift */; };
 		A924C4C41C58F78300A5F507 /* Stamina.swift in Sources */ = {isa = PBXBuildFile; fileRef = A924C4BF1C58F78300A5F507 /* Stamina.swift */; };
@@ -22,6 +21,7 @@
 		A93E28D81C005E9C009342F3 /* TodayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A93E28D71C005E9C009342F3 /* TodayViewController.m */; };
 		A93E28DB1C005E9C009342F3 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A93E28D91C005E9C009342F3 /* MainInterface.storyboard */; };
 		A93E28DF1C005E9C009342F3 /* DRST manager.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = A93E28D11C005E9C009342F3 /* DRST manager.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		A9533D6C1C65E7B2001F97CF /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9533D6B1C65E7B2001F97CF /* Data.swift */; };
 		A962B6CE1C5CBC4200563EB4 /* DRSTNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = A962B6CD1C5CBC4200563EB4 /* DRSTNotification.swift */; };
 		A964CB991C5D05F1005F5494 /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A964CB981C5D05F1005F5494 /* EditViewController.swift */; };
 		A96BE6681C0055190091A86E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A96BE6671C0055190091A86E /* Main.storyboard */; };
@@ -94,7 +94,6 @@
 		A924C49E1C58F72300A5F507 /* DRSTKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DRSTKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A924C4A01C58F72300A5F507 /* DRSTKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DRSTKit.h; sourceTree = "<group>"; };
 		A924C4A21C58F72300A5F507 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A924C4BC1C58F78300A5F507 /* DeviceData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceData.swift; sourceTree = "<group>"; };
 		A924C4BD1C58F78300A5F507 /* EXP.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EXP.swift; sourceTree = "<group>"; };
 		A924C4BE1C58F78300A5F507 /* ScreenPosition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenPosition.swift; sourceTree = "<group>"; };
 		A924C4BF1C58F78300A5F507 /* Stamina.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stamina.swift; sourceTree = "<group>"; };
@@ -108,6 +107,7 @@
 		A93E28DA1C005E9C009342F3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		A93E28DC1C005E9C009342F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A93E29131C007999009342F3 /* DRSTm.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = DRSTm.entitlements; sourceTree = "<group>"; };
+		A9533D6B1C65E7B2001F97CF /* Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		A962B6CD1C5CBC4200563EB4 /* DRSTNotification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DRSTNotification.swift; sourceTree = "<group>"; };
 		A964CB981C5D05F1005F5494 /* EditViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
 		A96BE6671C0055190091A86E /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
@@ -166,7 +166,7 @@
 			children = (
 				A91A0F311C5CE31100AF2B1D /* DataKit.swift */,
 				A924C4A01C58F72300A5F507 /* DRSTKit.h */,
-				A924C4BC1C58F78300A5F507 /* DeviceData.swift */,
+				A9533D6B1C65E7B2001F97CF /* Data.swift */,
 				A924C4BD1C58F78300A5F507 /* EXP.swift */,
 				A924C4BE1C58F78300A5F507 /* ScreenPosition.swift */,
 				A924C4BF1C58F78300A5F507 /* Stamina.swift */,
@@ -459,10 +459,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				A924C4C31C58F78300A5F507 /* ScreenPosition.swift in Sources */,
+				A9533D6C1C65E7B2001F97CF /* Data.swift in Sources */,
 				A91A0F321C5CE31100AF2B1D /* DataKit.swift in Sources */,
 				A924C4C41C58F78300A5F507 /* Stamina.swift in Sources */,
 				A924C4C21C58F78300A5F507 /* EXP.swift in Sources */,
-				A924C4C11C58F78300A5F507 /* DeviceData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
