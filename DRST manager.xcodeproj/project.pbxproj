@@ -18,10 +18,10 @@
 		A924C4C41C58F78300A5F507 /* Stamina.swift in Sources */ = {isa = PBXBuildFile; fileRef = A924C4BF1C58F78300A5F507 /* Stamina.swift */; };
 		A924C4C61C58FB0D00A5F507 /* tessdata in Resources */ = {isa = PBXBuildFile; fileRef = A924C4C51C58FB0D00A5F507 /* tessdata */; };
 		A92B5AC11C58FDF200AB976B /* DRSTOCR.swift in Sources */ = {isa = PBXBuildFile; fileRef = A92B5AC01C58FDF200AB976B /* DRSTOCR.swift */; };
-		A93E28D81C005E9C009342F3 /* TodayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A93E28D71C005E9C009342F3 /* TodayViewController.m */; };
 		A93E28DB1C005E9C009342F3 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A93E28D91C005E9C009342F3 /* MainInterface.storyboard */; };
 		A93E28DF1C005E9C009342F3 /* DRST manager.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = A93E28D11C005E9C009342F3 /* DRST manager.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		A9533D6C1C65E7B2001F97CF /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9533D6B1C65E7B2001F97CF /* Data.swift */; };
+		A9533D6E1C66487B001F97CF /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9533D6D1C66487B001F97CF /* TodayViewController.swift */; };
 		A962B6CE1C5CBC4200563EB4 /* DRSTNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = A962B6CD1C5CBC4200563EB4 /* DRSTNotification.swift */; };
 		A964CB991C5D05F1005F5494 /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A964CB981C5D05F1005F5494 /* EditViewController.swift */; };
 		A96BE6681C0055190091A86E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A96BE6671C0055190091A86E /* Main.storyboard */; };
@@ -102,12 +102,11 @@
 		A92B5AC01C58FDF200AB976B /* DRSTOCR.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DRSTOCR.swift; sourceTree = "<group>"; };
 		A93E28D11C005E9C009342F3 /* DRST manager.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "DRST manager.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A93E28D31C005E9C009342F3 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
-		A93E28D61C005E9C009342F3 /* TodayViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TodayViewController.h; sourceTree = "<group>"; };
-		A93E28D71C005E9C009342F3 /* TodayViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TodayViewController.m; sourceTree = "<group>"; };
 		A93E28DA1C005E9C009342F3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		A93E28DC1C005E9C009342F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A93E29131C007999009342F3 /* DRSTm.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = DRSTm.entitlements; sourceTree = "<group>"; };
 		A9533D6B1C65E7B2001F97CF /* Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		A9533D6D1C66487B001F97CF /* TodayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
 		A962B6CD1C5CBC4200563EB4 /* DRSTNotification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DRSTNotification.swift; sourceTree = "<group>"; };
 		A964CB981C5D05F1005F5494 /* EditViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
 		A96BE6671C0055190091A86E /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
@@ -188,8 +187,7 @@
 			isa = PBXGroup;
 			children = (
 				A9C6BCB11C00B7FD00EE6526 /* DRST manager.entitlements */,
-				A93E28D61C005E9C009342F3 /* TodayViewController.h */,
-				A93E28D71C005E9C009342F3 /* TodayViewController.m */,
+				A9533D6D1C66487B001F97CF /* TodayViewController.swift */,
 				A93E28D91C005E9C009342F3 /* MainInterface.storyboard */,
 				A93E28DC1C005E9C009342F3 /* Info.plist */,
 			);
@@ -470,7 +468,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A93E28D81C005E9C009342F3 /* TodayViewController.m in Sources */,
+				A9533D6E1C66487B001F97CF /* TodayViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -576,6 +574,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = "DRSTm Widget/DRST manager.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -586,6 +585,7 @@
 				PRODUCT_NAME = "DRST manager";
 				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -593,6 +593,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = "DRSTm Widget/DRST manager.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";

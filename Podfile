@@ -5,6 +5,7 @@
 
 target 'DRST manager' do
 	pod 'TesseractOCRiOS', :git => 'https://github.com/gali8/Tesseract-OCR-iOS.git'
+	pod 'MBProgressHUD', '~> 0.9.2'
 end
 
 target 'DRSTm Widget' do
