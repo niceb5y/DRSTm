@@ -16,22 +16,22 @@ public class ScreenPosition: NSObject {
 	
 	/**
 	Type of device
-	* phone_pod: 16:9 display
-	* pad: 4:3 display
+	* phone_pod: 16: 9 display
+	* pad: 4: 3 display
 	*/
-	public enum DeviceType:Int {
+	public enum DeviceType: Int {
 		case phone_pod, pad
 	}
 	
 	/**
 	Level area
 	- author: niceb5y
-	- parameters:
+	- parameters: 
 		- width: Width of screen
 		- type: Type of device
 	- returns: CGRect of level area
 	*/
-	public static func levelArea(width:Double, type:DeviceType) -> CGRect {
+	public static func levelArea(width: Double, type: DeviceType) -> CGRect {
 		if type == DeviceType.phone_pod {
 			return CGRectMake(CGFloat(0.13 * width), CGFloat(0.013 * width), CGFloat(0.043 * width), CGFloat(0.016 * width))
 		} else {
@@ -42,12 +42,12 @@ public class ScreenPosition: NSObject {
 	/**
 	EXP area
 	- author: niceb5y
-	- parameters:
-	- width: Width of screen
-	- type: Type of device
+	- parameters: 
+		- width: Width of screen
+		- type: Type of device
 	- returns: CGRect of exp area
 	*/
-	public static func expArea(width:Double, type:DeviceType) -> CGRect {
+	public static func expArea(width: Double, type: DeviceType) -> CGRect {
 		if type == DeviceType.phone_pod {
 			return CGRectMake(CGFloat(0.13 * width), CGFloat(0.035 * width), CGFloat(0.08 * width), CGFloat(0.014 * width))
 		} else {
@@ -59,11 +59,11 @@ public class ScreenPosition: NSObject {
 	Stamina area
 	- author: niceb5y
 	- parameters:
-	- width: Width of screen
-	- type: Type of device
+		- width: Width of screen
+		- type: Type of device
 	- returns: CGRect of stamina area
 	*/
-	public static func staminaArea(width:Double, type:DeviceType) -> CGRect {
+	public static func staminaArea(width: Double, type: DeviceType) -> CGRect {
 		if type == DeviceType.phone_pod {
 			return CGRectMake(CGFloat(0.28 * width), CGFloat(0.035 * width), CGFloat(0.063 * width), CGFloat(0.014 * width))
 		} else {
@@ -74,12 +74,12 @@ public class ScreenPosition: NSObject {
 	/**
 	Time left area
 	- author: niceb5y
-	- parameters:
-	- width: Width of screen
-	- type: Type of device
+	- parameters: 
+		- width: Width of screen
+		- type: Type of device
 	- returns: CGRect of time left area
 	*/
-	public static func timeArea(width:Double, type:DeviceType) -> CGRect {
+	public static func timeArea(width: Double, type: DeviceType) -> CGRect {
 		if type == DeviceType.phone_pod {
 			return CGRectMake(CGFloat(0.304 * width), CGFloat(0.013 * width), CGFloat(0.04 * width), CGFloat(0.016 * width))
 		} else {

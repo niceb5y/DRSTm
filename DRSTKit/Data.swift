@@ -8,17 +8,35 @@
 
 import UIKit
 
+/**
+User data for DRSTm
+- author: niceb5y
+*/
 public class Data: NSObject {
 	
+	/**
+	User group of deresute account.
+	* Group A ~ H
+	*/
 	public enum UserGroup: Int {
 		case A, B, C, D, E, F, G, H
 	}
 	
+	/**
+	Level of deresute songs.
+	* Debut
+	* Regular
+	* Pro
+	* Master
+	*/
 	public enum SongLevel: Int {
 		case Debut, Regular, Pro, Master
 	}
 	
-	var deviceData: Array<Device> {
+	/**
+	Array of user device data.
+	*/
+	public var deviceData: Array<Device> {
 		get {
 			var _deviceData = Helper.loadObject("DeviceData", fromCloud: notificationEnabled) as? Array<Device>
 			if _deviceData == nil {
@@ -33,7 +51,10 @@ public class Data: NSObject {
 		}
 	}
 	
-	var notificationEnabled: Bool {
+	/**
+	If notification is enabled by user.
+	*/
+	public var notificationEnabled: Bool {
 		get {
 			var _notificationEnabled: Bool? = Helper.loadBool("NotificationEnabled")
 			if _notificationEnabled == nil {
@@ -47,11 +68,24 @@ public class Data: NSObject {
 		}
 	}
 	
+	/**
+	User device data for DRSTm
+	- author: niceb5y
+	*/
 	public class Device: NSObject, NSCoding {
+		/**
+		Current version of object
+		*/
 		let version: Int = 0
 		
+		/**
+		Internal variables
+		*/
 		var _level: Int = 1, _exp: Int = 0, _stamina: Int = 0
 		
+		/**
+		Deresute level
+		*/
 		public var level: Int {
 			get {
 				return _level
@@ -65,6 +99,9 @@ public class Data: NSObject {
 			}
 		}
 		
+		/**
+		Current deresute EXP
+		*/
 		public var exp: Int {
 			get {
 				return _exp
@@ -78,12 +115,18 @@ public class Data: NSObject {
 			}
 		}
 		
+		/**
+		Maximum deresute EXP
+		*/
 		public var expMax: Int {
 			get {
 				return EXP.expAtLevel(level)
 			}
 		}
 		
+		/**
+		Current deresute stamina
+		*/
 		var stamina: Int {
 			get {
 				return _stamina
@@ -97,18 +140,33 @@ public class Data: NSObject {
 			}
 		}
 		
+		/**
+		Maximum deresute stamina
+		*/
 		var staminaMax: Int {
 			get {
 				return Stamina.staminaAtLevel(level)
 			}
 		}
 		
+		/**
+		Edited Date
+		*/
 		var date: NSDate = NSDate.init()
 		
+		/**
+		Deresute user group
+		*/
 		var group: UserGroup = UserGroup.A
 		
+		/**
+		Preferred deresute song level
+		*/
 		var preferLevel = SongLevel.Debut
 		
+		/**
+		Preferred deresute event song level
+		*/
 		var preferEventLevel = SongLevel.Debut
 		
 		public override init() {
@@ -139,28 +197,64 @@ public class Data: NSObject {
 		}
 	}
 	
+	/**
+	User data managemant class for DRSTm
+	- author: niceb5y
+	*/
 	class Helper: NSObject {
 		static let defaults = NSUserDefaults(suiteName: "group.com.niceb5y.drstm")!
 		static let store = NSUbiquitousKeyValueStore.defaultStore()
 		
-		static func saveObject(value: AnyObject, forKey: String) -> Bool? {
-			defaults.setObject(value, forKey: forKey)
-			return defaults.synchronize()
-		}
 		
+		/**
+		Load object from local NSUserDefaults
+		- author: niceb5y
+		- parameters:
+			- key: Key of object
+		- returns: Objects
+		*/
 		static func loadObject(key: String) -> AnyObject? {
 			return defaults.objectForKey(key)
 		}
 		
-		static func saveBool(value: Bool, forKey: String) -> Bool? {
-			defaults.setBool(value, forKey: forKey)
+		/**
+		Load object from local NSUserDefaults or NSUbiquitousKeyValueStore
+		- author: niceb5y
+		- parameters:
+			- key: Key of object
+			- fromCloud: If data should loaded from iCloud
+		- returns: Objects
+		*/
+		static func loadObject(key: String, fromCloud: Bool) -> AnyObject? {
+			if fromCloud {
+				return store.objectForKey(key)
+			} else {
+				return self.loadObject(key)
+			}
+		}
+		
+		/**
+		Save object to local NSUserDefaults
+		- author: niceb5y
+		- parameters:
+			- value: Object to save
+			- forKey: Key of object
+		- returns: If save is success
+		*/
+		static func saveObject(value: AnyObject, forKey: String) -> Bool? {
+			defaults.setObject(value, forKey: forKey)
 			return defaults.synchronize()
 		}
-		
-		static func loadBool(key: String) -> Bool? {
-			return defaults.boolForKey(key)
-		}
-		
+
+		/**
+		Save object to local NSUserDefaults or NSUbiquitousKeyValueStore
+		- author: niceb5y
+		- parameters:
+			- value: Object to save
+			- forKey: Key of object
+			- toCloud: If data should saved to iCloud
+		- returns: If save is success
+		*/
 		static func saveObject(value: AnyObject, forKey: String, toCloud: Bool) -> Bool? {
 			var result = Helper.saveObject(value, forKey: forKey)
 			if toCloud {
@@ -170,14 +264,54 @@ public class Data: NSObject {
 			return result
 		}
 		
-		static func loadObject(key: String, fromCloud: Bool) -> AnyObject? {
+		/**
+		Load bool value from local NSUserDefaults
+		- author: niceb5y
+		- parameters:
+			- key: Key of object
+		- returns: Bool value
+		*/
+		static func loadBool(key: String) -> Bool? {
+			return defaults.boolForKey(key)
+		}
+		
+		/**
+		Load bool value from local NSUserDefaults or NSUbiquitousKeyValueStore
+		- author: niceb5y
+		- parameters:
+			- key: Key of object
+		- returns: Bool value
+		*/
+		static func loadBool(key: String, fromCloud: Bool) -> Bool? {
 			if fromCloud {
-				return store.objectForKey(key)
+				return store.boolForKey(key)
 			} else {
-				return self.loadObject(key)
+				return self.loadBool(key)
 			}
 		}
 		
+		/**
+		Save bool value to local NSUserDefaults
+		- author: niceb5y
+		- parameters:
+			- value: Bool value to save
+			- forKey: Key of value
+		- returns: If save is success
+		*/
+		static func saveBool(value: Bool, forKey: String) -> Bool? {
+			defaults.setBool(value, forKey: forKey)
+			return defaults.synchronize()
+		}
+		
+		/**
+		Save bool value to local NSUserDefaults or NSUbiquitousKeyValueStore
+		- author: niceb5y
+		- parameters:
+			- value: Bool value to save
+			- forKey: Key of value
+			- toCloud: If data should saved to iCloud
+		- returns: If save is success
+		*/
 		static func saveBool(value: Bool, forKey: String, toCloud: Bool) -> Bool? {
 			var result = Helper.saveBool(value, forKey: forKey)
 			if toCloud {
@@ -187,17 +321,11 @@ public class Data: NSObject {
 			return result
 		}
 		
-		static func loadBool(key: String, fromCloud: Bool) -> Bool? {
-			if fromCloud {
-				return store.boolForKey(key)
-			} else {
-				return self.loadBool(key)
-			}
-		}
 	}
 	
 	public class LegacyMigrator {
-		public func migrate() {
+		@available(*, unavailable, message="Not implemented yet.")
+		public static func migrate() {
 			//TODO: 마이그레이션 구현
 		}
 	}
