@@ -10,20 +10,49 @@ import UIKit
 
 public class Data: NSObject {
 	
-	enum UserGroup:Int {
+	public enum UserGroup: Int {
 		case A, B, C, D, E, F, G, H
 	}
 	
-	enum PreferLevel:Int {
+	public enum SongLevel: Int {
 		case Debut, Regular, Pro, Master
 	}
 	
-	//TODO:인터페이스 구현
-	class Device: NSObject, NSCoding {
-		let version:Int = 0;
-		var _level:Int = 1, _exp:Int = 0, _stamina:Int = 0
+	var deviceData: Array<Device> {
+		get {
+			var _deviceData = Helper.loadObject("DeviceData", fromCloud: notificationEnabled) as? Array<Device>
+			if _deviceData == nil {
+				_deviceData = Array<Device>()
+				_deviceData?.append(Device())
+			}
+			return _deviceData!
+		}
 		
-		var level:Int {
+		set(deviceData) {
+			Helper.saveObject(deviceData, forKey: "DeviceData", toCloud: notificationEnabled)
+		}
+	}
+	
+	var notificationEnabled: Bool {
+		get {
+			var _notificationEnabled: Bool? = Helper.loadBool("NotificationEnabled")
+			if _notificationEnabled == nil {
+				_notificationEnabled = false
+			}
+			return _notificationEnabled!
+		}
+		
+		set(notificationEnabled) {
+			Helper.saveBool(notificationEnabled, forKey: "NotificationEnabled")
+		}
+	}
+	
+	public class Device: NSObject, NSCoding {
+		let version: Int = 0
+		
+		var _level: Int = 1, _exp: Int = 0, _stamina: Int = 0
+		
+		public var level: Int {
 			get {
 				return _level
 			}
@@ -36,7 +65,7 @@ public class Data: NSObject {
 			}
 		}
 		
-		var exp:Int {
+		public var exp: Int {
 			get {
 				return _exp
 			}
@@ -49,13 +78,13 @@ public class Data: NSObject {
 			}
 		}
 		
-		var expMax:Int {
+		public var expMax: Int {
 			get {
 				return EXP.expAtLevel(level)
 			}
 		}
 		
-		var stamina:Int {
+		var stamina: Int {
 			get {
 				return _stamina
 			}
@@ -68,68 +97,71 @@ public class Data: NSObject {
 			}
 		}
 		
-		var staminaMax:Int {
+		var staminaMax: Int {
 			get {
-				return Stamina.staminaAtLevel(level);
+				return Stamina.staminaAtLevel(level)
 			}
 		}
 		
-		var date:NSDate = NSDate.init()
+		var date: NSDate = NSDate.init()
 		
-		var group:UserGroup = UserGroup.A;
+		var group: UserGroup = UserGroup.A
 		
-		init(level:Int, exp:Int, stamina:Int, date:NSDate, group:UserGroup) {
+		var preferLevel = SongLevel.Debut
+		
+		var preferEventLevel = SongLevel.Debut
+		
+		public override init() {
 			super.init()
-			self.level = level
-			self.exp = exp
-			self.stamina = stamina
-			self.date = date
-			self.group = group
 		}
 		
-		required init?(coder aDecoder: NSCoder) {
+		public required init?(coder aDecoder: NSCoder) {
 			super.init()
 			_level = aDecoder.decodeIntegerForKey("level")
 			_exp = aDecoder.decodeIntegerForKey("exp")
 			_stamina = aDecoder.decodeIntegerForKey("stamina")
 			date = aDecoder.decodeObjectForKey("date") as! NSDate
 			group = UserGroup(rawValue: aDecoder.decodeIntegerForKey("group"))!
+			preferLevel = SongLevel(rawValue: aDecoder.decodeIntegerForKey("preferLevel"))!
+			preferEventLevel = SongLevel(rawValue: aDecoder.decodeIntegerForKey("preferEventLevel"))!
 		}
 
 		
-		func encodeWithCoder(aCoder: NSCoder) {
+		public func encodeWithCoder(aCoder: NSCoder) {
 			aCoder.encodeInteger(version, forKey: "version")
 			aCoder.encodeInteger(_level, forKey: "level")
 			aCoder.encodeInteger(_exp, forKey: "exp")
 			aCoder.encodeInteger(_stamina, forKey: "stamina")
-			aCoder.encodeObject(date, forKey:"date")
+			aCoder.encodeObject(date, forKey: "date")
 			aCoder.encodeInteger(group.rawValue, forKey: "group")
+			aCoder.encodeInteger(preferLevel.rawValue, forKey: "preferLevel")
+			aCoder.encodeInteger(preferEventLevel.rawValue, forKey: "preferEventLevel")
 		}
 	}
 	
 	class Helper: NSObject {
-		static let defaults = NSUserDefaults(suiteName:"group.com.niceb5y.drstm")!
+		static let defaults = NSUserDefaults(suiteName: "group.com.niceb5y.drstm")!
 		static let store = NSUbiquitousKeyValueStore.defaultStore()
 		
-		static func saveObject(value:AnyObject, forKey:String) -> Bool? {
+		static func saveObject(value: AnyObject, forKey: String) -> Bool? {
 			defaults.setObject(value, forKey: forKey)
 			return defaults.synchronize()
 		}
 		
-		static func loadObject(key:String) -> AnyObject? {
+		static func loadObject(key: String) -> AnyObject? {
 			return defaults.objectForKey(key)
 		}
 		
-		static func saveBool(value:Bool, forKey: String) -> Bool? {
+		static func saveBool(value: Bool, forKey: String) -> Bool? {
 			defaults.setBool(value, forKey: forKey)
 			return defaults.synchronize()
 		}
 		
-		static func loadBool(key:String) -> Bool? {
+		static func loadBool(key: String) -> Bool? {
 			return defaults.boolForKey(key)
 		}
 		
-		static func saveObject(value:AnyObject, forKey:String, toCloud:Bool) -> Bool? {
+		static func saveObject(value: AnyObject, forKey: String, toCloud: Bool) -> Bool? {
 			var result = Helper.saveObject(value, forKey: forKey)
 			if toCloud {
 				store.setObject(value, forKey: forKey)
@@ -138,7 +170,7 @@ public class Data: NSObject {
 			return result
 		}
 		
-		static func loadObject(key:String, fromCloud:Bool) -> AnyObject? {
+		static func loadObject(key: String, fromCloud: Bool) -> AnyObject? {
 			if fromCloud {
 				return store.objectForKey(key)
 			} else {
@@ -146,7 +178,7 @@ public class Data: NSObject {
 			}
 		}
 		
-		static func saveBool(value:Bool, forKey: String, toCloud:Bool) -> Bool? {
+		static func saveBool(value: Bool, forKey: String, toCloud: Bool) -> Bool? {
 			var result = Helper.saveBool(value, forKey: forKey)
 			if toCloud {
 				store.setBool(value, forKey: forKey)
@@ -155,7 +187,7 @@ public class Data: NSObject {
 			return result
 		}
 		
-		static func loadBool(key:String, fromCloud:Bool) -> Bool? {
+		static func loadBool(key: String, fromCloud: Bool) -> Bool? {
 			if fromCloud {
 				return store.boolForKey(key)
 			} else {
