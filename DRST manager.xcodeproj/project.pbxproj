@@ -13,20 +13,20 @@
 		A924C4A11C58F72300A5F507 /* DRSTKit.h in Headers */ = {isa = PBXBuildFile; fileRef = A924C4A01C58F72300A5F507 /* DRSTKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A924C4B31C58F72300A5F507 /* DRSTKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A924C49E1C58F72300A5F507 /* DRSTKit.framework */; };
 		A924C4B41C58F72300A5F507 /* DRSTKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A924C49E1C58F72300A5F507 /* DRSTKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		A924C4C21C58F78300A5F507 /* EXP.swift in Sources */ = {isa = PBXBuildFile; fileRef = A924C4BD1C58F78300A5F507 /* EXP.swift */; };
-		A924C4C31C58F78300A5F507 /* ScreenPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = A924C4BE1C58F78300A5F507 /* ScreenPosition.swift */; };
-		A924C4C41C58F78300A5F507 /* Stamina.swift in Sources */ = {isa = PBXBuildFile; fileRef = A924C4BF1C58F78300A5F507 /* Stamina.swift */; };
+		A924C4C21C58F78300A5F507 /* DRSTEXP.swift in Sources */ = {isa = PBXBuildFile; fileRef = A924C4BD1C58F78300A5F507 /* DRSTEXP.swift */; };
+		A924C4C31C58F78300A5F507 /* DRSTScreenPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = A924C4BE1C58F78300A5F507 /* DRSTScreenPosition.swift */; };
+		A924C4C41C58F78300A5F507 /* DRSTStamina.swift in Sources */ = {isa = PBXBuildFile; fileRef = A924C4BF1C58F78300A5F507 /* DRSTStamina.swift */; };
 		A924C4C61C58FB0D00A5F507 /* tessdata in Resources */ = {isa = PBXBuildFile; fileRef = A924C4C51C58FB0D00A5F507 /* tessdata */; };
 		A92B5AC11C58FDF200AB976B /* DRSTOCR.swift in Sources */ = {isa = PBXBuildFile; fileRef = A92B5AC01C58FDF200AB976B /* DRSTOCR.swift */; };
 		A93E28DB1C005E9C009342F3 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A93E28D91C005E9C009342F3 /* MainInterface.storyboard */; };
 		A93E28DF1C005E9C009342F3 /* DRST manager.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = A93E28D11C005E9C009342F3 /* DRST manager.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		A9533D6C1C65E7B2001F97CF /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9533D6B1C65E7B2001F97CF /* Data.swift */; };
+		A9533D6C1C65E7B2001F97CF /* DRSTData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9533D6B1C65E7B2001F97CF /* DRSTData.swift */; };
 		A9533D6E1C66487B001F97CF /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9533D6D1C66487B001F97CF /* TodayViewController.swift */; };
 		A962B6CE1C5CBC4200563EB4 /* DRSTNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = A962B6CD1C5CBC4200563EB4 /* DRSTNotification.swift */; };
 		A964CB991C5D05F1005F5494 /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A964CB981C5D05F1005F5494 /* EditViewController.swift */; };
 		A96BE6681C0055190091A86E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A96BE6671C0055190091A86E /* Main.storyboard */; };
-		A9A330F11C696F0200D8CA25 /* Data.Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A330F01C696F0200D8CA25 /* Data.Helper.swift */; };
-		A9A330F31C696F6E00D8CA25 /* Data.Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A330F21C696F6E00D8CA25 /* Data.Device.swift */; };
+		A9A330F11C696F0200D8CA25 /* DRSTData.Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A330F01C696F0200D8CA25 /* DRSTData.Helper.swift */; };
+		A9A330F31C696F6E00D8CA25 /* DRSTData.Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A330F21C696F6E00D8CA25 /* DRSTData.Device.swift */; };
 		A9B94FB71C5CC1D40021A516 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B94FB61C5CC1D40021A516 /* InfoViewController.swift */; };
 		A9BF25891C13086B00A3E2A5 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A93E28D31C005E9C009342F3 /* NotificationCenter.framework */; };
 		A9D955591BFF748300B583B4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A9D955581BFF748300B583B4 /* main.m */; };
@@ -96,9 +96,9 @@
 		A924C49E1C58F72300A5F507 /* DRSTKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DRSTKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A924C4A01C58F72300A5F507 /* DRSTKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DRSTKit.h; sourceTree = "<group>"; };
 		A924C4A21C58F72300A5F507 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A924C4BD1C58F78300A5F507 /* EXP.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EXP.swift; sourceTree = "<group>"; };
-		A924C4BE1C58F78300A5F507 /* ScreenPosition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenPosition.swift; sourceTree = "<group>"; };
-		A924C4BF1C58F78300A5F507 /* Stamina.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stamina.swift; sourceTree = "<group>"; };
+		A924C4BD1C58F78300A5F507 /* DRSTEXP.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DRSTEXP.swift; sourceTree = "<group>"; };
+		A924C4BE1C58F78300A5F507 /* DRSTScreenPosition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DRSTScreenPosition.swift; sourceTree = "<group>"; };
+		A924C4BF1C58F78300A5F507 /* DRSTStamina.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DRSTStamina.swift; sourceTree = "<group>"; };
 		A924C4C51C58FB0D00A5F507 /* tessdata */ = {isa = PBXFileReference; lastKnownFileType = folder; path = tessdata; sourceTree = "<group>"; };
 		A92B5ABF1C58FDF100AB976B /* DRST manager-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DRST manager-Bridging-Header.h"; sourceTree = "<group>"; };
 		A92B5AC01C58FDF200AB976B /* DRSTOCR.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DRSTOCR.swift; sourceTree = "<group>"; };
@@ -107,13 +107,13 @@
 		A93E28DA1C005E9C009342F3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		A93E28DC1C005E9C009342F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A93E29131C007999009342F3 /* DRSTm.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = DRSTm.entitlements; sourceTree = "<group>"; };
-		A9533D6B1C65E7B2001F97CF /* Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		A9533D6B1C65E7B2001F97CF /* DRSTData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DRSTData.swift; sourceTree = "<group>"; };
 		A9533D6D1C66487B001F97CF /* TodayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
 		A962B6CD1C5CBC4200563EB4 /* DRSTNotification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DRSTNotification.swift; sourceTree = "<group>"; };
 		A964CB981C5D05F1005F5494 /* EditViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
 		A96BE6671C0055190091A86E /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		A9A330F01C696F0200D8CA25 /* Data.Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Data.Helper.swift; sourceTree = "<group>"; };
-		A9A330F21C696F6E00D8CA25 /* Data.Device.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Data.Device.swift; sourceTree = "<group>"; };
+		A9A330F01C696F0200D8CA25 /* DRSTData.Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DRSTData.Helper.swift; sourceTree = "<group>"; };
+		A9A330F21C696F6E00D8CA25 /* DRSTData.Device.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DRSTData.Device.swift; sourceTree = "<group>"; };
 		A9B94FB61C5CC1D40021A516 /* InfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		A9C6BCB11C00B7FD00EE6526 /* DRST manager.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "DRST manager.entitlements"; sourceTree = "<group>"; };
 		A9D955541BFF748300B583B4 /* DRSTm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DRSTm.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -169,12 +169,12 @@
 			children = (
 				A91A0F311C5CE31100AF2B1D /* DataKit.swift */,
 				A924C4A01C58F72300A5F507 /* DRSTKit.h */,
-				A9533D6B1C65E7B2001F97CF /* Data.swift */,
-				A9A330F21C696F6E00D8CA25 /* Data.Device.swift */,
-				A9A330F01C696F0200D8CA25 /* Data.Helper.swift */,
-				A924C4BD1C58F78300A5F507 /* EXP.swift */,
-				A924C4BE1C58F78300A5F507 /* ScreenPosition.swift */,
-				A924C4BF1C58F78300A5F507 /* Stamina.swift */,
+				A9533D6B1C65E7B2001F97CF /* DRSTData.swift */,
+				A9A330F21C696F6E00D8CA25 /* DRSTData.Device.swift */,
+				A9A330F01C696F0200D8CA25 /* DRSTData.Helper.swift */,
+				A924C4BD1C58F78300A5F507 /* DRSTEXP.swift */,
+				A924C4BE1C58F78300A5F507 /* DRSTScreenPosition.swift */,
+				A924C4BF1C58F78300A5F507 /* DRSTStamina.swift */,
 				A924C4A21C58F72300A5F507 /* Info.plist */,
 			);
 			path = DRSTKit;
@@ -462,13 +462,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A924C4C31C58F78300A5F507 /* ScreenPosition.swift in Sources */,
-				A9533D6C1C65E7B2001F97CF /* Data.swift in Sources */,
-				A9A330F11C696F0200D8CA25 /* Data.Helper.swift in Sources */,
-				A9A330F31C696F6E00D8CA25 /* Data.Device.swift in Sources */,
+				A924C4C31C58F78300A5F507 /* DRSTScreenPosition.swift in Sources */,
+				A9533D6C1C65E7B2001F97CF /* DRSTData.swift in Sources */,
+				A9A330F11C696F0200D8CA25 /* DRSTData.Helper.swift in Sources */,
+				A9A330F31C696F6E00D8CA25 /* DRSTData.Device.swift in Sources */,
 				A91A0F321C5CE31100AF2B1D /* DataKit.swift in Sources */,
-				A924C4C41C58F78300A5F507 /* Stamina.swift in Sources */,
-				A924C4C21C58F78300A5F507 /* EXP.swift in Sources */,
+				A924C4C41C58F78300A5F507 /* DRSTStamina.swift in Sources */,
+				A924C4C21C58F78300A5F507 /* DRSTEXP.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

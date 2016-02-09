@@ -37,8 +37,8 @@ class DRSTOCR: NSObject, G8TesseractDelegate {
 	func getLevelOf(image:UIImage) throws -> Int {
 		tesseract.charWhitelist = "01234567890"
 		tesseract.image = Helper.Image.convertToGrayScale(image)
-		let devicetype = tesseract.image.size.width / tesseract.image.size.height < 1.5 ? ScreenPosition.DeviceType.pad : ScreenPosition.DeviceType.phone_pod
-		tesseract.rect = ScreenPosition.levelArea(Double(image.size.width), type: devicetype)
+		let devicetype = tesseract.image.size.width / tesseract.image.size.height < 1.5 ? DRSTScreenPosition.DeviceType.pad : DRSTScreenPosition.DeviceType.phone_pod
+		tesseract.rect = DRSTScreenPosition.levelArea(Double(image.size.width), type: devicetype)
 		tesseract.recognize()
 		let text = tesseract.recognizedText.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())
 		if let result = Int(text) {
@@ -59,8 +59,8 @@ class DRSTOCR: NSObject, G8TesseractDelegate {
 	func getStaminaOf(image:UIImage) throws -> Int {
 		tesseract.charWhitelist = "01234567890/"
 		tesseract.image = Helper.Image.convertToGrayScale(image)
-		let devicetype = tesseract.image.size.width / tesseract.image.size.height < 1.5 ? ScreenPosition.DeviceType.pad : ScreenPosition.DeviceType.phone_pod
-		tesseract.rect = ScreenPosition.staminaArea(Double(image.size.width), type: devicetype)
+		let devicetype = tesseract.image.size.width / tesseract.image.size.height < 1.5 ? DRSTScreenPosition.DeviceType.pad : DRSTScreenPosition.DeviceType.phone_pod
+		tesseract.rect = DRSTScreenPosition.staminaArea(Double(image.size.width), type: devicetype)
 		tesseract.recognize()
 		let text = tesseract.recognizedText.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())
 		if text.containsString("/") {
@@ -86,8 +86,8 @@ class DRSTOCR: NSObject, G8TesseractDelegate {
 	func getEXPOf(image:UIImage) throws -> Int {
 		tesseract.charWhitelist = "01234567890/"
 		tesseract.image = Helper.Image.convertToGrayScale(image)
-		let devicetype = tesseract.image.size.width / tesseract.image.size.height < 1.5 ? ScreenPosition.DeviceType.pad : ScreenPosition.DeviceType.phone_pod
-		tesseract.rect = ScreenPosition.expArea(Double(image.size.width), type: devicetype)
+		let devicetype = tesseract.image.size.width / tesseract.image.size.height < 1.5 ? DRSTScreenPosition.DeviceType.pad : DRSTScreenPosition.DeviceType.phone_pod
+		tesseract.rect = DRSTScreenPosition.expArea(Double(image.size.width), type: devicetype)
 		tesseract.recognize()
 		let text = tesseract.recognizedText.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())
 		if text.containsString("/") {

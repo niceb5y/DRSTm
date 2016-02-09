@@ -111,7 +111,7 @@ class EditViewController: UIViewController, UIImagePickerControllerDelegate, UIN
 				let level = try? ocr.getLevelOf(image)
 				if level != nil {
 					dispatch_async(dispatch_get_main_queue(), { () -> Void in
-						self.setMaximumValue(Stamina.staminaAtLevel(level!))
+						self.setMaximumValue(DRSTStamina.staminaAtLevel(level!))
 					})
 				} else {
 					dispatch_async(dispatch_get_main_queue(), { () -> Void in

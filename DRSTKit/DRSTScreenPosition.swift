@@ -12,7 +12,7 @@ import UIKit
 Deresute UI screen position for OCR
 - author: niceb5y
 */
-public class ScreenPosition: NSObject {
+public class DRSTScreenPosition: NSObject {
 	
 	/**
 	Type of device

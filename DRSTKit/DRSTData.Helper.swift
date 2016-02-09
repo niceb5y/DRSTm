@@ -8,7 +8,7 @@
 
 import UIKit
 
-extension Data {
+extension DRSTData {
 	
 	/**
 	User data managemant class for DRSTm

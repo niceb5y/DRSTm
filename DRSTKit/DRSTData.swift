@@ -12,7 +12,7 @@ import UIKit
 User data for DRSTm
 - author: niceb5y
 */
-public class Data: NSObject {
+public class DRSTData: NSObject {
 	
 	/**
 	User group of deresute account.

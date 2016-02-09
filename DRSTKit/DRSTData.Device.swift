@@ -8,7 +8,7 @@
 
 import UIKit
 
-extension Data {
+extension DRSTData {
 	
 	/**
 	User device data for DRSTm
@@ -62,7 +62,7 @@ extension Data {
 		*/
 		public var expMax: Int {
 			get {
-				return EXP.expAtLevel(level)
+				return DRSTEXP.expAtLevel(level)
 			}
 		}
 		
@@ -87,7 +87,7 @@ extension Data {
 		*/
 		var staminaMax: Int {
 			get {
-				return Stamina.staminaAtLevel(level)
+				return DRSTStamina.staminaAtLevel(level)
 			}
 		}
 		
