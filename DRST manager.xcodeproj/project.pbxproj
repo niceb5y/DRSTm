@@ -25,6 +25,8 @@
 		A962B6CE1C5CBC4200563EB4 /* DRSTNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = A962B6CD1C5CBC4200563EB4 /* DRSTNotification.swift */; };
 		A964CB991C5D05F1005F5494 /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A964CB981C5D05F1005F5494 /* EditViewController.swift */; };
 		A96BE6681C0055190091A86E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A96BE6671C0055190091A86E /* Main.storyboard */; };
+		A9A330F11C696F0200D8CA25 /* Data.Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A330F01C696F0200D8CA25 /* Data.Helper.swift */; };
+		A9A330F31C696F6E00D8CA25 /* Data.Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A330F21C696F6E00D8CA25 /* Data.Device.swift */; };
 		A9B94FB71C5CC1D40021A516 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B94FB61C5CC1D40021A516 /* InfoViewController.swift */; };
 		A9BF25891C13086B00A3E2A5 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A93E28D31C005E9C009342F3 /* NotificationCenter.framework */; };
 		A9D955591BFF748300B583B4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A9D955581BFF748300B583B4 /* main.m */; };
@@ -110,6 +112,8 @@
 		A962B6CD1C5CBC4200563EB4 /* DRSTNotification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DRSTNotification.swift; sourceTree = "<group>"; };
 		A964CB981C5D05F1005F5494 /* EditViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
 		A96BE6671C0055190091A86E /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		A9A330F01C696F0200D8CA25 /* Data.Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Data.Helper.swift; sourceTree = "<group>"; };
+		A9A330F21C696F6E00D8CA25 /* Data.Device.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Data.Device.swift; sourceTree = "<group>"; };
 		A9B94FB61C5CC1D40021A516 /* InfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		A9C6BCB11C00B7FD00EE6526 /* DRST manager.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "DRST manager.entitlements"; sourceTree = "<group>"; };
 		A9D955541BFF748300B583B4 /* DRSTm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DRSTm.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -166,6 +170,8 @@
 				A91A0F311C5CE31100AF2B1D /* DataKit.swift */,
 				A924C4A01C58F72300A5F507 /* DRSTKit.h */,
 				A9533D6B1C65E7B2001F97CF /* Data.swift */,
+				A9A330F21C696F6E00D8CA25 /* Data.Device.swift */,
+				A9A330F01C696F0200D8CA25 /* Data.Helper.swift */,
 				A924C4BD1C58F78300A5F507 /* EXP.swift */,
 				A924C4BE1C58F78300A5F507 /* ScreenPosition.swift */,
 				A924C4BF1C58F78300A5F507 /* Stamina.swift */,
@@ -458,6 +464,8 @@
 			files = (
 				A924C4C31C58F78300A5F507 /* ScreenPosition.swift in Sources */,
 				A9533D6C1C65E7B2001F97CF /* Data.swift in Sources */,
+				A9A330F11C696F0200D8CA25 /* Data.Helper.swift in Sources */,
+				A9A330F31C696F6E00D8CA25 /* Data.Device.swift in Sources */,
 				A91A0F321C5CE31100AF2B1D /* DataKit.swift in Sources */,
 				A924C4C41C58F78300A5F507 /* Stamina.swift in Sources */,
 				A924C4C21C58F78300A5F507 /* EXP.swift in Sources */,
