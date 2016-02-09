@@ -34,6 +34,7 @@
 		A9D9555C1BFF748300B583B4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A9D9555B1BFF748300B583B4 /* AppDelegate.m */; };
 		A9D955671BFF748300B583B4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A9D955661BFF748300B583B4 /* Assets.xcassets */; };
 		A9D9556A1BFF748300B583B4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9D955681BFF748300B583B4 /* LaunchScreen.storyboard */; };
+		A9F031151C69951500F9D3E8 /* DRSTmTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F031141C69951500F9D3E8 /* DRSTmTests.swift */; };
 		EF62B8D9EB885DF05031986E /* Pods_DRST_manager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42E3AB0433B1D5F285952A71 /* Pods_DRST_manager.framework */; };
 /* End PBXBuildFile section */
 
@@ -51,6 +52,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = A93E28D01C005E9C009342F3;
 			remoteInfo = "DRSTm Widget";
+		};
+		A9F031171C69951500F9D3E8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A9D9554C1BFF748300B583B4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A9D955531BFF748300B583B4;
+			remoteInfo = "DRST manager";
 		};
 /* End PBXContainerItemProxy section */
 
@@ -125,6 +133,9 @@
 		A9D955661BFF748300B583B4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A9D955691BFF748300B583B4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A9D9556B1BFF748300B583B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A9F031121C69951500F9D3E8 /* DRSTmTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DRSTmTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A9F031141C69951500F9D3E8 /* DRSTmTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DRSTmTests.swift; sourceTree = "<group>"; };
+		A9F031161C69951500F9D3E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AEC0A9CA1CFDC73A6D400A62 /* Pods-DRST manager.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DRST manager.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DRST manager/Pods-DRST manager.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -151,6 +162,13 @@
 			files = (
 				A924C4B31C58F72300A5F507 /* DRSTKit.framework in Frameworks */,
 				EF62B8D9EB885DF05031986E /* Pods_DRST_manager.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A9F0310F1C69951500F9D3E8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -209,6 +227,7 @@
 				A9D955561BFF748300B583B4 /* DRST manager */,
 				A93E28D51C005E9C009342F3 /* DRSTm Widget */,
 				A924C49F1C58F72300A5F507 /* DRSTKit */,
+				A9F031131C69951500F9D3E8 /* DRSTmTests */,
 				A93E28D21C005E9C009342F3 /* Frameworks */,
 				A9D955551BFF748300B583B4 /* Products */,
 				31DED2FB2117BAAFA7F88502 /* Pods */,
@@ -221,6 +240,7 @@
 				A9D955541BFF748300B583B4 /* DRSTm.app */,
 				A93E28D11C005E9C009342F3 /* DRST manager.appex */,
 				A924C49E1C58F72300A5F507 /* DRSTKit.framework */,
+				A9F031121C69951500F9D3E8 /* DRSTmTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -253,6 +273,15 @@
 				A9D955581BFF748300B583B4 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A9F031131C69951500F9D3E8 /* DRSTmTests */ = {
+			isa = PBXGroup;
+			children = (
+				A9F031141C69951500F9D3E8 /* DRSTmTests.swift */,
+				A9F031161C69951500F9D3E8 /* Info.plist */,
+			);
+			path = DRSTmTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -329,6 +358,24 @@
 			productReference = A9D955541BFF748300B583B4 /* DRSTm.app */;
 			productType = "com.apple.product-type.application";
 		};
+		A9F031111C69951500F9D3E8 /* DRSTmTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A9F0311B1C69951500F9D3E8 /* Build configuration list for PBXNativeTarget "DRSTmTests" */;
+			buildPhases = (
+				A9F0310E1C69951500F9D3E8 /* Sources */,
+				A9F0310F1C69951500F9D3E8 /* Frameworks */,
+				A9F031101C69951500F9D3E8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A9F031181C69951500F9D3E8 /* PBXTargetDependency */,
+			);
+			name = DRSTmTests;
+			productName = DRSTmTests;
+			productReference = A9F031121C69951500F9D3E8 /* DRSTmTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -361,6 +408,10 @@
 							};
 						};
 					};
+					A9F031111C69951500F9D3E8 = {
+						CreatedOnToolsVersion = 7.2.1;
+						TestTargetID = A9D955531BFF748300B583B4;
+					};
 				};
 			};
 			buildConfigurationList = A9D9554F1BFF748300B583B4 /* Build configuration list for PBXProject "DRST manager" */;
@@ -379,6 +430,7 @@
 				A9D955531BFF748300B583B4 /* DRST manager */,
 				A93E28D01C005E9C009342F3 /* DRSTm Widget */,
 				A924C49D1C58F72300A5F507 /* DRSTKit */,
+				A9F031111C69951500F9D3E8 /* DRSTmTests */,
 			);
 		};
 /* End PBXProject section */
@@ -407,6 +459,13 @@
 				A924C4C61C58FB0D00A5F507 /* tessdata in Resources */,
 				A9D9556A1BFF748300B583B4 /* LaunchScreen.storyboard in Resources */,
 				A9D955671BFF748300B583B4 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A9F031101C69951500F9D3E8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -498,6 +557,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A9F0310E1C69951500F9D3E8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A9F031151C69951500F9D3E8 /* DRSTmTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -510,6 +577,11 @@
 			isa = PBXTargetDependency;
 			target = A93E28D01C005E9C009342F3 /* DRSTm Widget */;
 			targetProxy = A93E28DD1C005E9C009342F3 /* PBXContainerItemProxy */;
+		};
+		A9F031181C69951500F9D3E8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A9D955531BFF748300B583B4 /* DRST manager */;
+			targetProxy = A9F031171C69951500F9D3E8 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -744,6 +816,33 @@
 			};
 			name = Release;
 		};
+		A9F031191C69951500F9D3E8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = DRSTmTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.niceb5y.DRSTmTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DRSTm.app/DRSTm";
+			};
+			name = Debug;
+		};
+		A9F0311A1C69951500F9D3E8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = DRSTmTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.niceb5y.DRSTmTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DRSTm.app/DRSTm";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -782,6 +881,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		A9F0311B1C69951500F9D3E8 /* Build configuration list for PBXNativeTarget "DRSTmTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A9F031191C69951500F9D3E8 /* Debug */,
+				A9F0311A1C69951500F9D3E8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
