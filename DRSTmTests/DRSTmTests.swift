@@ -20,6 +20,19 @@ class DRSTmTests: XCTestCase {
     }
 	
 	/**
+	TestDRST.Data.Device Class
+	*/
+	func testDRSTDataDevice() {
+		let device = DRSTData.Device()
+		XCTAssertEqual(device.level, 1)
+		XCTAssertEqual(device.stamina, 0)
+		XCTAssertEqual(device.exp, 0)
+		XCTAssertEqual(device.group, DRSTData.UserGroup.A)
+		XCTAssertEqual(device.preferLevel, DRSTData.SongLevel.Debut)
+		XCTAssertEqual(device.preferEventLevel, DRSTData.SongLevel.Debut)
+	}
+	
+	/**
 	Test DRSTData.Helper class
 	*/
 	func testDRSTDataHelper() {

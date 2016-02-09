@@ -69,7 +69,7 @@ extension DRSTData {
 		/**
 		Current deresute stamina
 		*/
-		var stamina: Int {
+		public var stamina: Int {
 			get {
 				return _stamina
 			}
@@ -85,7 +85,7 @@ extension DRSTData {
 		/**
 		Maximum deresute stamina
 		*/
-		var staminaMax: Int {
+		public var staminaMax: Int {
 			get {
 				return DRSTStamina.staminaAtLevel(level)
 			}
@@ -94,22 +94,22 @@ extension DRSTData {
 		/**
 		Edited Date
 		*/
-		var date: NSDate = NSDate.init()
+		public var date: NSDate = NSDate.init()
 		
 		/**
 		Deresute user group
 		*/
-		var group: UserGroup = UserGroup.A
+		public var group: UserGroup = UserGroup.A
 		
 		/**
 		Preferred deresute song level
 		*/
-		var preferLevel = SongLevel.Debut
+		public var preferLevel = SongLevel.Debut
 		
 		/**
 		Preferred deresute event song level
 		*/
-		var preferEventLevel = SongLevel.Debut
+		public var preferEventLevel = SongLevel.Debut
 		
 		public override init() {
 			super.init()

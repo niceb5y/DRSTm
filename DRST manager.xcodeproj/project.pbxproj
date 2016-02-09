@@ -35,6 +35,7 @@
 		A9D955671BFF748300B583B4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A9D955661BFF748300B583B4 /* Assets.xcassets */; };
 		A9D9556A1BFF748300B583B4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9D955681BFF748300B583B4 /* LaunchScreen.storyboard */; };
 		A9F031151C69951500F9D3E8 /* DRSTmTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F031141C69951500F9D3E8 /* DRSTmTests.swift */; };
+		A9F0313C1C69A85B00F9D3E8 /* DRSTOCR.swift in Sources */ = {isa = PBXBuildFile; fileRef = A92B5AC01C58FDF200AB976B /* DRSTOCR.swift */; };
 		EF62B8D9EB885DF05031986E /* Pods_DRST_manager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42E3AB0433B1D5F285952A71 /* Pods_DRST_manager.framework */; };
 /* End PBXBuildFile section */
 
@@ -562,6 +563,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A9F031151C69951500F9D3E8 /* DRSTmTests.swift in Sources */,
+				A9F0313C1C69A85B00F9D3E8 /* DRSTOCR.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
