@@ -17,7 +17,7 @@ class TodayViewController: UIViewController, NCWidgetProviding {
 	@IBOutlet weak var timeLeftButton: UIButton!
 	
 	@IBAction func launch(sender: AnyObject) {
-		extensionContext?.openURL(NSURL(string: "DRSTm://")!, completionHandler: nil)
+		extensionContext?.openURL(NSURL(string: "DRSTm://?method=edit")!, completionHandler: nil)
 	}
 	
 	override func viewDidLoad() {

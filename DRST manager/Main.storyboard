@@ -153,7 +153,7 @@
         <!--편집-->
         <scene sceneID="zgz-66-pye">
             <objects>
-                <viewController id="D8Q-XD-dvx" customClass="EditViewController" customModule="DRSTm" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="EditViewController" id="D8Q-XD-dvx" customClass="EditViewController" customModule="DRSTm" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="RIM-aD-NgM"/>
                         <viewControllerLayoutGuide type="bottom" id="ULe-J6-CnR"/>

@@ -42,4 +42,15 @@
 	// Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
+- (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<NSString *,id> *)options {
+	NSString *query = [url query];
+	if ([query  isEqual: @"method=edit"]) {
+		UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+		UIViewController *editViewController = [storyboard instantiateViewControllerWithIdentifier:@"EditViewController"];
+		UINavigationController *nav = [self.window.rootViewController childViewControllers][0];
+		[nav pushViewController:editViewController animated:YES];
+	}
+	return YES;
+}
+
 @end
