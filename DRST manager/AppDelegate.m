@@ -53,4 +53,13 @@
 	return YES;
 }
 
+- (void)application:(UIApplication *)application performActionForShortcutItem:(UIApplicationShortcutItem *)shortcutItem completionHandler:(void (^)(BOOL))completionHandler {
+	if ([[shortcutItem type]  isEqual: @"com.niceb5y.drstm.edit"]) {
+		UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+		UIViewController *editViewController = [storyboard instantiateViewControllerWithIdentifier:@"EditViewController"];
+		UINavigationController *nav = [self.window.rootViewController childViewControllers][0];
+		[nav pushViewController:editViewController animated:YES];
+	}
+}
+
 @end
