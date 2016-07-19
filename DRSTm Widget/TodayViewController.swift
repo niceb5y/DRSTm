@@ -27,7 +27,7 @@ class TodayViewController: UIViewController, NCWidgetProviding {
 	
 	override func viewWillAppear(animated: Bool) {
 		refresh()
-		timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("refresh"), userInfo: nil, repeats: true)
+		timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: #selector(refresh), userInfo: nil, repeats: true)
 	}
 	
 	override func viewWillDisappear(animated: Bool) {

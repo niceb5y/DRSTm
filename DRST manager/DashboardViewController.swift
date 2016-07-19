@@ -24,7 +24,7 @@ class DashboardViewController: UIViewController {
 		segmentedButton.hidden = !dk.dualAccountEnabled
 		deviceIndex = 0
 		refresh()
-		timer = NSTimer.scheduledTimerWithTimeInterval(10, target: self, selector: Selector("refresh"), userInfo: nil, repeats: true)
+		timer = NSTimer.scheduledTimerWithTimeInterval(10, target: self, selector: #selector(refresh), userInfo: nil, repeats: true)
 	}
 	
 	override func viewWillAppear(animated: Bool) {

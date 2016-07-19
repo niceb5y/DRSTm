@@ -891,6 +891,7 @@
 				A9F0311A1C69951500F9D3E8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
