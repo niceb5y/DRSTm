@@ -33,7 +33,7 @@ extension DRSTData {
 				return _level
 			}
 			set(level) {
-				if level < 1 || level > 150 {
+				if level < 1 || level > 300 {
 					_level = 1
 				} else {
 					_level = level
