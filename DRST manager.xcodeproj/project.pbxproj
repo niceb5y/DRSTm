@@ -18,6 +18,16 @@
 		A924C4C41C58F78300A5F507 /* DRSTStamina.swift in Sources */ = {isa = PBXBuildFile; fileRef = A924C4BF1C58F78300A5F507 /* DRSTStamina.swift */; };
 		A924C4C61C58FB0D00A5F507 /* tessdata in Resources */ = {isa = PBXBuildFile; fileRef = A924C4C51C58FB0D00A5F507 /* tessdata */; };
 		A92B5AC11C58FDF200AB976B /* DRSTOCR.swift in Sources */ = {isa = PBXBuildFile; fileRef = A92B5AC01C58FDF200AB976B /* DRSTOCR.swift */; };
+		A9341F121D3E852900160DEA /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9341F101D3E852900160DEA /* Interface.storyboard */; };
+		A9341F141D3E852900160DEA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A9341F131D3E852900160DEA /* Assets.xcassets */; };
+		A9341F1B1D3E852900160DEA /* DRSTm Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = A9341F1A1D3E852900160DEA /* DRSTm Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		A9341F221D3E852900160DEA /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9341F211D3E852900160DEA /* InterfaceController.swift */; };
+		A9341F241D3E852900160DEA /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9341F231D3E852900160DEA /* ExtensionDelegate.swift */; };
+		A9341F261D3E852900160DEA /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9341F251D3E852900160DEA /* NotificationController.swift */; };
+		A9341F281D3E852900160DEA /* GlanceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9341F271D3E852900160DEA /* GlanceController.swift */; };
+		A9341F2A1D3E852900160DEA /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9341F291D3E852900160DEA /* ComplicationController.swift */; };
+		A9341F2C1D3E852900160DEA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A9341F2B1D3E852900160DEA /* Assets.xcassets */; };
+		A9341F301D3E852900160DEA /* DRSTm.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = A9341F0E1D3E852900160DEA /* DRSTm.app */; };
 		A93E28DB1C005E9C009342F3 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A93E28D91C005E9C009342F3 /* MainInterface.storyboard */; };
 		A93E28DF1C005E9C009342F3 /* DRST manager.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = A93E28D11C005E9C009342F3 /* DRST manager.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		A9533D6C1C65E7B2001F97CF /* DRSTData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9533D6B1C65E7B2001F97CF /* DRSTData.swift */; };
@@ -47,6 +57,20 @@
 			remoteGlobalIDString = A924C49D1C58F72300A5F507;
 			remoteInfo = DRSTKit;
 		};
+		A9341F1C1D3E852900160DEA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A9D9554C1BFF748300B583B4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A9341F191D3E852900160DEA;
+			remoteInfo = "DRSTm Extension";
+		};
+		A9341F2E1D3E852900160DEA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A9D9554C1BFF748300B583B4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A9341F0D1D3E852900160DEA;
+			remoteInfo = DRSTm;
+		};
 		A93E28DD1C005E9C009342F3 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = A9D9554C1BFF748300B583B4 /* Project object */;
@@ -75,6 +99,17 @@
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A9341F361D3E852900160DEA /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				A9341F1B1D3E852900160DEA /* DRSTm Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A93E28E31C005E9C009342F3 /* Embed App Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -92,6 +127,7 @@
 			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
 			dstSubfolderSpec = 16;
 			files = (
+				A9341F301D3E852900160DEA /* DRSTm.app in Embed Watch Content */,
 			);
 			name = "Embed Watch Content";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -112,6 +148,19 @@
 		A924C4C51C58FB0D00A5F507 /* tessdata */ = {isa = PBXFileReference; lastKnownFileType = folder; path = tessdata; sourceTree = "<group>"; };
 		A92B5ABF1C58FDF100AB976B /* DRST manager-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DRST manager-Bridging-Header.h"; sourceTree = "<group>"; };
 		A92B5AC01C58FDF200AB976B /* DRSTOCR.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DRSTOCR.swift; sourceTree = "<group>"; };
+		A9341F0E1D3E852900160DEA /* DRSTm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DRSTm.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A9341F111D3E852900160DEA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		A9341F131D3E852900160DEA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A9341F151D3E852900160DEA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A9341F1A1D3E852900160DEA /* DRSTm Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "DRSTm Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A9341F201D3E852900160DEA /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		A9341F211D3E852900160DEA /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		A9341F231D3E852900160DEA /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		A9341F251D3E852900160DEA /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		A9341F271D3E852900160DEA /* GlanceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlanceController.swift; sourceTree = "<group>"; };
+		A9341F291D3E852900160DEA /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
+		A9341F2B1D3E852900160DEA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A9341F2D1D3E852900160DEA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A93E28D11C005E9C009342F3 /* DRST manager.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "DRST manager.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A93E28D31C005E9C009342F3 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
 		A93E28DA1C005E9C009342F3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
@@ -142,6 +191,13 @@
 
 /* Begin PBXFrameworksBuildPhase section */
 		A924C49A1C58F72300A5F507 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A9341F171D3E852900160DEA /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -202,6 +258,39 @@
 			path = DRSTKit;
 			sourceTree = "<group>";
 		};
+		A9341F0F1D3E852900160DEA /* DRSTm */ = {
+			isa = PBXGroup;
+			children = (
+				A9341F101D3E852900160DEA /* Interface.storyboard */,
+				A9341F131D3E852900160DEA /* Assets.xcassets */,
+				A9341F151D3E852900160DEA /* Info.plist */,
+			);
+			path = DRSTm;
+			sourceTree = "<group>";
+		};
+		A9341F1E1D3E852900160DEA /* DRSTm Extension */ = {
+			isa = PBXGroup;
+			children = (
+				A9341F211D3E852900160DEA /* InterfaceController.swift */,
+				A9341F231D3E852900160DEA /* ExtensionDelegate.swift */,
+				A9341F251D3E852900160DEA /* NotificationController.swift */,
+				A9341F271D3E852900160DEA /* GlanceController.swift */,
+				A9341F291D3E852900160DEA /* ComplicationController.swift */,
+				A9341F2B1D3E852900160DEA /* Assets.xcassets */,
+				A9341F2D1D3E852900160DEA /* Info.plist */,
+				A9341F1F1D3E852900160DEA /* Supporting Files */,
+			);
+			path = "DRSTm Extension";
+			sourceTree = "<group>";
+		};
+		A9341F1F1D3E852900160DEA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A9341F201D3E852900160DEA /* PushNotificationPayload.apns */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		A93E28D21C005E9C009342F3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -229,6 +318,8 @@
 				A93E28D51C005E9C009342F3 /* DRSTm Widget */,
 				A924C49F1C58F72300A5F507 /* DRSTKit */,
 				A9F031131C69951500F9D3E8 /* DRSTmTests */,
+				A9341F0F1D3E852900160DEA /* DRSTm */,
+				A9341F1E1D3E852900160DEA /* DRSTm Extension */,
 				A93E28D21C005E9C009342F3 /* Frameworks */,
 				A9D955551BFF748300B583B4 /* Products */,
 				31DED2FB2117BAAFA7F88502 /* Pods */,
@@ -242,6 +333,8 @@
 				A93E28D11C005E9C009342F3 /* DRST manager.appex */,
 				A924C49E1C58F72300A5F507 /* DRSTKit.framework */,
 				A9F031121C69951500F9D3E8 /* DRSTmTests.xctest */,
+				A9341F0E1D3E852900160DEA /* DRSTm.app */,
+				A9341F1A1D3E852900160DEA /* DRSTm Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -317,6 +410,40 @@
 			productReference = A924C49E1C58F72300A5F507 /* DRSTKit.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		A9341F0D1D3E852900160DEA /* DRSTm */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A9341F371D3E852900160DEA /* Build configuration list for PBXNativeTarget "DRSTm" */;
+			buildPhases = (
+				A9341F0C1D3E852900160DEA /* Resources */,
+				A9341F361D3E852900160DEA /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A9341F1D1D3E852900160DEA /* PBXTargetDependency */,
+			);
+			name = DRSTm;
+			productName = DRSTm;
+			productReference = A9341F0E1D3E852900160DEA /* DRSTm.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		A9341F191D3E852900160DEA /* DRSTm Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A9341F351D3E852900160DEA /* Build configuration list for PBXNativeTarget "DRSTm Extension" */;
+			buildPhases = (
+				A9341F161D3E852900160DEA /* Sources */,
+				A9341F171D3E852900160DEA /* Frameworks */,
+				A9341F181D3E852900160DEA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "DRSTm Extension";
+			productName = "DRSTm Extension";
+			productReference = A9341F1A1D3E852900160DEA /* DRSTm Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
 		A93E28D01C005E9C009342F3 /* DRSTm Widget */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = A93E28E21C005E9C009342F3 /* Build configuration list for PBXNativeTarget "DRSTm Widget" */;
@@ -353,6 +480,7 @@
 			dependencies = (
 				A93E28DE1C005E9C009342F3 /* PBXTargetDependency */,
 				A924C4B21C58F72300A5F507 /* PBXTargetDependency */,
+				A9341F2F1D3E852900160DEA /* PBXTargetDependency */,
 			);
 			name = "DRST manager";
 			productName = "DRST manager";
@@ -383,13 +511,20 @@
 		A9D9554C1BFF748300B583B4 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0720;
+				LastSwiftUpdateCheck = 0730;
 				LastUpgradeCheck = 0710;
 				ORGANIZATIONNAME = "Seungho Kim";
 				TargetAttributes = {
 					A924C49D1C58F72300A5F507 = {
 						CreatedOnToolsVersion = 7.2;
 						DevelopmentTeam = 5C758YKFY3;
+					};
+					A9341F0D1D3E852900160DEA = {
+						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 5C758YKFY3;
+					};
+					A9341F191D3E852900160DEA = {
+						CreatedOnToolsVersion = 7.3.1;
 					};
 					A93E28D01C005E9C009342F3 = {
 						CreatedOnToolsVersion = 7.1.1;
@@ -432,6 +567,8 @@
 				A93E28D01C005E9C009342F3 /* DRSTm Widget */,
 				A924C49D1C58F72300A5F507 /* DRSTKit */,
 				A9F031111C69951500F9D3E8 /* DRSTmTests */,
+				A9341F0D1D3E852900160DEA /* DRSTm */,
+				A9341F191D3E852900160DEA /* DRSTm Extension */,
 			);
 		};
 /* End PBXProject section */
@@ -441,6 +578,23 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A9341F0C1D3E852900160DEA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A9341F141D3E852900160DEA /* Assets.xcassets in Resources */,
+				A9341F121D3E852900160DEA /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A9341F181D3E852900160DEA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A9341F2C1D3E852900160DEA /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -536,6 +690,18 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A9341F161D3E852900160DEA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A9341F261D3E852900160DEA /* NotificationController.swift in Sources */,
+				A9341F241D3E852900160DEA /* ExtensionDelegate.swift in Sources */,
+				A9341F2A1D3E852900160DEA /* ComplicationController.swift in Sources */,
+				A9341F221D3E852900160DEA /* InterfaceController.swift in Sources */,
+				A9341F281D3E852900160DEA /* GlanceController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A93E28CD1C005E9C009342F3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -575,6 +741,16 @@
 			target = A924C49D1C58F72300A5F507 /* DRSTKit */;
 			targetProxy = A924C4B11C58F72300A5F507 /* PBXContainerItemProxy */;
 		};
+		A9341F1D1D3E852900160DEA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A9341F191D3E852900160DEA /* DRSTm Extension */;
+			targetProxy = A9341F1C1D3E852900160DEA /* PBXContainerItemProxy */;
+		};
+		A9341F2F1D3E852900160DEA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A9341F0D1D3E852900160DEA /* DRSTm */;
+			targetProxy = A9341F2E1D3E852900160DEA /* PBXContainerItemProxy */;
+		};
 		A93E28DE1C005E9C009342F3 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = A93E28D01C005E9C009342F3 /* DRSTm Widget */;
@@ -588,6 +764,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		A9341F101D3E852900160DEA /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A9341F111D3E852900160DEA /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
 		A93E28D91C005E9C009342F3 /* MainInterface.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -653,6 +837,78 @@
 				SKIP_INSTALL = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		A9341F311D3E852900160DEA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				IBSC_MODULE = DRSTm_Extension;
+				INFOPLIST_FILE = DRSTm/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.niceb5y.DRST-manager.watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.2;
+			};
+			name = Debug;
+		};
+		A9341F321D3E852900160DEA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				IBSC_MODULE = DRSTm_Extension;
+				INFOPLIST_FILE = DRSTm/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.niceb5y.DRST-manager.watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.2;
+			};
+			name = Release;
+		};
+		A9341F331D3E852900160DEA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CLANG_ANALYZER_NONNULL = YES;
+				INFOPLIST_FILE = "DRSTm Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.niceb5y.DRST-manager.watchkitapp.watchkitextension";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.2;
+			};
+			name = Debug;
+		};
+		A9341F341D3E852900160DEA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CLANG_ANALYZER_NONNULL = YES;
+				INFOPLIST_FILE = "DRSTm Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.niceb5y.DRST-manager.watchkitapp.watchkitextension";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.2;
 			};
 			name = Release;
 		};
@@ -856,6 +1112,22 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		A9341F351D3E852900160DEA /* Build configuration list for PBXNativeTarget "DRSTm Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A9341F331D3E852900160DEA /* Debug */,
+				A9341F341D3E852900160DEA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		A9341F371D3E852900160DEA /* Build configuration list for PBXNativeTarget "DRSTm" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A9341F311D3E852900160DEA /* Debug */,
+				A9341F321D3E852900160DEA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 		A93E28E21C005E9C009342F3 /* Build configuration list for PBXNativeTarget "DRSTm Widget" */ = {
 			isa = XCConfigurationList;
