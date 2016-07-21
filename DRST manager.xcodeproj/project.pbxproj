@@ -1120,6 +1120,7 @@
 				A9341F341D3E852900160DEA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A9341F371D3E852900160DEA /* Build configuration list for PBXNativeTarget "DRSTm" */ = {
 			isa = XCConfigurationList;
@@ -1128,6 +1129,7 @@
 				A9341F321D3E852900160DEA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A93E28E21C005E9C009342F3 /* Build configuration list for PBXNativeTarget "DRSTm Widget" */ = {
 			isa = XCConfigurationList;
