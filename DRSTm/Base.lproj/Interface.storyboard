@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="10032"/>
+    </dependencies>
+    <scenes>
+        <!--현재 스태미너-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller title="현재 스태미너" id="AgC-eL-Hgc" customClass="InterfaceController" customModule="DRSTm" customModuleProvider="target">
+                    <items>
+                        <label width="1" height="1" heightAdjustment="-60" alignment="left" textAlignment="center" id="H1v-cf-lLo">
+                            <fontDescription key="font" type="system" weight="medium" pointSize="36"/>
+                        </label>
+                        <label width="1" alignment="left" text="로딩중..." textAlignment="center" minimumScaleFactor="0.80000000000000004" id="Hea-2b-cGZ"/>
+                        <button width="1" alignment="left" title="편집" id="hec-ma-rHI">
+                            <connections>
+                                <segue destination="oNg-vM-Hd8" kind="push" id="5WM-LR-jwQ"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="lblCurrent" destination="H1v-cf-lLo" id="BVW-F1-Vwh"/>
+                        <outlet property="lblTimeLeft" destination="Hea-2b-cGZ" id="oOR-Hr-0cz"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="235" y="348"/>
+        </scene>
+        <!--Edit Interface Controller-->
+        <scene sceneID="uLv-oD-SsS">
+            <objects>
+                <controller id="oNg-vM-Hd8" customClass="EditInterfaceController" customModule="DRSTm_Extension">
+                    <items>
+                        <picker width="1" height="1" heightAdjustment="-40" alignment="left" focusStyle="sequence" indicatorMode="shownWhileFocused" id="EGR-Jp-2oM">
+                            <connections>
+                                <action selector="pickerChanged:" destination="oNg-vM-Hd8" id="lDS-Yu-mIH"/>
+                            </connections>
+                        </picker>
+                        <button width="1" alignment="left" title="저장" id="y5Q-SY-dQc">
+                            <connections>
+                                <action selector="setState" destination="oNg-vM-Hd8" id="7W6-na-8GQ"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="staminaPicker" destination="EGR-Jp-2oM" id="gAm-dV-XT1"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="553" y="348"/>
+        </scene>
+        <!--Glance Interface Controller-->
+        <scene sceneID="BOz-TT-tkC">
+            <objects>
+                <glanceController spacing="0.0" hidesWhenLoading="NO" id="0uZ-2p-rRc" customClass="GlanceController" customModule="DRSTm" customModuleProvider="target">
+                    <items>
+                        <group alignment="left" layout="vertical" id="t8f-Gd-c4y">
+                            <items>
+                                <label height="19.5" alignment="left" text="DRSTm" id="SMh-TZ-eaP"/>
+                                <label alignment="left" text="현재 스태미너" id="UkE-M5-aW2">
+                                    <color key="textColor" red="0.23921568630000001" green="0.70980392160000005" blue="0.90196078430000004" alpha="1" colorSpace="calibratedRGB"/>
+                                </label>
+                            </items>
+                        </group>
+                        <group alignment="left" layout="vertical" id="uCw-4Q-Ouw">
+                            <items>
+                                <label width="1" height="1" heightAdjustment="-20" alignment="left" text="000" textAlignment="center" id="F33-5x-YDa">
+                                    <color key="textColor" red="0.23921568630000001" green="0.70980392160000005" blue="0.90196078430000004" alpha="1" colorSpace="calibratedRGB"/>
+                                    <fontDescription key="font" type="system" weight="medium" pointSize="64"/>
+                                </label>
+                                <label width="1" alignment="left" text="로딩중..." textAlignment="center" id="hGn-JA-ZuG"/>
+                            </items>
+                        </group>
+                    </items>
+                    <edgeInsets key="margins" left="0.0" right="0.0" top="0.0" bottom="14"/>
+                    <connections>
+                        <outlet property="lblCurrent" destination="F33-5x-YDa" id="WhX-W1-naY"/>
+                        <outlet property="lblTimeLeft" destination="hGn-JA-ZuG" id="mtC-W5-7va"/>
+                    </connections>
+                </glanceController>
+            </objects>
+            <point key="canvasLocation" x="235" y="672"/>
+        </scene>
+        <!--Static Notification Interface Controller-->
+        <scene sceneID="AEw-b0-oYE">
+            <objects>
+                <notificationController id="YCC-NB-fut">
+                    <items>
+                        <label alignment="left" text="Alert Label" id="XkS-y5-khE"/>
+                    </items>
+                    <notificationCategory key="notificationCategory" identifier="myCategory" id="JfB-70-Muf"/>
+                    <connections>
+                        <outlet property="notificationAlertLabel" destination="XkS-y5-khE" id="49B-RR-99y"/>
+                        <segue destination="gdX-wl-uQE" kind="relationship" relationship="dynamicNotificationInterface" id="fKh-qV-3T2"/>
+                    </connections>
+                </notificationController>
+            </objects>
+            <point key="canvasLocation" x="235" y="1001"/>
+        </scene>
+        <!--Notification Controller-->
+        <scene sceneID="KIl-fV-djm">
+            <objects>
+                <controller id="gdX-wl-uQE" customClass="NotificationController" customModule="DRSTm" customModuleProvider="target"/>
+            </objects>
+            <point key="canvasLocation" x="553" y="1001"/>
+        </scene>
+    </scenes>
+</document>
