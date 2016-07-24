@@ -30,6 +30,7 @@
 		A9341F301D3E852900160DEA /* DRSTm.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = A9341F0E1D3E852900160DEA /* DRSTm.app */; };
 		A93E28DB1C005E9C009342F3 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A93E28D91C005E9C009342F3 /* MainInterface.storyboard */; };
 		A93E28DF1C005E9C009342F3 /* DRST manager.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = A93E28D11C005E9C009342F3 /* DRST manager.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		A94450AD1D44B28000720327 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A94450AC1D44B28000720327 /* AppDelegate.swift */; };
 		A9533D6C1C65E7B2001F97CF /* DRSTData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9533D6B1C65E7B2001F97CF /* DRSTData.swift */; };
 		A9533D6E1C66487B001F97CF /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9533D6D1C66487B001F97CF /* TodayViewController.swift */; };
 		A962B6CE1C5CBC4200563EB4 /* DRSTNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = A962B6CD1C5CBC4200563EB4 /* DRSTNotification.swift */; };
@@ -40,8 +41,6 @@
 		A9A330F51C69759C00D8CA25 /* DRSTKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A330F41C69759C00D8CA25 /* DRSTKit.swift */; };
 		A9B94FB71C5CC1D40021A516 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B94FB61C5CC1D40021A516 /* InfoViewController.swift */; };
 		A9BF25891C13086B00A3E2A5 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A93E28D31C005E9C009342F3 /* NotificationCenter.framework */; };
-		A9D955591BFF748300B583B4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A9D955581BFF748300B583B4 /* main.m */; };
-		A9D9555C1BFF748300B583B4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A9D9555B1BFF748300B583B4 /* AppDelegate.m */; };
 		A9D955671BFF748300B583B4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A9D955661BFF748300B583B4 /* Assets.xcassets */; };
 		A9D9556A1BFF748300B583B4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9D955681BFF748300B583B4 /* LaunchScreen.storyboard */; };
 		A9F031151C69951500F9D3E8 /* DRSTmTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F031141C69951500F9D3E8 /* DRSTmTests.swift */; };
@@ -166,6 +165,7 @@
 		A93E28DA1C005E9C009342F3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		A93E28DC1C005E9C009342F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A93E29131C007999009342F3 /* DRSTm.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = DRSTm.entitlements; sourceTree = "<group>"; };
+		A94450AC1D44B28000720327 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A9533D6B1C65E7B2001F97CF /* DRSTData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DRSTData.swift; sourceTree = "<group>"; };
 		A9533D6D1C66487B001F97CF /* TodayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
 		A962B6CD1C5CBC4200563EB4 /* DRSTNotification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DRSTNotification.swift; sourceTree = "<group>"; };
@@ -177,9 +177,6 @@
 		A9B94FB61C5CC1D40021A516 /* InfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		A9C6BCB11C00B7FD00EE6526 /* DRST manager.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "DRST manager.entitlements"; sourceTree = "<group>"; };
 		A9D955541BFF748300B583B4 /* DRSTm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DRSTm.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		A9D955581BFF748300B583B4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		A9D9555A1BFF748300B583B4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		A9D9555B1BFF748300B583B4 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		A9D955661BFF748300B583B4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A9D955691BFF748300B583B4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A9D9556B1BFF748300B583B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -344,8 +341,7 @@
 			children = (
 				A93E29131C007999009342F3 /* DRSTm.entitlements */,
 				A924C4C51C58FB0D00A5F507 /* tessdata */,
-				A9D9555A1BFF748300B583B4 /* AppDelegate.h */,
-				A9D9555B1BFF748300B583B4 /* AppDelegate.m */,
+				A94450AC1D44B28000720327 /* AppDelegate.swift */,
 				A91A0F341C5CE77000AF2B1D /* DashboardViewController.swift */,
 				A9B94FB61C5CC1D40021A516 /* InfoViewController.swift */,
 				A964CB981C5D05F1005F5494 /* EditViewController.swift */,
@@ -355,18 +351,9 @@
 				A96BE6671C0055190091A86E /* Main.storyboard */,
 				A9D955681BFF748300B583B4 /* LaunchScreen.storyboard */,
 				A9D9556B1BFF748300B583B4 /* Info.plist */,
-				A9D955571BFF748300B583B4 /* Supporting Files */,
 				A92B5ABF1C58FDF100AB976B /* DRST manager-Bridging-Header.h */,
 			);
 			path = "DRST manager";
-			sourceTree = "<group>";
-		};
-		A9D955571BFF748300B583B4 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				A9D955581BFF748300B583B4 /* main.m */,
-			);
-			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		A9F031131C69951500F9D3E8 /* DRSTmTests */ = {
@@ -714,11 +701,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A9D9555C1BFF748300B583B4 /* AppDelegate.m in Sources */,
+				A94450AD1D44B28000720327 /* AppDelegate.swift in Sources */,
 				A9B94FB71C5CC1D40021A516 /* InfoViewController.swift in Sources */,
 				A92B5AC11C58FDF200AB976B /* DRSTOCR.swift in Sources */,
 				A962B6CE1C5CBC4200563EB4 /* DRSTNotification.swift in Sources */,
-				A9D955591BFF748300B583B4 /* main.m in Sources */,
 				A91A0F351C5CE77000AF2B1D /* DashboardViewController.swift in Sources */,
 				A964CB991C5D05F1005F5494 /* EditViewController.swift in Sources */,
 			);

@@ -12,20 +12,40 @@ import Foundation
 
 class GlanceController: WKInterfaceController {
 
-    override func awakeWithContext(context: AnyObject?) {
-        super.awakeWithContext(context)
-        
-        // Configure interface objects here.
-    }
+	@IBOutlet var lblCurrent: WKInterfaceLabel!
+	@IBOutlet var lblTimeLeft: WKInterfaceLabel!
+	var timer:NSTimer?
+	
+	override init() {
+		super.init()
+		self.updateState()
+	}
+	
+	override func awakeWithContext(context: AnyObject?) {
+		super.awakeWithContext(context)
+  }
 
-    override func willActivate() {
-        // This method is called when watch view controller is about to be visible to user
-        super.willActivate()
-    }
+	override func willActivate() {
+		super.willActivate()
+		timer = NSTimer.scheduledTimerWithTimeInterval(5, target: self, selector: #selector(updateState), userInfo: nil, repeats: true)
+	}
 
-    override func didDeactivate() {
-        // This method is called when watch view controller is no longer visible
-        super.didDeactivate()
-    }
-
+	override func didDeactivate() {
+		super.didDeactivate()
+		timer = nil
+	}
+	
+	func updateState() {
+		let queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)
+		dispatch_async(queue, {() -> () in
+			let delegate = WKExtension.sharedExtension().delegate as! ExtensionDelegate
+			delegate.requestState({ (current, max, timeLeft) in
+				let main_queue = dispatch_get_main_queue()
+				dispatch_async(main_queue, {() -> () in
+					self.lblCurrent.setText("\(current)")
+					self.lblTimeLeft.setText("\(timeLeft) 남음")
+				})
+			})
+		})
+	}
 }

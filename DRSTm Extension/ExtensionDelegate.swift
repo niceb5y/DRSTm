@@ -7,20 +7,49 @@
 //
 
 import WatchKit
+import WatchConnectivity
 
-class ExtensionDelegate: NSObject, WKExtensionDelegate {
+class ExtensionDelegate: NSObject, WKExtensionDelegate, WCSessionDelegate {
+	
+	var session:WCSession? = nil
+	
+	override init() {
+		super.init()
+		if WCSession.isSupported() {
+			session = WCSession.defaultSession()
+			session!.delegate = self
+			session!.activateSession()
+		}
+	}
 
-    func applicationDidFinishLaunching() {
-        // Perform any final initialization of your application.
-    }
+	func applicationDidFinishLaunching() {
+		// Perform any final initialization of your application.
+	}
 
-    func applicationDidBecomeActive() {
-        // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
-    }
+	func applicationDidBecomeActive() {
+		// Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+	}
 
-    func applicationWillResignActive() {
-        // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
-        // Use this method to pause ongoing tasks, disable timers, etc.
-    }
-
+	func applicationWillResignActive() {
+		// Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
+		// Use this method to pause ongoing tasks, disable timers, etc.
+	}
+	
+	func requestState(resultHandler:(current:Int, max:Int, timeLeft:String)->()) {
+		guard let session = session else { return }
+		session.sendMessage(["req" : "?"], replyHandler: { (res) in
+			let current = res["current"] as! Int
+			let max = res["max"] as! Int
+			let timeLeft = res["timeLeft"] as! String
+				resultHandler(current: current, max: max, timeLeft: timeLeft)
+//			let defaults = NSUserDefaults()
+//			defaults.setInteger(current, forKey: "c")
+//			defaults.setInteger(max, forKey: "c")
+//			defaults.setObject(timeLeft, forKey: "")
+//			defaults.synchronize()
+			
+		}, errorHandler:{ (error) in
+			debugPrint(error)
+		})
+	}
 }

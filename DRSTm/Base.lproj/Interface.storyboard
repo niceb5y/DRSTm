@@ -5,22 +5,69 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="10032"/>
     </dependencies>
     <scenes>
-        <!--Interface Controller-->
+        <!--현재 스태미너-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="DRSTm" customModuleProvider="target"/>
+                <controller title="현재 스태미너" id="AgC-eL-Hgc" customClass="InterfaceController" customModule="DRSTm" customModuleProvider="target">
+                    <items>
+                        <label width="1" height="1" heightAdjustment="-60" alignment="left" textAlignment="center" id="H1v-cf-lLo">
+                            <fontDescription key="font" type="system" weight="medium" pointSize="36"/>
+                        </label>
+                        <label width="1" alignment="left" text="로딩중..." textAlignment="center" minimumScaleFactor="0.80000000000000004" id="Hea-2b-cGZ"/>
+                        <button width="1" alignment="left" title="편집" id="hec-ma-rHI">
+                            <connections>
+                                <segue destination="oNg-vM-Hd8" kind="push" id="5WM-LR-jwQ"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="lblCurrent" destination="H1v-cf-lLo" id="BVW-F1-Vwh"/>
+                        <outlet property="lblTimeLeft" destination="Hea-2b-cGZ" id="oOR-Hr-0cz"/>
+                    </connections>
+                </controller>
             </objects>
-            <point key="canvasLocation" x="235" y="348.25"/>
+            <point key="canvasLocation" x="235" y="348"/>
+        </scene>
+        <!--Interface Controller-->
+        <scene sceneID="uLv-oD-SsS">
+            <objects>
+                <controller id="oNg-vM-Hd8">
+                    <items>
+                        <picker width="1" height="1" heightAdjustment="-40" alignment="left" focusStyle="stack" indicatorMode="shownWhileFocused" id="EGR-Jp-2oM"/>
+                        <button width="1" alignment="left" title="저장" id="y5Q-SY-dQc"/>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="553" y="348"/>
         </scene>
         <!--Glance Interface Controller-->
         <scene sceneID="BOz-TT-tkC">
             <objects>
-                <glanceController spacing="0.0" id="0uZ-2p-rRc" customClass="GlanceController" customModule="DRSTm" customModuleProvider="target">
+                <glanceController spacing="0.0" hidesWhenLoading="NO" id="0uZ-2p-rRc" customClass="GlanceController" customModule="DRSTm" customModuleProvider="target">
                     <items>
-                        <group alignment="left" id="t8f-Gd-c4y"/>
-                        <group alignment="left" id="uCw-4Q-Ouw"/>
+                        <group alignment="left" layout="vertical" id="t8f-Gd-c4y">
+                            <items>
+                                <label height="19.5" alignment="left" text="DRSTm" id="SMh-TZ-eaP"/>
+                                <label alignment="left" text="현재 스태미너" id="UkE-M5-aW2">
+                                    <color key="textColor" red="0.23921568630000001" green="0.70980392160000005" blue="0.90196078430000004" alpha="1" colorSpace="calibratedRGB"/>
+                                </label>
+                            </items>
+                        </group>
+                        <group alignment="left" layout="vertical" id="uCw-4Q-Ouw">
+                            <items>
+                                <label width="1" height="1" heightAdjustment="-20" alignment="left" text="000" textAlignment="center" id="F33-5x-YDa">
+                                    <color key="textColor" red="0.23921568630000001" green="0.70980392160000005" blue="0.90196078430000004" alpha="1" colorSpace="calibratedRGB"/>
+                                    <fontDescription key="font" type="system" weight="medium" pointSize="64"/>
+                                </label>
+                                <label width="1" alignment="left" text="로딩중..." textAlignment="center" id="hGn-JA-ZuG"/>
+                            </items>
+                        </group>
                     </items>
                     <edgeInsets key="margins" left="0.0" right="0.0" top="0.0" bottom="14"/>
+                    <connections>
+                        <outlet property="lblCurrent" destination="F33-5x-YDa" id="WhX-W1-naY"/>
+                        <outlet property="lblTimeLeft" destination="hGn-JA-ZuG" id="mtC-W5-7va"/>
+                    </connections>
                 </glanceController>
             </objects>
             <point key="canvasLocation" x="235" y="672"/>
