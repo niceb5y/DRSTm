@@ -42,14 +42,19 @@ class ExtensionDelegate: NSObject, WKExtensionDelegate, WCSessionDelegate {
 			let max = res["max"] as! Int
 			let timeLeft = res["timeLeft"] as! String
 				resultHandler(current: current, max: max, timeLeft: timeLeft)
-//			let defaults = NSUserDefaults()
-//			defaults.setInteger(current, forKey: "c")
-//			defaults.setInteger(max, forKey: "c")
-//			defaults.setObject(timeLeft, forKey: "")
-//			defaults.synchronize()
-			
 		}, errorHandler:{ (error) in
 			debugPrint(error)
 		})
 	}
+	
+	func setState(value:String, resultHandler:(success:Bool) -> ()) {
+		guard let session = session else { return }
+		session.sendMessage(["req" : "set", "value": value], replyHandler: { (res) -> () in
+			let success = res["success"] as! Bool
+			resultHandler(success: success)
+		}, errorHandler:{ (error) in
+			debugPrint(error)
+		})
+	}
+
 }

@@ -28,14 +28,25 @@
             </objects>
             <point key="canvasLocation" x="235" y="348"/>
         </scene>
-        <!--Interface Controller-->
+        <!--Edit Interface Controller-->
         <scene sceneID="uLv-oD-SsS">
             <objects>
-                <controller id="oNg-vM-Hd8">
+                <controller id="oNg-vM-Hd8" customClass="EditInterfaceController" customModule="DRSTm_Extension">
                     <items>
-                        <picker width="1" height="1" heightAdjustment="-40" alignment="left" focusStyle="stack" indicatorMode="shownWhileFocused" id="EGR-Jp-2oM"/>
-                        <button width="1" alignment="left" title="저장" id="y5Q-SY-dQc"/>
+                        <picker width="1" height="1" heightAdjustment="-40" alignment="left" focusStyle="sequence" indicatorMode="shownWhileFocused" id="EGR-Jp-2oM">
+                            <connections>
+                                <action selector="pickerChanged:" destination="oNg-vM-Hd8" id="lDS-Yu-mIH"/>
+                            </connections>
+                        </picker>
+                        <button width="1" alignment="left" title="저장" id="y5Q-SY-dQc">
+                            <connections>
+                                <action selector="setState" destination="oNg-vM-Hd8" id="7W6-na-8GQ"/>
+                            </connections>
+                        </button>
                     </items>
+                    <connections>
+                        <outlet property="staminaPicker" destination="EGR-Jp-2oM" id="gAm-dV-XT1"/>
+                    </connections>
                 </controller>
             </objects>
             <point key="canvasLocation" x="553" y="348"/>

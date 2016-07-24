@@ -37,8 +37,17 @@ class AppDelegate:UIResponder, UIApplicationDelegate, WCSessionDelegate {
 				"timeLeft": self.dk.estimatedTimeLeftString(0)
 				]
 				replyHandler(result)
-				debugPrint("send")
 			})
+		}
+		
+		if req == "set" {
+			let value = Int(message["value"] as! String)
+			self.dk.setCurrentStamina(value!, atIndex: 0)
+			self.dk.date = NSDate()
+			let result:[String:AnyObject] = [
+				"success":true
+			]
+			replyHandler(result)
 		}
 	}
 	

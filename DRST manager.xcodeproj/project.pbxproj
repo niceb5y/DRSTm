@@ -31,6 +31,7 @@
 		A93E28DB1C005E9C009342F3 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A93E28D91C005E9C009342F3 /* MainInterface.storyboard */; };
 		A93E28DF1C005E9C009342F3 /* DRST manager.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = A93E28D11C005E9C009342F3 /* DRST manager.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		A94450AD1D44B28000720327 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A94450AC1D44B28000720327 /* AppDelegate.swift */; };
+		A95241221D44FC470012024D /* EditInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A95241211D44FC470012024D /* EditInterfaceController.swift */; };
 		A9533D6C1C65E7B2001F97CF /* DRSTData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9533D6B1C65E7B2001F97CF /* DRSTData.swift */; };
 		A9533D6E1C66487B001F97CF /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9533D6D1C66487B001F97CF /* TodayViewController.swift */; };
 		A962B6CE1C5CBC4200563EB4 /* DRSTNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = A962B6CD1C5CBC4200563EB4 /* DRSTNotification.swift */; };
@@ -166,6 +167,7 @@
 		A93E28DC1C005E9C009342F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A93E29131C007999009342F3 /* DRSTm.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = DRSTm.entitlements; sourceTree = "<group>"; };
 		A94450AC1D44B28000720327 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A95241211D44FC470012024D /* EditInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditInterfaceController.swift; sourceTree = "<group>"; };
 		A9533D6B1C65E7B2001F97CF /* DRSTData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DRSTData.swift; sourceTree = "<group>"; };
 		A9533D6D1C66487B001F97CF /* TodayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
 		A962B6CD1C5CBC4200563EB4 /* DRSTNotification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DRSTNotification.swift; sourceTree = "<group>"; };
@@ -273,6 +275,7 @@
 				A9341F251D3E852900160DEA /* NotificationController.swift */,
 				A9341F271D3E852900160DEA /* GlanceController.swift */,
 				A9341F291D3E852900160DEA /* ComplicationController.swift */,
+				A95241211D44FC470012024D /* EditInterfaceController.swift */,
 				A9341F2B1D3E852900160DEA /* Assets.xcassets */,
 				A9341F2D1D3E852900160DEA /* Info.plist */,
 				A9341F1F1D3E852900160DEA /* Supporting Files */,
@@ -686,6 +689,7 @@
 				A9341F2A1D3E852900160DEA /* ComplicationController.swift in Sources */,
 				A9341F221D3E852900160DEA /* InterfaceController.swift in Sources */,
 				A9341F281D3E852900160DEA /* GlanceController.swift in Sources */,
+				A95241221D44FC470012024D /* EditInterfaceController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
