@@ -64,11 +64,19 @@ class EditViewController: UIViewController, UIImagePickerControllerDelegate, UIN
 	}
 	
 	@IBAction func textMaxTouched(sender: AnyObject) {
-		setMaximumValue(Int(maxText.text!)!)
+		if (maxText.text == "") {
+			maxText.text = String(stamina.max)
+		} else {
+			setMaximumValue(Int(maxText.text!)!)
+		}
 	}
 	
 	@IBAction func textCurrentTouched(sender: AnyObject) {
-		setCurrentValue(Int(currentText.text!)!)
+		if (currentText.text == "") {
+			currentText.text = String(stamina.current)
+		} else {
+			setCurrentValue(Int(currentText.text!)!)
+		}
 	}
 	
 	@IBAction func maxStepperTouched(sender: AnyObject) {
