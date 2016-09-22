@@ -12,25 +12,25 @@ import DRSTKit
 
 class TodayViewController: UIViewController, NCWidgetProviding {
 	let dk:DataKit = DataKit()
-	var timer:NSTimer?
+	var timer:Timer?
 	
 	@IBOutlet weak var timeLeftButton: UIButton!
 	
-	@IBAction func launch(sender: AnyObject) {
-		extensionContext?.openURL(NSURL(string: "DRSTm://?method=edit")!, completionHandler: nil)
+	@IBAction func launch(_ sender: AnyObject) {
+		extensionContext?.open(URL(string: "DRSTm://?method=edit")!, completionHandler: nil)
 	}
 	
 	override func viewDidLoad() {
-		timeLeftButton.titleLabel?.lineBreakMode = NSLineBreakMode.ByWordWrapping
-		timeLeftButton.titleLabel?.textAlignment = NSTextAlignment.Center
+		timeLeftButton.titleLabel?.lineBreakMode = NSLineBreakMode.byWordWrapping
+		timeLeftButton.titleLabel?.textAlignment = NSTextAlignment.center
 	}
 	
-	override func viewWillAppear(animated: Bool) {
+	override func viewWillAppear(_ animated: Bool) {
 		refresh()
-		timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: #selector(refresh), userInfo: nil, repeats: true)
+		timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(refresh), userInfo: nil, repeats: true)
 	}
 	
-	override func viewWillDisappear(animated: Bool) {
+	override func viewWillDisappear(_ animated: Bool) {
 		if timer != nil {
 			timer?.invalidate()
 			timer = nil
@@ -44,22 +44,22 @@ class TodayViewController: UIViewController, NCWidgetProviding {
 		}
 	}
 	
-	func widgetMarginInsetsForProposedMarginInsets(defaultMarginInsets: UIEdgeInsets) -> UIEdgeInsets {
-		return UIEdgeInsetsZero
+	func widgetMarginInsets(forProposedMarginInsets defaultMarginInsets: UIEdgeInsets) -> UIEdgeInsets {
+		return UIEdgeInsets.zero
 	}
 	
 	func refresh() {
 		if dk.dualAccountEnabled {
-			preferredContentSize = CGSizeMake(0, 98)
+			preferredContentSize = CGSize(width: 0, height: 98)
 			timeLeftButton.setTitle(
 				"기기1: 스태미너 \(dk.estimatedCurrentStamina(0)) / \(dk.maxStamina(0))\n"
 				+ "\(dk.estimatedTimeLeftString(0)) 남음\n"
 				+ "기기 2: 스태미너 \(dk.estimatedCurrentStamina(1)) / \(dk.maxStamina(1))\n"
 				+ "\(dk.estimatedTimeLeftString(1)) 남음",
-				forState: UIControlState.Normal)
+				for: UIControlState())
 		} else {
-			preferredContentSize = CGSizeMake(0, 57)
-			timeLeftButton.setTitle("스태미너 \(dk.estimatedCurrentStamina(0)) / \(dk.maxStamina(0))\n\(dk.estimatedTimeLeftString(0)) 남음", forState: UIControlState.Normal)
+			preferredContentSize = CGSize(width: 0, height: 57)
+			timeLeftButton.setTitle("스태미너 \(dk.estimatedCurrentStamina(0)) / \(dk.maxStamina(0))\n\(dk.estimatedTimeLeftString(0)) 남음", for: UIControlState())
 		}
 	}
 }

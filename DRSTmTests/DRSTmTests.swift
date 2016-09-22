@@ -27,16 +27,16 @@ class DRSTmTests: XCTestCase {
 		XCTAssertEqual(device.level, 1)
 		XCTAssertEqual(device.stamina, 0)
 		XCTAssertEqual(device.exp, 0)
-		XCTAssertEqual(device.group, DRSTData.UserGroup.A)
-		XCTAssertEqual(device.preferLevel, DRSTData.SongLevel.Debut)
-		XCTAssertEqual(device.preferEventLevel, DRSTData.SongLevel.Debut)
+		XCTAssertEqual(device.group, DRSTData.UserGroup.a)
+		XCTAssertEqual(device.preferLevel, DRSTData.SongLevel.debut)
+		XCTAssertEqual(device.preferEventLevel, DRSTData.SongLevel.debut)
 	}
 	
 	/**
 	Test DRSTData.Helper class
 	*/
 	func testDRSTDataHelper() {
-		self.measureBlock { () -> Void in
+		self.measure { () -> Void in
 			//Test load/save/delete bool value
 			let boolKey = "UnitTestBool"
 			XCTAssertEqual(DRSTData.Helper.saveBool(true, forKey: boolKey), true)
@@ -56,7 +56,7 @@ class DRSTmTests: XCTestCase {
 	Test DRSTData.Helper class with iCloud
 	*/
 	func testDRSTDataHelperCloud() {
-		self.measureBlock { () -> Void in
+		self.measure { () -> Void in
 			//Test load/save/delete bool value
 			let boolKey = "UnitTestBool"
 			XCTAssertEqual(DRSTData.Helper.saveBool(true, forKey: boolKey, toCloud: true), true)

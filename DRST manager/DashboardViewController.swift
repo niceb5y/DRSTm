@@ -10,7 +10,7 @@ import UIKit
 import DRSTKit
 
 class DashboardViewController: UIViewController {
-	var timer:NSTimer?
+	var timer:Timer?
 	let dk = DataKit()
 	var deviceIndex = 0
 	
@@ -21,15 +21,15 @@ class DashboardViewController: UIViewController {
 	@IBOutlet weak var segmentedButton: UISegmentedControl!
 	
 	override func viewDidLoad() {
-		segmentedButton.hidden = !dk.dualAccountEnabled
+		segmentedButton.isHidden = !dk.dualAccountEnabled
 		deviceIndex = 0
 		refresh()
-		timer = NSTimer.scheduledTimerWithTimeInterval(10, target: self, selector: #selector(refresh), userInfo: nil, repeats: true)
+		timer = Timer.scheduledTimer(timeInterval: 10, target: self, selector: #selector(refresh), userInfo: nil, repeats: true)
 	}
 	
-	override func viewWillAppear(animated: Bool) {
+	override func viewWillAppear(_ animated: Bool) {
 		super.viewWillAppear(animated)
-		segmentedButton.hidden = !dk.dualAccountEnabled
+		segmentedButton.isHidden = !dk.dualAccountEnabled
 		if !dk.dualAccountEnabled {
 			deviceIndex = 0
 		}
@@ -53,12 +53,12 @@ class DashboardViewController: UIViewController {
 		}
 	}
 	
-	@IBAction func segmentedButtonTouched(sender: AnyObject) {
+	@IBAction func segmentedButtonTouched(_ sender: AnyObject) {
 		deviceIndex = segmentedButton.selectedSegmentIndex
 	}
 	
-	@IBAction func launchApp(sender: AnyObject) {
+	@IBAction func launchApp(_ sender: AnyObject) {
 		DRSTNotification.clear()
-		UIApplication.sharedApplication().openURL(NSURL(string: "starlightstage://")!)
+		UIApplication.shared.openURL(URL(string: "starlightstage://")!)
 	}
 }

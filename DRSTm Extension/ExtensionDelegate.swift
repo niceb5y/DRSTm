@@ -10,18 +10,24 @@ import WatchKit
 import WatchConnectivity
 
 class ExtensionDelegate: NSObject, WKExtensionDelegate, WCSessionDelegate {
-	
+
 	var session:WCSession? = nil
 	
 	override init() {
 		super.init()
 		if WCSession.isSupported() {
-			session = WCSession.defaultSession()
+			session = WCSession.default()
 			session!.delegate = self
-			session!.activateSession()
+			session!.activate()
 		}
 	}
-
+  
+  /** Called when the session has completed activation. If session state is WCSessionActivationStateNotActivated there will be an error with more details. */
+  @available(watchOS 2.2, *)
+  public func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
+    
+  }
+  
 	func applicationDidFinishLaunching() {
 		// Perform any final initialization of your application.
 	}
@@ -35,23 +41,23 @@ class ExtensionDelegate: NSObject, WKExtensionDelegate, WCSessionDelegate {
 		// Use this method to pause ongoing tasks, disable timers, etc.
 	}
 	
-	func requestState(resultHandler:(current:Int, max:Int, timeLeft:String)->()) {
+	func requestState(_ resultHandler:@escaping (_ current:Int, _ max:Int, _ timeLeft:String)->()) {
 		guard let session = session else { return }
 		session.sendMessage(["req" : "?"], replyHandler: { (res) in
 			let current = res["current"] as! Int
 			let max = res["max"] as! Int
 			let timeLeft = res["timeLeft"] as! String
-				resultHandler(current: current, max: max, timeLeft: timeLeft)
+				resultHandler(current, max, timeLeft)
 		}, errorHandler:{ (error) in
 			debugPrint(error)
 		})
 	}
 	
-	func setState(value:String, resultHandler:(success:Bool) -> ()) {
+	func setState(_ value:String, resultHandler:@escaping (_ success:Bool) -> ()) {
 		guard let session = session else { return }
 		session.sendMessage(["req" : "set", "value": value], replyHandler: { (res) -> () in
 			let success = res["success"] as! Bool
-			resultHandler(success: success)
+			resultHandler(success)
 		}, errorHandler:{ (error) in
 			debugPrint(error)
 		})

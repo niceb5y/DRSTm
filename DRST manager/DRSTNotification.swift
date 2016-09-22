@@ -25,7 +25,7 @@ class DRSTNotification: NSObject {
 		let loop = dk.dualAccountEnabled ? 2 : 1
 		for index in 0 ..< loop {
 			let noti = UILocalNotification()
-			noti.fireDate = NSDate(timeIntervalSinceNow: NSTimeInterval(dk.estimatedSecondLeft(index)))
+			noti.fireDate = Date(timeIntervalSinceNow: TimeInterval(dk.estimatedSecondLeft(index)))
 			if loop == 2 {
 				noti.alertBody = "[기기 \(index)] 스태미너가 가득 찼습니다."
 			} else {
@@ -33,7 +33,7 @@ class DRSTNotification: NSObject {
 			}
 			noti.alertTitle = "DRSTm"
 			noti.soundName = UILocalNotificationDefaultSoundName;
-			UIApplication.sharedApplication().scheduleLocalNotification(noti)
+			UIApplication.shared.scheduleLocalNotification(noti)
 		}
 	}
 	
@@ -42,6 +42,6 @@ class DRSTNotification: NSObject {
 	- author: niceb5y
 	*/
 	static func clear() {
-		UIApplication.sharedApplication().cancelAllLocalNotifications()
+		UIApplication.shared.cancelAllLocalNotifications()
 	}
 }

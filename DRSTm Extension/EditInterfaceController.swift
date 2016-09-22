@@ -18,8 +18,8 @@ class EditInterfaceController: WKInterfaceController {
 		super.init()
 	}
 	
-	override func awakeWithContext(context: AnyObject?) {
-		super.awakeWithContext(context)
+	override func awake(withContext context: Any?) {
+		super.awake(withContext: context)
 		updateState()
 	}
 	
@@ -32,10 +32,10 @@ class EditInterfaceController: WKInterfaceController {
 	}
 
 	func updateState() {
-		let delegate = WKExtension.sharedExtension().delegate as! ExtensionDelegate
+		let delegate = WKExtension.shared().delegate as! ExtensionDelegate
 		delegate.requestState({ (current, max, timeLeft) in
 			self.itemList = []
-			for i in (0...max).reverse() {
+			for i in (0...max).reversed() {
 				self.itemList.append("\(i)")
 			}
 			let pickerItem = self.itemList.map({(item) -> WKPickerItem in
@@ -48,16 +48,16 @@ class EditInterfaceController: WKInterfaceController {
 		})
 	}
 	
-	@IBAction func pickerChanged(value: Int) {
+	@IBAction func pickerChanged(_ value: Int) {
 		selected = itemList[value]
 		debugPrint(itemList[value])
 	}
 	
 	@IBAction func setState() {
-		let delegate = WKExtension.sharedExtension().delegate as! ExtensionDelegate
+		let delegate = WKExtension.shared().delegate as! ExtensionDelegate
 		delegate.setState(selected) { (success) in
 			if success {
-				self.popController()
+				self.pop()
 			}
 		}
 	}

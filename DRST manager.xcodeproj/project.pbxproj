@@ -17,7 +17,6 @@
 		A924C4C31C58F78300A5F507 /* DRSTScreenPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = A924C4BE1C58F78300A5F507 /* DRSTScreenPosition.swift */; };
 		A924C4C41C58F78300A5F507 /* DRSTStamina.swift in Sources */ = {isa = PBXBuildFile; fileRef = A924C4BF1C58F78300A5F507 /* DRSTStamina.swift */; };
 		A924C4C61C58FB0D00A5F507 /* tessdata in Resources */ = {isa = PBXBuildFile; fileRef = A924C4C51C58FB0D00A5F507 /* tessdata */; };
-		A92B5AC11C58FDF200AB976B /* DRSTOCR.swift in Sources */ = {isa = PBXBuildFile; fileRef = A92B5AC01C58FDF200AB976B /* DRSTOCR.swift */; };
 		A9341F121D3E852900160DEA /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9341F101D3E852900160DEA /* Interface.storyboard */; };
 		A9341F141D3E852900160DEA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A9341F131D3E852900160DEA /* Assets.xcassets */; };
 		A9341F1B1D3E852900160DEA /* DRSTm Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = A9341F1A1D3E852900160DEA /* DRSTm Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -45,8 +44,6 @@
 		A9D955671BFF748300B583B4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A9D955661BFF748300B583B4 /* Assets.xcassets */; };
 		A9D9556A1BFF748300B583B4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9D955681BFF748300B583B4 /* LaunchScreen.storyboard */; };
 		A9F031151C69951500F9D3E8 /* DRSTmTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F031141C69951500F9D3E8 /* DRSTmTests.swift */; };
-		A9F0313C1C69A85B00F9D3E8 /* DRSTOCR.swift in Sources */ = {isa = PBXBuildFile; fileRef = A92B5AC01C58FDF200AB976B /* DRSTOCR.swift */; };
-		EF62B8D9EB885DF05031986E /* Pods_DRST_manager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42E3AB0433B1D5F285952A71 /* Pods_DRST_manager.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -135,8 +132,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		42E3AB0433B1D5F285952A71 /* Pods_DRST_manager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DRST_manager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		952AFB32BECF5A5CD2D3D693 /* Pods-DRST manager.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DRST manager.release.xcconfig"; path = "Pods/Target Support Files/Pods-DRST manager/Pods-DRST manager.release.xcconfig"; sourceTree = "<group>"; };
 		A91A0F311C5CE31100AF2B1D /* DataKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataKit.swift; sourceTree = "<group>"; };
 		A91A0F341C5CE77000AF2B1D /* DashboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
 		A924C49E1C58F72300A5F507 /* DRSTKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DRSTKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -147,7 +142,6 @@
 		A924C4BF1C58F78300A5F507 /* DRSTStamina.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DRSTStamina.swift; sourceTree = "<group>"; };
 		A924C4C51C58FB0D00A5F507 /* tessdata */ = {isa = PBXFileReference; lastKnownFileType = folder; path = tessdata; sourceTree = "<group>"; };
 		A92B5ABF1C58FDF100AB976B /* DRST manager-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DRST manager-Bridging-Header.h"; sourceTree = "<group>"; };
-		A92B5AC01C58FDF200AB976B /* DRSTOCR.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DRSTOCR.swift; sourceTree = "<group>"; };
 		A9341F0E1D3E852900160DEA /* DRSTm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DRSTm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9341F111D3E852900160DEA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
 		A9341F131D3E852900160DEA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -185,7 +179,6 @@
 		A9F031121C69951500F9D3E8 /* DRSTmTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DRSTmTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9F031141C69951500F9D3E8 /* DRSTmTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DRSTmTests.swift; sourceTree = "<group>"; };
 		A9F031161C69951500F9D3E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AEC0A9CA1CFDC73A6D400A62 /* Pods-DRST manager.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DRST manager.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DRST manager/Pods-DRST manager.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -217,7 +210,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				A924C4B31C58F72300A5F507 /* DRSTKit.framework in Frameworks */,
-				EF62B8D9EB885DF05031986E /* Pods_DRST_manager.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -231,15 +223,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		31DED2FB2117BAAFA7F88502 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				AEC0A9CA1CFDC73A6D400A62 /* Pods-DRST manager.debug.xcconfig */,
-				952AFB32BECF5A5CD2D3D693 /* Pods-DRST manager.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 		A924C49F1C58F72300A5F507 /* DRSTKit */ = {
 			isa = PBXGroup;
 			children = (
@@ -295,7 +278,6 @@
 			isa = PBXGroup;
 			children = (
 				A93E28D31C005E9C009342F3 /* NotificationCenter.framework */,
-				42E3AB0433B1D5F285952A71 /* Pods_DRST_manager.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -322,7 +304,6 @@
 				A9341F1E1D3E852900160DEA /* DRSTm Extension */,
 				A93E28D21C005E9C009342F3 /* Frameworks */,
 				A9D955551BFF748300B583B4 /* Products */,
-				31DED2FB2117BAAFA7F88502 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -349,7 +330,6 @@
 				A9B94FB61C5CC1D40021A516 /* InfoViewController.swift */,
 				A964CB981C5D05F1005F5494 /* EditViewController.swift */,
 				A962B6CD1C5CBC4200563EB4 /* DRSTNotification.swift */,
-				A92B5AC01C58FDF200AB976B /* DRSTOCR.swift */,
 				A9D955661BFF748300B583B4 /* Assets.xcassets */,
 				A96BE6671C0055190091A86E /* Main.storyboard */,
 				A9D955681BFF748300B583B4 /* LaunchScreen.storyboard */,
@@ -455,15 +435,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A9D955841BFF748300B583B4 /* Build configuration list for PBXNativeTarget "DRST manager" */;
 			buildPhases = (
-				1FD959FDC63DAB920394172B /* Check Pods Manifest.lock */,
 				A9D955501BFF748300B583B4 /* Sources */,
 				A9D955511BFF748300B583B4 /* Frameworks */,
 				A9D955521BFF748300B583B4 /* Resources */,
 				A93E28E31C005E9C009342F3 /* Embed App Extensions */,
 				A93E29121C00615B009342F3 /* Embed Watch Content */,
 				A928DC761C0466680017F554 /* Embed Frameworks */,
-				867AA193E813CFA05D3BFA6B /* Embed Pods Frameworks */,
-				24952F409DD4A852D9A50765 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -502,23 +479,28 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0710;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = "Seungho Kim";
 				TargetAttributes = {
 					A924C49D1C58F72300A5F507 = {
 						CreatedOnToolsVersion = 7.2;
 						DevelopmentTeam = 5C758YKFY3;
+						LastSwiftMigration = 0800;
 					};
 					A9341F0D1D3E852900160DEA = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = 5C758YKFY3;
+						LastSwiftMigration = 0800;
 					};
 					A9341F191D3E852900160DEA = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 5C758YKFY3;
+						LastSwiftMigration = 0800;
 					};
 					A93E28D01C005E9C009342F3 = {
 						CreatedOnToolsVersion = 7.1.1;
 						DevelopmentTeam = 5C758YKFY3;
+						LastSwiftMigration = 0800;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
 								enabled = 1;
@@ -528,6 +510,7 @@
 					A9D955531BFF748300B583B4 = {
 						CreatedOnToolsVersion = 7.1.1;
 						DevelopmentTeam = 5C758YKFY3;
+						LastSwiftMigration = 0800;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
 								enabled = 1;
@@ -536,6 +519,7 @@
 					};
 					A9F031111C69951500F9D3E8 = {
 						CreatedOnToolsVersion = 7.2.1;
+						LastSwiftMigration = 0800;
 						TestTargetID = A9D955531BFF748300B583B4;
 					};
 				};
@@ -616,54 +600,6 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		1FD959FDC63DAB920394172B /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		24952F409DD4A852D9A50765 /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DRST manager/Pods-DRST manager-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		867AA193E813CFA05D3BFA6B /* Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DRST manager/Pods-DRST manager-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
 		A924C4991C58F72300A5F507 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -707,7 +643,6 @@
 			files = (
 				A94450AD1D44B28000720327 /* AppDelegate.swift in Sources */,
 				A9B94FB71C5CC1D40021A516 /* InfoViewController.swift in Sources */,
-				A92B5AC11C58FDF200AB976B /* DRSTOCR.swift in Sources */,
 				A962B6CE1C5CBC4200563EB4 /* DRSTNotification.swift in Sources */,
 				A91A0F351C5CE77000AF2B1D /* DashboardViewController.swift in Sources */,
 				A964CB991C5D05F1005F5494 /* EditViewController.swift in Sources */,
@@ -719,7 +654,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				A9F031151C69951500F9D3E8 /* DRSTmTests.swift in Sources */,
-				A9F0313C1C69A85B00F9D3E8 /* DRSTOCR.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -787,7 +721,7 @@
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -801,6 +735,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -812,7 +747,7 @@
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -825,6 +760,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.niceb5y.DRSTKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -833,11 +769,11 @@
 		A9341F311D3E852900160DEA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ANALYZER_NONNULL = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				IBSC_MODULE = DRSTm_Extension;
 				INFOPLIST_FILE = DRSTm/Info.plist;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.niceb5y.DRST-manager.watchkitapp";
@@ -845,6 +781,7 @@
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 2.2;
 			};
@@ -853,17 +790,18 @@
 		A9341F321D3E852900160DEA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ANALYZER_NONNULL = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				IBSC_MODULE = DRSTm_Extension;
 				INFOPLIST_FILE = DRSTm/Info.plist;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.niceb5y.DRST-manager.watchkitapp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 2.2;
 			};
@@ -874,6 +812,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CLANG_ANALYZER_NONNULL = YES;
+				DEVELOPMENT_TEAM = 5C758YKFY3;
 				INFOPLIST_FILE = "DRSTm Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.niceb5y.DRST-manager.watchkitapp.watchkitextension";
@@ -881,6 +820,7 @@
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 2.2;
 			};
@@ -891,12 +831,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CLANG_ANALYZER_NONNULL = YES;
+				DEVELOPMENT_TEAM = 5C758YKFY3;
 				INFOPLIST_FILE = "DRSTm Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.niceb5y.DRST-manager.watchkitapp.watchkitextension";
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 2.2;
 			};
@@ -918,6 +860,7 @@
 				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -936,6 +879,7 @@
 				PRODUCT_NAME = "DRST manager";
 				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -952,8 +896,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -996,8 +942,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -1016,6 +964,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -1023,14 +972,13 @@
 		};
 		A9D955851BFF748300B583B4 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AEC0A9CA1CFDC73A6D400A62 /* Pods-DRST manager.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = "DRST manager/DRSTm.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "DRST manager/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -1040,19 +988,19 @@
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "DRST manager/DRST manager-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		A9D955861BFF748300B583B4 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 952AFB32BECF5A5CD2D3D693 /* Pods-DRST manager.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = "DRST manager/DRSTm.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "DRST manager/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -1061,6 +1009,7 @@
 				PRODUCT_NAME = DRSTm;
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "DRST manager/DRST manager-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -1074,6 +1023,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.niceb5y.DRSTmTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DRSTm.app/DRSTm";
 			};
 			name = Debug;
@@ -1087,6 +1037,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.niceb5y.DRSTmTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DRSTm.app/DRSTm";
 			};
 			name = Release;

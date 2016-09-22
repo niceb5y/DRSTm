@@ -8,6 +8,6 @@
 
 import UIKit
 
-public class DRSTKit: NSObject {
-	public static let Kisaragi_Chihaya = 72 //くっ
+open class DRSTKit: NSObject {
+	open static let Kisaragi_Chihaya = 72 //くっ
 }

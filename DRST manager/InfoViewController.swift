@@ -24,36 +24,36 @@ class InfoViewController: UITableViewController {
 		iCloudSwitch.setOn(dk.iCloudEnabled, animated: false)
 	}
 	
-	override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-		if indexPath.section == 1 {
-			if indexPath.row == 0 {
-				let vc = SFSafariViewController(URL: NSURL(string: "https://twitter.com/deresute_border")!)
-				self.presentViewController(vc, animated: true, completion: nil)
+	override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+		if (indexPath as NSIndexPath).section == 1 {
+			if (indexPath as NSIndexPath).row == 0 {
+				let vc = SFSafariViewController(url: URL(string: "https://twitter.com/deresute_border")!)
+				self.present(vc, animated: true, completion: nil)
 			}
-		} else if indexPath.section == 2 {
-			if indexPath.row == 0 {
-				let url = NSURL(string: "mailto:niceb5y+drstm@gmail.com?subject=%EB%8B%B9%EC%8B%A0%EC%9D%B4%20%EC%96%B4%EC%A7%B8%EC%84%9C%20%EA%B0%9C%EB%B0%9C%EC%9E%90%EC%9D%B8%EA%B1%B0%EC%A3%A0%3F")
-				UIApplication.sharedApplication().openURL(url!)
+		} else if (indexPath as NSIndexPath).section == 2 {
+			if (indexPath as NSIndexPath).row == 0 {
+				let url = URL(string: "mailto:niceb5y+drstm@gmail.com?subject=%EB%8B%B9%EC%8B%A0%EC%9D%B4%20%EC%96%B4%EC%A7%B8%EC%84%9C%20%EA%B0%9C%EB%B0%9C%EC%9E%90%EC%9D%B8%EA%B1%B0%EC%A3%A0%3F")
+				UIApplication.shared.openURL(url!)
 			}
 		}
 	}
 	
-	@IBAction func accountSwitchTouched(sender: AnyObject) {
-		dk.dualAccountEnabled = accountSwitch.on
+	@IBAction func accountSwitchTouched(_ sender: AnyObject) {
+		dk.dualAccountEnabled = accountSwitch.isOn
 	}
 	
-	@IBAction func notificationSwitchTouched(sender: AnyObject) {
-		dk.notificationEnabled = notificationSwitch.on
-		if notificationSwitch.on {
-			let notificationSettings = UIUserNotificationSettings(forTypes: UIUserNotificationType.Sound.union(UIUserNotificationType.Alert), categories: nil)
-			UIApplication.sharedApplication().registerUserNotificationSettings(notificationSettings)
-			UIApplication.sharedApplication().registerForRemoteNotifications()
+	@IBAction func notificationSwitchTouched(_ sender: AnyObject) {
+		dk.notificationEnabled = notificationSwitch.isOn
+		if notificationSwitch.isOn {
+			let notificationSettings = UIUserNotificationSettings(types: UIUserNotificationType.sound.union(UIUserNotificationType.alert), categories: nil)
+			UIApplication.shared.registerUserNotificationSettings(notificationSettings)
+			UIApplication.shared.registerForRemoteNotifications()
 			DRSTNotification.register()
 		} else {
 			DRSTNotification.clear()
 		}
 	}
-	@IBAction func iCloudSwitchTouched(sender: AnyObject) {
-		dk.iCloudEnabled = iCloudSwitch.on
+	@IBAction func iCloudSwitchTouched(_ sender: AnyObject) {
+		dk.iCloudEnabled = iCloudSwitch.isOn
 	}
 }

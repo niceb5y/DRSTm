@@ -8,15 +8,15 @@
 
 import UIKit
 
-public class DataKit: NSObject {
-	var defaults:NSUserDefaults
+open class DataKit: NSObject {
+	var defaults:UserDefaults
 	var store:NSUbiquitousKeyValueStore
 	
 	
 	public override init() {
-		defaults = NSUserDefaults.init(suiteName: "group.com.niceb5y.drstm")!
+		defaults = UserDefaults.init(suiteName: "group.com.niceb5y.drstm")!
 		store =
-			NSUbiquitousKeyValueStore.defaultStore()
+			NSUbiquitousKeyValueStore.default()
 		super.init()
 	}
 	
@@ -29,7 +29,7 @@ public class DataKit: NSObject {
 			return staminaMax as! Array<Int>
 		}
 		set(staminaMax) {
-			saveData(staminaMax, forKey: "StaminaMax")
+			_ = saveData(staminaMax as AnyObject, forKey: "StaminaMax")
 		}
 	}
 	
@@ -42,42 +42,42 @@ public class DataKit: NSObject {
 			return staminaCurrent as! Array<Int>
 		}
 		set(staminaCurrent) {
-			saveData(staminaCurrent, forKey: "StaminaCurrent")
+			_ = saveData(staminaCurrent as AnyObject, forKey: "StaminaCurrent")
 		}
 	}
 	
-	public func maxStamina(atIndex:Int) -> Int {
+	open func maxStamina(_ atIndex:Int) -> Int {
 		return staminaMax[atIndex]
 	}
 	
-	public func currentStamina(atIndex:Int) -> Int {
+	open func currentStamina(_ atIndex:Int) -> Int {
 		return staminaCurrent[atIndex]
 	}
 	
-	public func setMaxStamina(value:Int, atIndex:Int) {
+	open func setMaxStamina(_ value:Int, atIndex:Int) {
 		staminaMax[atIndex] = value
 	}
 	
-	public func setCurrentStamina(value:Int, atIndex:Int) {
+	open func setCurrentStamina(_ value:Int, atIndex:Int) {
 		staminaCurrent[atIndex] = value
 	}
 	
-	public func estimatedCurrentStamina(atIndex:Int) -> Int {
-		let interval:NSTimeInterval = NSDate.init().timeIntervalSinceDate(self.date)
+	open func estimatedCurrentStamina(_ atIndex:Int) -> Int {
+		let interval:TimeInterval = Date.init().timeIntervalSince(self.date)
 		return min(currentStamina(atIndex) + Int(interval) / 300, maxStamina(atIndex))
 	}
 	
-	public func estimatedSecondLeft(atIndex:Int) -> Int {
-		let interval:NSTimeInterval = NSDate.init().timeIntervalSinceDate(self.date)
+	open func estimatedSecondLeft(_ atIndex:Int) -> Int {
+		let interval:TimeInterval = Date.init().timeIntervalSince(self.date)
 		let left = maxStamina(atIndex) - estimatedCurrentStamina(atIndex)
 		return max(left * 300 - Int(interval) % 300, 0)
 	}
 	
-	public func estimatedMinuteLeft(atIndex:Int) -> Int {
+	open func estimatedMinuteLeft(_ atIndex:Int) -> Int {
 		return estimatedSecondLeft(atIndex) / 60
 	}
 	
-	public func estimatedTimeLeftString(atIndex:Int) -> String {
+	open func estimatedTimeLeftString(_ atIndex:Int) -> String {
 		let minute = estimatedMinuteLeft(atIndex)
 		if (minute > 59 && minute != 72) {
 			return "\(minute / 60)시간 \(minute % 60)분"
@@ -86,14 +86,14 @@ public class DataKit: NSObject {
 		}
 	}
 	
-	public func estimatedCompleteTimeString(atIndex:Int) -> String {
-		let completeTime = NSDate.init(timeIntervalSinceNow: Double(estimatedSecondLeft(atIndex)))
-		let dateFormatter = NSDateFormatter.init()
+	open func estimatedCompleteTimeString(_ atIndex:Int) -> String {
+		let completeTime = Date.init(timeIntervalSinceNow: Double(estimatedSecondLeft(atIndex)))
+		let dateFormatter = DateFormatter.init()
 		dateFormatter.dateFormat = "a h시 mm분"
-		return dateFormatter.stringFromDate(completeTime)
+		return dateFormatter.string(from: completeTime)
 	}
 	
-	public var dualAccountEnabled:Bool {
+	open var dualAccountEnabled:Bool {
 		get {
 			let dualAccountEnabled = loadBoolData("SetDualAccount")
 			if (dualAccountEnabled == nil) {
@@ -102,11 +102,11 @@ public class DataKit: NSObject {
 			return dualAccountEnabled!
 		}
 		set(dualAccountEnabled) {
-			saveBoolData(dualAccountEnabled, forKey: "SetDualAccount")
+			_ = saveBoolData(dualAccountEnabled, forKey: "SetDualAccount")
 		}
 	}
 	
-	public var notificationEnabled:Bool {
+	open var notificationEnabled:Bool {
 		get {
 			let notificationEnabled = loadBoolData("SetNotification")
 			if (notificationEnabled == nil) {
@@ -115,11 +115,11 @@ public class DataKit: NSObject {
 			return notificationEnabled!
 		}
 		set(notificationEnabled) {
-			saveBoolData(notificationEnabled, forKey: "SetNotification")
+			_ = saveBoolData(notificationEnabled, forKey: "SetNotification")
 		}
 	}
 	
-	public var iCloudEnabled:Bool {
+	open var iCloudEnabled:Bool {
 		get {
 			let iCloudEnabled = loadLocalBoolData("SetiCloudEnabled")
 			if (iCloudEnabled == nil) {
@@ -134,82 +134,82 @@ public class DataKit: NSObject {
 				let _date = date
 				let _staminaMax = staminaMax
 				let _staminaCurrent = staminaCurrent
-				saveBoolData(iCloudEnabled, forKey: "SetiCloudEnabled")
+				_ = saveBoolData(iCloudEnabled, forKey: "SetiCloudEnabled")
 				notificationEnabled = _notification
 				dualAccountEnabled = _dualAccount
 				date = _date
 				staminaMax = _staminaMax
 				staminaCurrent = _staminaCurrent
 			} else {
-				saveBoolData(iCloudEnabled, forKey: "SetiCloudEnabled")
+				_ = saveBoolData(iCloudEnabled, forKey: "SetiCloudEnabled")
 			}
 		}
 	}
 	
-	public var date:NSDate {
+	open var date:Date {
 		get {
 			let date = loadData("SetDate")
 			if (date == nil) {
-				return NSDate.init()
+				return Date.init()
 			}
-			return date as! NSDate
+			return date as! Date
 		}
 		set(date) {
-			saveData(date, forKey: "SetDate")
+			_ = saveData(date as AnyObject, forKey: "SetDate")
 		}
 	}
 	
-	func loadData(key:String) -> AnyObject? {
+	func loadData(_ key:String) -> AnyObject? {
 		if (iCloudEnabled) {
-			return store.objectForKey(key)
+			return store.object(forKey: key) as AnyObject?
 		} else {
 			return loadLocalData(key)
 		}
 	}
 	
-	func loadBoolData(key:String) -> Bool? {
+	func loadBoolData(_ key:String) -> Bool? {
 		if (iCloudEnabled) {
-			return store.boolForKey(key)
+			return store.bool(forKey: key)
 		} else {
 			return loadLocalBoolData(key)
 		}
 	}
 	
-	func saveData(value:AnyObject, forKey:String) -> Bool? {
+	func saveData(_ value:AnyObject, forKey:String) -> Bool? {
 		if (iCloudEnabled) {
-			store.setObject(value, forKey: forKey)
-			saveLocalData(value, forKey: forKey)
+			store.set(value, forKey: forKey)
+			_ = saveLocalData(value, forKey: forKey)
 			return store.synchronize()
 		} else {
 			return saveLocalData(value, forKey: forKey)
 		}
 	}
 	
-	func saveBoolData(value:Bool, forKey:String) -> Bool? {
+	func saveBoolData(_ value:Bool, forKey:String) -> Bool? {
 		if (iCloudEnabled) {
-			store.setBool(value, forKey: forKey)
-			saveLocalBoolData(value, forKey: forKey)
+			store.set(value, forKey: forKey)
+			_ = saveLocalBoolData(value, forKey: forKey)
 			return store.synchronize()
 		} else {
 			return saveLocalBoolData(value, forKey: forKey)
 		}
 	}
 	
-	func loadLocalData(key:String) -> AnyObject? {
-		return defaults.objectForKey(key)
+	func loadLocalData(_ key:String) -> AnyObject? {
+		return defaults.object(forKey: key) as AnyObject?
 	}
 	
-	func loadLocalBoolData(key:String) -> Bool? {
-		return defaults.boolForKey(key)
+	func loadLocalBoolData(_ key:String) -> Bool? {
+		return defaults.bool(forKey: key)
 	}
 	
-	func saveLocalData(value:AnyObject, forKey:String) -> Bool? {
-		defaults.setObject(value, forKey: forKey)
+	func saveLocalData(_ value:AnyObject, forKey:String) -> Bool? {
+		defaults.set(value, forKey: forKey)
 		return defaults.synchronize()
 	}
 	
-	func saveLocalBoolData(value:Bool, forKey:String) -> Bool? {
-		defaults.setBool(value, forKey: forKey)
+	func saveLocalBoolData(_ value:Bool, forKey:String) -> Bool? {
+		defaults.set(value, forKey: forKey)
 		return defaults.synchronize()
 	}
 }

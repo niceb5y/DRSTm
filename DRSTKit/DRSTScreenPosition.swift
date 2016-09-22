@@ -12,7 +12,7 @@ import UIKit
 Deresute UI screen position for OCR
 - author: niceb5y
 */
-public class DRSTScreenPosition: NSObject {
+open class DRSTScreenPosition: NSObject {
 	
 	/**
 	Type of device
@@ -31,11 +31,11 @@ public class DRSTScreenPosition: NSObject {
 		- type: Type of device
 	- returns: CGRect of level area
 	*/
-	public static func levelArea(width: Double, type: DeviceType) -> CGRect {
+	open static func levelArea(_ width: Double, type: DeviceType) -> CGRect {
 		if type == DeviceType.phone_pod {
-			return CGRectMake(CGFloat(0.13 * width), CGFloat(0.013 * width), CGFloat(0.043 * width), CGFloat(0.016 * width))
+			return CGRect(x: CGFloat(0.13 * width), y: CGFloat(0.013 * width), width: CGFloat(0.043 * width), height: CGFloat(0.016 * width))
 		} else {
-			return CGRectMake(CGFloat(0.06 * width), CGFloat(0.016 * width), CGFloat(0.052 * width), CGFloat(0.018 * width))
+			return CGRect(x: CGFloat(0.06 * width), y: CGFloat(0.016 * width), width: CGFloat(0.052 * width), height: CGFloat(0.018 * width))
 		}
 	}
 	
@@ -47,11 +47,11 @@ public class DRSTScreenPosition: NSObject {
 		- type: Type of device
 	- returns: CGRect of exp area
 	*/
-	public static func expArea(width: Double, type: DeviceType) -> CGRect {
+	open static func expArea(_ width: Double, type: DeviceType) -> CGRect {
 		if type == DeviceType.phone_pod {
-			return CGRectMake(CGFloat(0.13 * width), CGFloat(0.035 * width), CGFloat(0.08 * width), CGFloat(0.014 * width))
+			return CGRect(x: CGFloat(0.13 * width), y: CGFloat(0.035 * width), width: CGFloat(0.08 * width), height: CGFloat(0.014 * width))
 		} else {
-			return CGRectMake(CGFloat(0.06 * width), CGFloat(0.04 * width), CGFloat(0.096 * width), CGFloat(0.017 * width))
+			return CGRect(x: CGFloat(0.06 * width), y: CGFloat(0.04 * width), width: CGFloat(0.096 * width), height: CGFloat(0.017 * width))
 		}
 	}
 	
@@ -63,11 +63,11 @@ public class DRSTScreenPosition: NSObject {
 		- type: Type of device
 	- returns: CGRect of stamina area
 	*/
-	public static func staminaArea(width: Double, type: DeviceType) -> CGRect {
+	open static func staminaArea(_ width: Double, type: DeviceType) -> CGRect {
 		if type == DeviceType.phone_pod {
-			return CGRectMake(CGFloat(0.28 * width), CGFloat(0.035 * width), CGFloat(0.063 * width), CGFloat(0.014 * width))
+			return CGRect(x: CGFloat(0.28 * width), y: CGFloat(0.035 * width), width: CGFloat(0.063 * width), height: CGFloat(0.014 * width))
 		} else {
-			return CGRectMake(CGFloat(0.24 * width), CGFloat(0.04 * width), CGFloat(0.074 * width), CGFloat(0.017 * width))
+			return CGRect(x: CGFloat(0.24 * width), y: CGFloat(0.04 * width), width: CGFloat(0.074 * width), height: CGFloat(0.017 * width))
 		}
 	}
 	
@@ -79,11 +79,11 @@ public class DRSTScreenPosition: NSObject {
 		- type: Type of device
 	- returns: CGRect of time left area
 	*/
-	public static func timeArea(width: Double, type: DeviceType) -> CGRect {
+	open static func timeArea(_ width: Double, type: DeviceType) -> CGRect {
 		if type == DeviceType.phone_pod {
-			return CGRectMake(CGFloat(0.304 * width), CGFloat(0.013 * width), CGFloat(0.04 * width), CGFloat(0.016 * width))
+			return CGRect(x: CGFloat(0.304 * width), y: CGFloat(0.013 * width), width: CGFloat(0.04 * width), height: CGFloat(0.016 * width))
 		} else {
-			return CGRectMake(CGFloat(0.268 * width), CGFloat(0.016 * width), CGFloat(0.046 * width), CGFloat(0.018 * width))
+			return CGRect(x: CGFloat(0.268 * width), y: CGFloat(0.016 * width), width: CGFloat(0.046 * width), height: CGFloat(0.018 * width))
 		}
 	}
 }

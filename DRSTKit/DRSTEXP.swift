@@ -12,7 +12,7 @@ import UIKit
 Deresute EXP Data
 - author: niceb5y
 */
-public class DRSTEXP: NSObject {
+open class DRSTEXP: NSObject {
 	static let exp: Array<Int> = [
 		30,    50,    70,    90,    110,   130,   150,   170,   190,   210,
 		230,   250,   270,   290,   310,   330,   350,   370,   390,   410,
@@ -53,7 +53,7 @@ public class DRSTEXP: NSObject {
 		- level: Level of Account
 	- returns: EXP (or -1 if value not exist)
 	*/
-	public static func expAtLevel(level: Int) -> Int {
+	open static func expAtLevel(_ level: Int) -> Int {
 		if level >= 1 && level <= 300 {
 			return exp[level - 1]
 		}

@@ -12,7 +12,7 @@ import UIKit
 Deresute Stamina Data
 - author: niceb5y
 */
-public class DRSTStamina: NSObject {
+open class DRSTStamina: NSObject {
 	static let stamina: Array<Int> = [
 		40, 41, 41, 42, 42, 43, 43, 44, 44, 45,
 		45, 46, 46, 47, 47, 48, 48, 49, 49, 50,
@@ -53,7 +53,7 @@ public class DRSTStamina: NSObject {
 		- level: Level of Account
 	- returns: Maximum stamina (or -1 if value not exist)
 	*/
-	public static func staminaAtLevel(level: Int) -> Int {
+	open static func staminaAtLevel(_ level: Int) -> Int {
 		if level >= 1 && level <= 300 {
 			return stamina[level - 1]
 		}

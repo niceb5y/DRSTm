@@ -14,9 +14,9 @@ extension DRSTData {
 	User data managemant class for DRSTm
 	- author: niceb5y
 	*/
-	public class Helper: NSObject {
-		static let defaults = NSUserDefaults(suiteName: "group.com.niceb5y.drstm")!
-		static let store = NSUbiquitousKeyValueStore.defaultStore()
+	open class Helper: NSObject {
+		static let defaults = UserDefaults(suiteName: "group.com.niceb5y.drstm")!
+		static let store = NSUbiquitousKeyValueStore.default()
 		
 		/**
 		Load object from local NSUserDefaults
@@ -25,9 +25,9 @@ extension DRSTData {
 		- key: Key of object
 		- returns: Objects
 		*/
-		public static func loadObject(key: String) -> AnyObject? {
-			let data = defaults.objectForKey(key) as! NSData
-			return NSKeyedUnarchiver.unarchiveObjectWithData(data)
+		open static func loadObject(_ key: String) -> AnyObject? {
+			let data = defaults.object(forKey: key) as! Data
+			return NSKeyedUnarchiver.unarchiveObject(with: data) as AnyObject?
 		}
 		
 		/**
@@ -38,10 +38,10 @@ extension DRSTData {
 		- fromCloud: If data should loaded from iCloud
 		- returns: Objects
 		*/
-		public static func loadObject(key: String, fromCloud: Bool) -> AnyObject? {
+		open static func loadObject(_ key: String, fromCloud: Bool) -> AnyObject? {
 			if fromCloud {
-				let data = store.objectForKey(key) as! NSData
-				return NSKeyedUnarchiver.unarchiveObjectWithData(data)
+				let data = store.object(forKey: key) as! Data
+				return NSKeyedUnarchiver.unarchiveObject(with: data) as AnyObject?
 			} else {
 				return loadObject(key)
 			}
@@ -55,9 +55,9 @@ extension DRSTData {
 		- forKey: Key of object
 		- returns: If save is success
 		*/
-		public static func saveObject(value: AnyObject, forKey: String) -> Bool {
-			let data = NSKeyedArchiver.archivedDataWithRootObject(value)
-			defaults.setObject(data, forKey: forKey)
+		open static func saveObject(_ value: AnyObject, forKey: String) -> Bool {
+			let data = NSKeyedArchiver.archivedData(withRootObject: value)
+			defaults.set(data, forKey: forKey)
 			return defaults.synchronize()
 		}
 		
@@ -70,11 +70,11 @@ extension DRSTData {
 		- toCloud: If data should saved to iCloud
 		- returns: If save is success
 		*/
-		public static func saveObject(value: AnyObject, forKey: String, toCloud: Bool) -> Bool {
+		open static func saveObject(_ value: AnyObject, forKey: String, toCloud: Bool) -> Bool {
 			var result = saveObject(value, forKey: forKey)
 			if toCloud {
-				let data = NSKeyedArchiver.archivedDataWithRootObject(value)
-				store.setObject(data, forKey: forKey)
+				let data = NSKeyedArchiver.archivedData(withRootObject: value)
+				store.set(data, forKey: forKey)
 				result = store.synchronize()
 			}
 			return result
@@ -87,8 +87,8 @@ extension DRSTData {
 		- key: Key of object
 		- returns: If remove is success
 		*/
-		public static func removeObject(key: String) -> Bool {
-			defaults.removeObjectForKey(key)
+		open static func removeObject(_ key: String) -> Bool {
+			defaults.removeObject(forKey: key)
 			return defaults.synchronize()
 		}
 		
@@ -100,10 +100,10 @@ extension DRSTData {
 		- fromCloud: If data should removed from iCloud
 		- returns: If remove is Success
 		*/
-		public static func removeObject(key: String, fromCloud: Bool) -> Bool {
+		open static func removeObject(_ key: String, fromCloud: Bool) -> Bool {
 			var result = removeObject(key)
 			if fromCloud {
-				store.removeObjectForKey(key)
+				store.removeObject(forKey: key)
 				result = store.synchronize()
 			}
 			return result
@@ -116,8 +116,8 @@ extension DRSTData {
 		- key: Key of bool value
 		- returns: Bool value
 		*/
-		public static func loadBool(key: String) -> Bool? {
-			return defaults.boolForKey(key)
+		open static func loadBool(_ key: String) -> Bool? {
+			return defaults.bool(forKey: key)
 		}
 		
 		/**
@@ -127,9 +127,9 @@ extension DRSTData {
 		- key: Key of bool value
 		- returns: Bool value
 		*/
-		public static func loadBool(key: String, fromCloud: Bool) -> Bool? {
+		open static func loadBool(_ key: String, fromCloud: Bool) -> Bool? {
 			if fromCloud {
-				return store.boolForKey(key)
+				return store.bool(forKey: key)
 			} else {
 				return loadBool(key)
 			}
@@ -143,8 +143,8 @@ extension DRSTData {
 		- forKey: Key of bool value
 		- returns: If save is success
 		*/
-		public static func saveBool(value: Bool, forKey: String) -> Bool {
-			defaults.setBool(value, forKey: forKey)
+		open static func saveBool(_ value: Bool, forKey: String) -> Bool {
+			defaults.set(value, forKey: forKey)
 			return defaults.synchronize()
 		}
 		
@@ -157,10 +157,10 @@ extension DRSTData {
 		- toCloud: If data should saved to iCloud
 		- returns: If save is success
 		*/
-		public static func saveBool(value: Bool, forKey: String, toCloud: Bool) -> Bool {
+		open static func saveBool(_ value: Bool, forKey: String, toCloud: Bool) -> Bool {
 			var result = saveBool(value, forKey: forKey)
 			if toCloud {
-				store.setBool(value, forKey: forKey)
+				store.set(value, forKey: forKey)
 				result = store.synchronize()
 			}
 			return result
@@ -170,8 +170,8 @@ extension DRSTData {
 		Legacy data migration helper class for DRSTm
 		- author: niceb5y
 		*/
-		public class LegacyMigrator {
-			@available(*, unavailable, message="Not implemented yet.")
+		open class LegacyMigrator {
+			@available(*, unavailable, message: "Not implemented yet.")
 			static func migrate() {
 				//TODO: 마이그레이션 구현
 			}

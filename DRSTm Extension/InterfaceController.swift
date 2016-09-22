@@ -15,20 +15,20 @@ class InterfaceController: WKInterfaceController {
 
 	@IBOutlet var lblCurrent: WKInterfaceLabel!
 	@IBOutlet var lblTimeLeft: WKInterfaceLabel!
-	var timer:NSTimer?
+	var timer:Timer?
 	
 	override init() {
 		super.init()
 		self.updateState()
 	}
 	
-	override func awakeWithContext(context: AnyObject?) {
-		super.awakeWithContext(context)
+	override func awake(withContext context: Any?) {
+		super.awake(withContext: context)
 	}
 
 	override func willActivate() {
 		super.willActivate()
-		timer = NSTimer.scheduledTimerWithTimeInterval(5, target: self, selector: #selector(updateState), userInfo: nil, repeats: true)
+		timer = Timer.scheduledTimer(timeInterval: 5, target: self, selector: #selector(updateState), userInfo: nil, repeats: true)
 	}
 
 	override func didDeactivate() {
@@ -37,12 +37,12 @@ class InterfaceController: WKInterfaceController {
 	}
 	
 	func updateState() {
-		let queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)
-		dispatch_async(queue, {() -> () in
-			let delegate = WKExtension.sharedExtension().delegate as! ExtensionDelegate
+		let queue = DispatchQueue.global()
+		queue.async(execute: {() -> () in
+			let delegate = WKExtension.shared().delegate as! ExtensionDelegate
 			delegate.requestState({ (current, max, timeLeft) in
-				let main_queue = dispatch_get_main_queue()
-				dispatch_async(main_queue, {() -> () in
+				let main_queue = DispatchQueue.main
+				main_queue.async(execute: {() -> () in
 					self.lblCurrent.setText("\(current)/\(max)")
 					self.lblTimeLeft.setText("\(timeLeft) 남음")
 				})

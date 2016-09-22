@@ -14,7 +14,7 @@ extension DRSTData {
 	User device data for DRSTm
 	- author: niceb5y
 	*/
-	public class Device: NSObject, NSCoding {
+	open class Device: NSObject, NSCoding {
 		/**
 		Current version of object
 		*/
@@ -28,7 +28,7 @@ extension DRSTData {
 		/**
 		Deresute level
 		*/
-		public var level: Int {
+		open var level: Int {
 			get {
 				return _level
 			}
@@ -44,7 +44,7 @@ extension DRSTData {
 		/**
 		Current deresute EXP
 		*/
-		public var exp: Int {
+		open var exp: Int {
 			get {
 				return _exp
 			}
@@ -60,7 +60,7 @@ extension DRSTData {
 		/**
 		Maximum deresute EXP
 		*/
-		public var expMax: Int {
+		open var expMax: Int {
 			get {
 				return DRSTEXP.expAtLevel(level)
 			}
@@ -69,7 +69,7 @@ extension DRSTData {
 		/**
 		Current deresute stamina
 		*/
-		public var stamina: Int {
+		open var stamina: Int {
 			get {
 				return _stamina
 			}
@@ -85,7 +85,7 @@ extension DRSTData {
 		/**
 		Maximum deresute stamina
 		*/
-		public var staminaMax: Int {
+		open var staminaMax: Int {
 			get {
 				return DRSTStamina.staminaAtLevel(level)
 			}
@@ -94,22 +94,22 @@ extension DRSTData {
 		/**
 		Edited Date
 		*/
-		public var date: NSDate = NSDate.init()
+		open var date: Date = Date.init()
 		
 		/**
 		Deresute user group
 		*/
-		public var group: UserGroup = UserGroup.A
+		open var group: UserGroup = UserGroup.a
 		
 		/**
 		Preferred deresute song level
 		*/
-		public var preferLevel = SongLevel.Debut
+		open var preferLevel = SongLevel.debut
 		
 		/**
 		Preferred deresute event song level
 		*/
-		public var preferEventLevel = SongLevel.Debut
+		open var preferEventLevel = SongLevel.debut
 		
 		public override init() {
 			super.init()
@@ -117,25 +117,25 @@ extension DRSTData {
 		
 		public required init?(coder aDecoder: NSCoder) {
 			super.init()
-			_level = aDecoder.decodeIntegerForKey("level")
-			_exp = aDecoder.decodeIntegerForKey("exp")
-			_stamina = aDecoder.decodeIntegerForKey("stamina")
-			date = aDecoder.decodeObjectForKey("date") as! NSDate
-			group = UserGroup(rawValue: aDecoder.decodeIntegerForKey("group"))!
-			preferLevel = SongLevel(rawValue: aDecoder.decodeIntegerForKey("preferLevel"))!
-			preferEventLevel = SongLevel(rawValue: aDecoder.decodeIntegerForKey("preferEventLevel"))!
+			_level = aDecoder.decodeInteger(forKey: "level")
+			_exp = aDecoder.decodeInteger(forKey: "exp")
+			_stamina = aDecoder.decodeInteger(forKey: "stamina")
+			date = aDecoder.decodeObject(forKey: "date") as! Date
+			group = UserGroup(rawValue: aDecoder.decodeInteger(forKey: "group"))!
+			preferLevel = SongLevel(rawValue: aDecoder.decodeInteger(forKey: "preferLevel"))!
+			preferEventLevel = SongLevel(rawValue: aDecoder.decodeInteger(forKey: "preferEventLevel"))!
 		}
 		
 		
-		public func encodeWithCoder(aCoder: NSCoder) {
-			aCoder.encodeInteger(version, forKey: "version")
-			aCoder.encodeInteger(_level, forKey: "level")
-			aCoder.encodeInteger(_exp, forKey: "exp")
-			aCoder.encodeInteger(_stamina, forKey: "stamina")
-			aCoder.encodeObject(date, forKey: "date")
-			aCoder.encodeInteger(group.rawValue, forKey: "group")
-			aCoder.encodeInteger(preferLevel.rawValue, forKey: "preferLevel")
-			aCoder.encodeInteger(preferEventLevel.rawValue, forKey: "preferEventLevel")
+		open func encode(with aCoder: NSCoder) {
+			aCoder.encode(version, forKey: "version")
+			aCoder.encode(_level, forKey: "level")
+			aCoder.encode(_exp, forKey: "exp")
+			aCoder.encode(_stamina, forKey: "stamina")
+			aCoder.encode(date, forKey: "date")
+			aCoder.encode(group.rawValue, forKey: "group")
+			aCoder.encode(preferLevel.rawValue, forKey: "preferLevel")
+			aCoder.encode(preferEventLevel.rawValue, forKey: "preferEventLevel")
 		}
 	}
 }
