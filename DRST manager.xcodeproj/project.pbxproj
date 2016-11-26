@@ -16,7 +16,6 @@
 		A924C4C21C58F78300A5F507 /* DRSTEXP.swift in Sources */ = {isa = PBXBuildFile; fileRef = A924C4BD1C58F78300A5F507 /* DRSTEXP.swift */; };
 		A924C4C31C58F78300A5F507 /* DRSTScreenPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = A924C4BE1C58F78300A5F507 /* DRSTScreenPosition.swift */; };
 		A924C4C41C58F78300A5F507 /* DRSTStamina.swift in Sources */ = {isa = PBXBuildFile; fileRef = A924C4BF1C58F78300A5F507 /* DRSTStamina.swift */; };
-		A924C4C61C58FB0D00A5F507 /* tessdata in Resources */ = {isa = PBXBuildFile; fileRef = A924C4C51C58FB0D00A5F507 /* tessdata */; };
 		A9341F121D3E852900160DEA /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9341F101D3E852900160DEA /* Interface.storyboard */; };
 		A9341F141D3E852900160DEA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A9341F131D3E852900160DEA /* Assets.xcassets */; };
 		A9341F1B1D3E852900160DEA /* DRSTm Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = A9341F1A1D3E852900160DEA /* DRSTm Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -140,7 +139,6 @@
 		A924C4BD1C58F78300A5F507 /* DRSTEXP.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DRSTEXP.swift; sourceTree = "<group>"; };
 		A924C4BE1C58F78300A5F507 /* DRSTScreenPosition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DRSTScreenPosition.swift; sourceTree = "<group>"; };
 		A924C4BF1C58F78300A5F507 /* DRSTStamina.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DRSTStamina.swift; sourceTree = "<group>"; };
-		A924C4C51C58FB0D00A5F507 /* tessdata */ = {isa = PBXFileReference; lastKnownFileType = folder; path = tessdata; sourceTree = "<group>"; };
 		A92B5ABF1C58FDF100AB976B /* DRST manager-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DRST manager-Bridging-Header.h"; sourceTree = "<group>"; };
 		A9341F0E1D3E852900160DEA /* DRSTm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DRSTm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9341F111D3E852900160DEA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
@@ -324,7 +322,6 @@
 			isa = PBXGroup;
 			children = (
 				A93E29131C007999009342F3 /* DRSTm.entitlements */,
-				A924C4C51C58FB0D00A5F507 /* tessdata */,
 				A94450AC1D44B28000720327 /* AppDelegate.swift */,
 				A91A0F341C5CE77000AF2B1D /* DashboardViewController.swift */,
 				A9B94FB61C5CC1D40021A516 /* InfoViewController.swift */,
@@ -585,7 +582,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				A96BE6681C0055190091A86E /* Main.storyboard in Resources */,
-				A924C4C61C58FB0D00A5F507 /* tessdata in Resources */,
 				A9D9556A1BFF748300B583B4 /* LaunchScreen.storyboard in Resources */,
 				A9D955671BFF748300B583B4 /* Assets.xcassets in Resources */,
 			);
