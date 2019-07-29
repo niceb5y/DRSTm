@@ -16,7 +16,7 @@ class ExtensionDelegate: NSObject, WKExtensionDelegate, WCSessionDelegate {
 	override init() {
 		super.init()
 		if WCSession.isSupported() {
-			session = WCSession.default()
+      session = WCSession.default
 			session!.delegate = self
 			session!.activate()
 		}

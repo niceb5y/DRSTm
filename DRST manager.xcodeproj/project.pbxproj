@@ -13,9 +13,6 @@
 		A924C4A11C58F72300A5F507 /* DRSTKit.h in Headers */ = {isa = PBXBuildFile; fileRef = A924C4A01C58F72300A5F507 /* DRSTKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A924C4B31C58F72300A5F507 /* DRSTKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A924C49E1C58F72300A5F507 /* DRSTKit.framework */; };
 		A924C4B41C58F72300A5F507 /* DRSTKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A924C49E1C58F72300A5F507 /* DRSTKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		A924C4C21C58F78300A5F507 /* DRSTEXP.swift in Sources */ = {isa = PBXBuildFile; fileRef = A924C4BD1C58F78300A5F507 /* DRSTEXP.swift */; };
-		A924C4C31C58F78300A5F507 /* DRSTScreenPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = A924C4BE1C58F78300A5F507 /* DRSTScreenPosition.swift */; };
-		A924C4C41C58F78300A5F507 /* DRSTStamina.swift in Sources */ = {isa = PBXBuildFile; fileRef = A924C4BF1C58F78300A5F507 /* DRSTStamina.swift */; };
 		A9341F121D3E852900160DEA /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9341F101D3E852900160DEA /* Interface.storyboard */; };
 		A9341F141D3E852900160DEA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A9341F131D3E852900160DEA /* Assets.xcassets */; };
 		A9341F1B1D3E852900160DEA /* DRSTm Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = A9341F1A1D3E852900160DEA /* DRSTm Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -30,14 +27,10 @@
 		A93E28DF1C005E9C009342F3 /* DRST manager.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = A93E28D11C005E9C009342F3 /* DRST manager.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		A94450AD1D44B28000720327 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A94450AC1D44B28000720327 /* AppDelegate.swift */; };
 		A95241221D44FC470012024D /* EditInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A95241211D44FC470012024D /* EditInterfaceController.swift */; };
-		A9533D6C1C65E7B2001F97CF /* DRSTData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9533D6B1C65E7B2001F97CF /* DRSTData.swift */; };
 		A9533D6E1C66487B001F97CF /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9533D6D1C66487B001F97CF /* TodayViewController.swift */; };
 		A962B6CE1C5CBC4200563EB4 /* DRSTNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = A962B6CD1C5CBC4200563EB4 /* DRSTNotification.swift */; };
 		A964CB991C5D05F1005F5494 /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A964CB981C5D05F1005F5494 /* EditViewController.swift */; };
 		A96BE6681C0055190091A86E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A96BE6671C0055190091A86E /* Main.storyboard */; };
-		A9A330F11C696F0200D8CA25 /* DRSTData.Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A330F01C696F0200D8CA25 /* DRSTData.Helper.swift */; };
-		A9A330F31C696F6E00D8CA25 /* DRSTData.Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A330F21C696F6E00D8CA25 /* DRSTData.Device.swift */; };
-		A9A330F51C69759C00D8CA25 /* DRSTKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A330F41C69759C00D8CA25 /* DRSTKit.swift */; };
 		A9B94FB71C5CC1D40021A516 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B94FB61C5CC1D40021A516 /* InfoViewController.swift */; };
 		A9BF25891C13086B00A3E2A5 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A93E28D31C005E9C009342F3 /* NotificationCenter.framework */; };
 		A9D955671BFF748300B583B4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A9D955661BFF748300B583B4 /* Assets.xcassets */; };
@@ -136,9 +129,6 @@
 		A924C49E1C58F72300A5F507 /* DRSTKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DRSTKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A924C4A01C58F72300A5F507 /* DRSTKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DRSTKit.h; sourceTree = "<group>"; };
 		A924C4A21C58F72300A5F507 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A924C4BD1C58F78300A5F507 /* DRSTEXP.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DRSTEXP.swift; sourceTree = "<group>"; };
-		A924C4BE1C58F78300A5F507 /* DRSTScreenPosition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DRSTScreenPosition.swift; sourceTree = "<group>"; };
-		A924C4BF1C58F78300A5F507 /* DRSTStamina.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DRSTStamina.swift; sourceTree = "<group>"; };
 		A92B5ABF1C58FDF100AB976B /* DRST manager-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DRST manager-Bridging-Header.h"; sourceTree = "<group>"; };
 		A9341F0E1D3E852900160DEA /* DRSTm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DRSTm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9341F111D3E852900160DEA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
@@ -160,14 +150,10 @@
 		A93E29131C007999009342F3 /* DRSTm.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = DRSTm.entitlements; sourceTree = "<group>"; };
 		A94450AC1D44B28000720327 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A95241211D44FC470012024D /* EditInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditInterfaceController.swift; sourceTree = "<group>"; };
-		A9533D6B1C65E7B2001F97CF /* DRSTData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DRSTData.swift; sourceTree = "<group>"; };
 		A9533D6D1C66487B001F97CF /* TodayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
 		A962B6CD1C5CBC4200563EB4 /* DRSTNotification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DRSTNotification.swift; sourceTree = "<group>"; };
 		A964CB981C5D05F1005F5494 /* EditViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
 		A96BE6671C0055190091A86E /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		A9A330F01C696F0200D8CA25 /* DRSTData.Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DRSTData.Helper.swift; sourceTree = "<group>"; };
-		A9A330F21C696F6E00D8CA25 /* DRSTData.Device.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DRSTData.Device.swift; sourceTree = "<group>"; };
-		A9A330F41C69759C00D8CA25 /* DRSTKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DRSTKit.swift; sourceTree = "<group>"; };
 		A9B94FB61C5CC1D40021A516 /* InfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		A9C6BCB11C00B7FD00EE6526 /* DRST manager.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "DRST manager.entitlements"; sourceTree = "<group>"; };
 		A9D955541BFF748300B583B4 /* DRSTm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DRSTm.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -226,13 +212,6 @@
 			children = (
 				A91A0F311C5CE31100AF2B1D /* DataKit.swift */,
 				A924C4A01C58F72300A5F507 /* DRSTKit.h */,
-				A9533D6B1C65E7B2001F97CF /* DRSTData.swift */,
-				A9A330F21C696F6E00D8CA25 /* DRSTData.Device.swift */,
-				A9A330F01C696F0200D8CA25 /* DRSTData.Helper.swift */,
-				A924C4BD1C58F78300A5F507 /* DRSTEXP.swift */,
-				A9A330F41C69759C00D8CA25 /* DRSTKit.swift */,
-				A924C4BE1C58F78300A5F507 /* DRSTScreenPosition.swift */,
-				A924C4BF1C58F78300A5F507 /* DRSTStamina.swift */,
 				A924C4A21C58F72300A5F507 /* Info.plist */,
 			);
 			path = DRSTKit;
@@ -526,6 +505,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -601,14 +581,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A924C4C31C58F78300A5F507 /* DRSTScreenPosition.swift in Sources */,
-				A9533D6C1C65E7B2001F97CF /* DRSTData.swift in Sources */,
-				A9A330F11C696F0200D8CA25 /* DRSTData.Helper.swift in Sources */,
-				A9A330F31C696F6E00D8CA25 /* DRSTData.Device.swift in Sources */,
 				A91A0F321C5CE31100AF2B1D /* DataKit.swift in Sources */,
-				A9A330F51C69759C00D8CA25 /* DRSTKit.swift in Sources */,
-				A924C4C41C58F78300A5F507 /* DRSTStamina.swift in Sources */,
-				A924C4C21C58F78300A5F507 /* DRSTEXP.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -731,7 +704,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -756,7 +729,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.niceb5y.DRSTKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -777,7 +750,7 @@
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 2.2;
 			};
@@ -797,7 +770,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 2.2;
 			};
@@ -816,7 +789,7 @@
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 2.2;
 			};
@@ -834,7 +807,7 @@
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 2.2;
 			};
@@ -856,7 +829,7 @@
 				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -875,7 +848,7 @@
 				PRODUCT_NAME = "DRST manager";
 				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
@@ -984,7 +957,7 @@
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "DRST manager/DRST manager-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -1005,7 +978,7 @@
 				PRODUCT_NAME = DRSTm;
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "DRST manager/DRST manager-Bridging-Header.h";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
@@ -1019,7 +992,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.niceb5y.DRSTmTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DRSTm.app/DRSTm";
 			};
 			name = Debug;
@@ -1033,7 +1006,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.niceb5y.DRSTmTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DRSTm.app/DRSTm";
 			};
 			name = Release;

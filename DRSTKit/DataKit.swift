@@ -16,7 +16,7 @@ open class DataKit: NSObject {
 	public override init() {
 		defaults = UserDefaults.init(suiteName: "group.com.niceb5y.drstm")!
 		store =
-			NSUbiquitousKeyValueStore.default()
+      NSUbiquitousKeyValueStore.default
 		super.init()
 	}
 	

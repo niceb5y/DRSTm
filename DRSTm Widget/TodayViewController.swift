@@ -48,7 +48,7 @@ class TodayViewController: UIViewController, NCWidgetProviding {
 		return UIEdgeInsets.zero
 	}
 	
-	func refresh() {
+  @objc func refresh() {
 		if dk.dualAccountEnabled {
 			preferredContentSize = CGSize(width: 0, height: 98)
 			timeLeftButton.setTitle(
@@ -56,10 +56,10 @@ class TodayViewController: UIViewController, NCWidgetProviding {
 				+ "\(dk.estimatedTimeLeftString(0)) 남음\n"
 				+ "기기 2: 스태미너 \(dk.estimatedCurrentStamina(1)) / \(dk.maxStamina(1))\n"
 				+ "\(dk.estimatedTimeLeftString(1)) 남음",
-				for: UIControlState())
+        for: UIControl.State())
 		} else {
 			preferredContentSize = CGSize(width: 0, height: 57)
-			timeLeftButton.setTitle("스태미너 \(dk.estimatedCurrentStamina(0)) / \(dk.maxStamina(0))\n\(dk.estimatedTimeLeftString(0)) 남음", for: UIControlState())
+      timeLeftButton.setTitle("스태미너 \(dk.estimatedCurrentStamina(0)) / \(dk.maxStamina(0))\n\(dk.estimatedTimeLeftString(0)) 남음", for: UIControl.State())
 		}
 	}
 }

@@ -21,7 +21,7 @@ class AppDelegate:UIResponder, UIApplicationDelegate, WCSessionDelegate {
 	override init() {
 		super.init()
 		if WCSession.isSupported() {
-			session = WCSession.default()
+      session = WCSession.default
 			session!.delegate = self
 			session!.activate()
 		}
@@ -69,16 +69,16 @@ class AppDelegate:UIResponder, UIApplicationDelegate, WCSessionDelegate {
 		}
 	}
 	
-	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+  func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 		return true
 	}
 	
-	func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any]) -> Bool {
+  func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any]) -> Bool {
 		let query = url.query
 		if query == "method=edit" {
 			let storyboard = UIStoryboard(name: "Main", bundle: nil)
 			let editViewController = storyboard.instantiateViewController(withIdentifier: "EditViewController")
-			let nav = self.window?.rootViewController?.childViewControllers[0] as! UINavigationController
+      let nav = self.window?.rootViewController?.children[0] as! UINavigationController
 			nav.pushViewController(editViewController, animated: true)
 		}
 		return true
@@ -88,7 +88,7 @@ class AppDelegate:UIResponder, UIApplicationDelegate, WCSessionDelegate {
 		if shortcutItem.type == "com.niceb5y.drstm.edit" {
 			let storyboard = UIStoryboard(name: "Main", bundle: nil)
 			let editViewController = storyboard.instantiateViewController(withIdentifier: "EditViewController")
-			let nav = self.window?.rootViewController?.childViewControllers[0] as! UINavigationController
+      let nav = self.window?.rootViewController?.children[0] as! UINavigationController
 			nav.pushViewController(editViewController, animated: true)
 		}
 	}

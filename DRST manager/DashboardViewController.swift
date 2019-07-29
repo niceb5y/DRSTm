@@ -36,7 +36,7 @@ class DashboardViewController: UIViewController {
 		refresh()
 	}
 	
-	func refresh() {
+  @objc func refresh() {
 		let max = dk.maxStamina(deviceIndex)
 		let cur = dk.estimatedCurrentStamina(deviceIndex)
 		staminaLabel.text = "\(cur) / \(max)"

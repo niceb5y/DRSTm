@@ -36,7 +36,7 @@ class InterfaceController: WKInterfaceController {
 		timer = nil
 	}
 	
-	func updateState() {
+  @objc func updateState() {
 		let queue = DispatchQueue.global()
 		queue.async(execute: {() -> () in
 			let delegate = WKExtension.shared().delegate as! ExtensionDelegate
