@@ -89,6 +89,7 @@ open class DataKit: NSObject {
 	open func estimatedCompleteTimeString(_ atIndex:Int) -> String {
 		let completeTime = Date.init(timeIntervalSinceNow: Double(estimatedSecondLeft(atIndex)))
 		let dateFormatter = DateFormatter.init()
+    dateFormatter.locale = Locale.init(identifier: "ko-KR")
 		dateFormatter.dateFormat = "a h시 mm분"
 		return dateFormatter.string(from: completeTime)
 	}

@@ -17,10 +17,10 @@ class DashboardViewController: UIViewController {
 	@IBOutlet weak var timeLeftLabel: UILabel!
 	@IBOutlet weak var timeEstimateLabel: UILabel!
 	@IBOutlet weak var staminaLabel: UILabel!
-	@IBOutlet weak var staminaProgress: UIProgressView!
 	@IBOutlet weak var segmentedButton: UISegmentedControl!
-	
-	override func viewDidLoad() {
+	@IBOutlet weak var circularProgress: CircularProgress!
+  
+  override func viewDidLoad() {
 		segmentedButton.isHidden = !dk.dualAccountEnabled
 		deviceIndex = 0
 		refresh()
@@ -40,9 +40,9 @@ class DashboardViewController: UIViewController {
 		let max = dk.maxStamina(deviceIndex)
 		let cur = dk.estimatedCurrentStamina(deviceIndex)
 		staminaLabel.text = "\(cur) / \(max)"
-		timeEstimateLabel.text = "예상 스태미너 MAX 시간: \(dk.estimatedCompleteTimeString(deviceIndex))"
+		timeEstimateLabel.text = "\(dk.estimatedCompleteTimeString(deviceIndex)) MAX"
 		timeLeftLabel.text = dk.estimatedTimeLeftString(deviceIndex)
-		staminaProgress.progress = Float(cur) / Float(max)
+    circularProgress.update(progress: CGFloat(cur) / CGFloat(max))
 	}
 	
 	override func didReceiveMemoryWarning() {

@@ -21,53 +21,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="스태미너 Max까지" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lv4-gz-5wL">
-                                <rect key="frame" x="20" y="311.5" width="374" height="29"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="29" id="WVp-xx-HoV"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="72분" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ndp-Mn-9y6">
-                                <rect key="frame" x="20" y="356.5" width="374" height="61"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="61" id="BfY-kf-KXe"/>
-                                    <constraint firstAttribute="width" constant="560" id="Faq-xB-cB8"/>
-                                    <constraint firstAttribute="height" constant="61" id="Wfe-GA-WUT"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="51"/>
-                                <color key="textColor" red="0.23921568630000001" green="0.70980392160000005" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="BfY-kf-KXe"/>
-                                        <exclude reference="Faq-xB-cB8"/>
-                                    </mask>
-                                </variation>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="남았습니다." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FFB-zZ-98W">
-                                <rect key="frame" x="20" y="433.5" width="374" height="29"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="예상 스태미너 MAX 시간: 1시 12분" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zED-SG-EfT">
-                                <rect key="frame" x="20" y="502.5" width="374" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100/100" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PfC-gL-u7A">
-                                <rect key="frame" x="20" y="539" width="62" height="22"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="JCT-4L-LSm">
-                                <rect key="frame" x="90" y="549" width="304" height="2"/>
-                            </progressView>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="y0d-rN-BoC">
                                 <rect key="frame" x="158.5" y="745" width="97" height="29"/>
                                 <segments>
@@ -78,62 +31,71 @@
                                     <action selector="segmentedButtonTouched:" destination="9pv-A4-QxB" eventType="valueChanged" id="2gz-QV-H3y"/>
                                 </connections>
                             </segmentedControl>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eqG-cQ-mAc">
-                                <rect key="frame" x="166" y="567" width="82" height="30"/>
-                                <state key="normal" title="데레스테 실행"/>
-                                <connections>
-                                    <action selector="launchApp:" destination="9pv-A4-QxB" eventType="touchUpInside" id="nDG-qR-ccU"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="JFp-4f-rqB">
+                                <rect key="frame" x="47" y="255" width="320" height="386.5"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5sA-Dn-Pqy" customClass="CircularProgress" customModule="DRSTm" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="320"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="6sa-N2-03E">
+                                                <rect key="frame" x="116" y="112.5" width="88" height="94.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100 / 100" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PfC-gL-u7A">
+                                                        <rect key="frame" x="9" y="0.0" width="70.5" height="21"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="21" id="tjs-93-qEC"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="72분" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ndp-Mn-9y6">
+                                                        <rect key="frame" x="0.0" y="21" width="88" height="53"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="44"/>
+                                                        <color key="textColor" red="0.38039215686274508" green="0.70196078431372544" blue="0.88235294117647056" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="남았습니다" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mdx-fu-KAw">
+                                                        <rect key="frame" x="7" y="74" width="74" height="20.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="6sa-N2-03E" firstAttribute="centerY" secondItem="5sA-Dn-Pqy" secondAttribute="centerY" id="Dos-yy-vs4"/>
+                                            <constraint firstItem="6sa-N2-03E" firstAttribute="centerX" secondItem="5sA-Dn-Pqy" secondAttribute="centerX" id="HF4-XG-V8G"/>
+                                            <constraint firstAttribute="height" constant="320" id="a42-fj-2h6"/>
+                                            <constraint firstAttribute="width" constant="320" id="sds-O8-42m"/>
+                                        </constraints>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="오후 1시 12분 MAX" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zED-SG-EfT">
+                                        <rect key="frame" x="93" y="328" width="134" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eqG-cQ-mAc">
+                                        <rect key="frame" x="119" y="356.5" width="82" height="30"/>
+                                        <state key="normal" title="데레스테 실행"/>
+                                        <connections>
+                                            <action selector="launchApp:" destination="9pv-A4-QxB" eventType="touchUpInside" id="nDG-qR-ccU"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="tintColor" red="0.23921568630000001" green="0.70980392160000005" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="FFB-zZ-98W" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" id="24O-9j-l8F"/>
-                            <constraint firstItem="eqG-cQ-mAc" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="4JN-i9-h0O"/>
-                            <constraint firstItem="zED-SG-EfT" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" id="5hG-f9-MBf"/>
-                            <constraint firstItem="4ug-Mw-9AY" firstAttribute="top" secondItem="y0d-rN-BoC" secondAttribute="bottom" constant="40" id="7uS-gT-X8C"/>
-                            <constraint firstItem="FFB-zZ-98W" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="CmD-bz-Czo"/>
-                            <constraint firstItem="Ndp-Mn-9y6" firstAttribute="trailing" secondItem="tsR-hK-woN" secondAttribute="trailingMargin" id="CmK-Ru-agm"/>
-                            <constraint firstItem="zED-SG-EfT" firstAttribute="trailing" secondItem="tsR-hK-woN" secondAttribute="trailingMargin" id="G3u-Zs-Amh"/>
-                            <constraint firstItem="Ndp-Mn-9y6" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" id="G4X-jB-dow"/>
-                            <constraint firstItem="FFB-zZ-98W" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="Iap-Fb-N9n"/>
-                            <constraint firstItem="PfC-gL-u7A" firstAttribute="top" secondItem="zED-SG-EfT" secondAttribute="bottom" constant="16" id="Idk-TG-wPn"/>
-                            <constraint firstItem="Ndp-Mn-9y6" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" id="IwC-EE-it8"/>
-                            <constraint firstItem="FFB-zZ-98W" firstAttribute="trailing" secondItem="tsR-hK-woN" secondAttribute="trailingMargin" id="OtM-Ce-Xkj"/>
-                            <constraint firstItem="JCT-4L-LSm" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" constant="70" id="Q55-2B-YJG"/>
-                            <constraint firstItem="Ndp-Mn-9y6" firstAttribute="centerY" secondItem="tsR-hK-woN" secondAttribute="centerY" id="Sxh-Se-pg9"/>
-                            <constraint firstItem="Lv4-gz-5wL" firstAttribute="trailing" secondItem="tsR-hK-woN" secondAttribute="trailingMargin" id="Ua4-FP-fK1"/>
-                            <constraint firstItem="JCT-4L-LSm" firstAttribute="top" secondItem="zED-SG-EfT" secondAttribute="bottom" constant="26" id="VUZ-zG-tTJ"/>
-                            <constraint firstItem="y0d-rN-BoC" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="YDA-HF-GBe"/>
-                            <constraint firstItem="JCT-4L-LSm" firstAttribute="trailing" secondItem="tsR-hK-woN" secondAttribute="trailingMargin" id="aTb-3x-b5s"/>
-                            <constraint firstItem="PfC-gL-u7A" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" id="bBN-WU-y0o"/>
-                            <constraint firstItem="eqG-cQ-mAc" firstAttribute="top" secondItem="JCT-4L-LSm" secondAttribute="bottom" constant="16" id="bbz-eJ-nLw"/>
-                            <constraint firstItem="zED-SG-EfT" firstAttribute="top" secondItem="FFB-zZ-98W" secondAttribute="bottom" constant="40" id="eKa-ur-mEi"/>
-                            <constraint firstItem="Ndp-Mn-9y6" firstAttribute="top" secondItem="Lv4-gz-5wL" secondAttribute="bottom" constant="16" id="euV-s6-cdE"/>
-                            <constraint firstItem="Lv4-gz-5wL" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="gWM-gh-wh6"/>
-                            <constraint firstItem="FFB-zZ-98W" firstAttribute="top" secondItem="Ndp-Mn-9y6" secondAttribute="bottom" constant="16" id="lLM-Mc-vfG"/>
-                            <constraint firstItem="Lv4-gz-5wL" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="bottom" id="mY7-Ne-tk0"/>
-                            <constraint firstItem="FFB-zZ-98W" firstAttribute="top" secondItem="Ndp-Mn-9y6" secondAttribute="bottom" constant="8" id="o5c-0D-ctZ"/>
-                            <constraint firstItem="Ndp-Mn-9y6" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="qCK-Dm-ndu"/>
-                            <constraint firstItem="Ndp-Mn-9y6" firstAttribute="centerY" secondItem="tsR-hK-woN" secondAttribute="centerY" constant="30" id="qZ5-jT-nIE"/>
-                            <constraint firstItem="Ndp-Mn-9y6" firstAttribute="trailing" secondItem="tsR-hK-woN" secondAttribute="trailingMargin" id="rIg-ef-tVs"/>
-                            <constraint firstItem="JCT-4L-LSm" firstAttribute="centerY" secondItem="PfC-gL-u7A" secondAttribute="centerY" id="sa7-2s-6df"/>
-                            <constraint firstItem="Lv4-gz-5wL" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="bottom" constant="16" id="tZJ-2J-a97"/>
-                            <constraint firstItem="Lv4-gz-5wL" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" id="wf4-R8-8zc"/>
-                            <constraint firstItem="FFB-zZ-98W" firstAttribute="centerY" secondItem="tsR-hK-woN" secondAttribute="centerY" id="xM3-jo-Kn9"/>
-                            <constraint firstItem="Ndp-Mn-9y6" firstAttribute="top" secondItem="Lv4-gz-5wL" secondAttribute="bottom" constant="8" id="zfS-O9-a76"/>
+                            <constraint firstItem="y0d-rN-BoC" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="1a7-3u-H4c"/>
+                            <constraint firstItem="4ug-Mw-9AY" firstAttribute="top" secondItem="y0d-rN-BoC" secondAttribute="bottom" constant="40" id="4L8-Ah-hMe"/>
+                            <constraint firstItem="JFp-4f-rqB" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="aI0-0Y-LB5"/>
+                            <constraint firstItem="JFp-4f-rqB" firstAttribute="centerY" secondItem="tsR-hK-woN" secondAttribute="centerY" id="ytD-FC-QBT"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="o5c-0D-ctZ"/>
-                                <exclude reference="mY7-Ne-tk0"/>
-                                <exclude reference="tZJ-2J-a97"/>
-                                <exclude reference="Sxh-Se-pg9"/>
-                                <exclude reference="qZ5-jT-nIE"/>
-                                <exclude reference="zfS-O9-a76"/>
-                            </mask>
-                        </variation>
                     </view>
                     <navigationItem key="navigationItem" title="대시보드" id="QqL-dD-gSI">
                         <barButtonItem key="rightBarButtonItem" title="편집" id="Cdo-bQ-A4m">
@@ -143,9 +105,9 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="circularProgress" destination="5sA-Dn-Pqy" id="eHo-z0-IkD"/>
                         <outlet property="segmentedButton" destination="y0d-rN-BoC" id="VjV-CZ-DuE"/>
                         <outlet property="staminaLabel" destination="PfC-gL-u7A" id="id7-9W-A8o"/>
-                        <outlet property="staminaProgress" destination="JCT-4L-LSm" id="gFl-Nn-GhC"/>
                         <outlet property="timeEstimateLabel" destination="zED-SG-EfT" id="Pbt-Gh-xQ8"/>
                         <outlet property="timeLeftLabel" destination="Ndp-Mn-9y6" id="UU2-a5-4PV"/>
                     </connections>
@@ -353,10 +315,10 @@
                                             </constraints>
                                             <variation key="default">
                                                 <mask key="constraints">
-                                                    <exclude reference="exi-TS-zGf"/>
-                                                    <exclude reference="sse-zx-r5B"/>
                                                     <exclude reference="C7E-bG-Lwi"/>
                                                     <exclude reference="QyK-S2-dWN"/>
+                                                    <exclude reference="exi-TS-zGf"/>
+                                                    <exclude reference="sse-zx-r5B"/>
                                                 </mask>
                                             </variation>
                                         </tableViewCellContentView>
@@ -451,10 +413,10 @@
                                             </constraints>
                                             <variation key="default">
                                                 <mask key="constraints">
-                                                    <exclude reference="Eka-Ld-C5p"/>
-                                                    <exclude reference="bNh-41-HzK"/>
                                                     <exclude reference="Wk8-EE-c39"/>
                                                     <exclude reference="sm1-oB-7yY"/>
+                                                    <exclude reference="Eka-Ld-C5p"/>
+                                                    <exclude reference="bNh-41-HzK"/>
                                                 </mask>
                                             </variation>
                                         </tableViewCellContentView>

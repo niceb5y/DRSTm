@@ -36,6 +36,7 @@
 		A9D955671BFF748300B583B4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A9D955661BFF748300B583B4 /* Assets.xcassets */; };
 		A9D9556A1BFF748300B583B4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9D955681BFF748300B583B4 /* LaunchScreen.storyboard */; };
 		A9F031151C69951500F9D3E8 /* DRSTmTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F031141C69951500F9D3E8 /* DRSTmTests.swift */; };
+		A9F7A6BC22F09D4000F87D20 /* CircularProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F7A6BB22F09D4000F87D20 /* CircularProgress.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -163,6 +164,7 @@
 		A9F031121C69951500F9D3E8 /* DRSTmTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DRSTmTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9F031141C69951500F9D3E8 /* DRSTmTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DRSTmTests.swift; sourceTree = "<group>"; };
 		A9F031161C69951500F9D3E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A9F7A6BB22F09D4000F87D20 /* CircularProgress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgress.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -311,6 +313,7 @@
 				A9D955681BFF748300B583B4 /* LaunchScreen.storyboard */,
 				A9D9556B1BFF748300B583B4 /* Info.plist */,
 				A92B5ABF1C58FDF100AB976B /* DRST manager-Bridging-Header.h */,
+				A9F7A6BB22F09D4000F87D20 /* CircularProgress.swift */,
 			);
 			path = "DRST manager";
 			sourceTree = "<group>";
@@ -611,6 +614,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A94450AD1D44B28000720327 /* AppDelegate.swift in Sources */,
+				A9F7A6BC22F09D4000F87D20 /* CircularProgress.swift in Sources */,
 				A9B94FB71C5CC1D40021A516 /* InfoViewController.swift in Sources */,
 				A962B6CE1C5CBC4200563EB4 /* DRSTNotification.swift in Sources */,
 				A91A0F351C5CE77000AF2B1D /* DashboardViewController.swift in Sources */,
