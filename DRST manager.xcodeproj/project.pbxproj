@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -22,9 +22,9 @@
 		A9341F281D3E852900160DEA /* GlanceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9341F271D3E852900160DEA /* GlanceController.swift */; };
 		A9341F2A1D3E852900160DEA /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9341F291D3E852900160DEA /* ComplicationController.swift */; };
 		A9341F2C1D3E852900160DEA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A9341F2B1D3E852900160DEA /* Assets.xcassets */; };
-		A9341F301D3E852900160DEA /* DRSTm.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = A9341F0E1D3E852900160DEA /* DRSTm.app */; };
+		A9341F301D3E852900160DEA /* DRSTm.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = A9341F0E1D3E852900160DEA /* DRSTm.app */; platformFilter = ios; };
 		A93E28DB1C005E9C009342F3 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A93E28D91C005E9C009342F3 /* MainInterface.storyboard */; };
-		A93E28DF1C005E9C009342F3 /* DRST manager.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = A93E28D11C005E9C009342F3 /* DRST manager.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		A93E28DF1C005E9C009342F3 /* DRST manager.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = A93E28D11C005E9C009342F3 /* DRST manager.appex */; platformFilter = ios; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		A94450AD1D44B28000720327 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A94450AC1D44B28000720327 /* AppDelegate.swift */; };
 		A95241221D44FC470012024D /* EditInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A95241211D44FC470012024D /* EditInterfaceController.swift */; };
 		A9533D6E1C66487B001F97CF /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9533D6D1C66487B001F97CF /* TodayViewController.swift */; };
@@ -504,12 +504,11 @@
 				};
 			};
 			buildConfigurationList = A9D9554F1BFF748300B583B4 /* Build configuration list for PBXProject "DRST manager" */;
-			compatibilityVersion = "Xcode 3.2";
+			compatibilityVersion = "Xcode 10.0";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				English,
-				en,
 				Base,
 			);
 			mainGroup = A9D9554B1BFF748300B583B4;
@@ -645,11 +644,13 @@
 		};
 		A9341F2F1D3E852900160DEA /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
+			platformFilter = ios;
 			target = A9341F0D1D3E852900160DEA /* DRSTm */;
 			targetProxy = A9341F2E1D3E852900160DEA /* PBXContainerItemProxy */;
 		};
 		A93E28DE1C005E9C009342F3 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
+			platformFilter = ios;
 			target = A93E28D01C005E9C009342F3 /* DRSTm Widget */;
 			targetProxy = A93E28DD1C005E9C009342F3 /* PBXContainerItemProxy */;
 		};
@@ -703,7 +704,11 @@
 				INFOPLIST_FILE = DRSTKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.niceb5y.DRSTKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -729,7 +734,11 @@
 				INFOPLIST_FILE = DRSTKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.niceb5y.DRSTKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -747,8 +756,10 @@
 				CLANG_ANALYZER_NONNULL = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 28;
 				IBSC_MODULE = DRSTm_Extension;
 				INFOPLIST_FILE = DRSTm/Info.plist;
+				MARKETING_VERSION = 1.1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.niceb5y.DRST-manager.watchkitapp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
@@ -768,8 +779,10 @@
 				CLANG_ANALYZER_NONNULL = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 28;
 				IBSC_MODULE = DRSTm_Extension;
 				INFOPLIST_FILE = DRSTm/Info.plist;
+				MARKETING_VERSION = 1.1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.niceb5y.DRST-manager.watchkitapp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
@@ -785,9 +798,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CLANG_ANALYZER_NONNULL = YES;
+				CURRENT_PROJECT_VERSION = 28;
 				DEVELOPMENT_TEAM = 5C758YKFY3;
 				INFOPLIST_FILE = "DRSTm Extension/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.niceb5y.DRST-manager.watchkitapp.watchkitextension";
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
@@ -804,9 +823,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CLANG_ANALYZER_NONNULL = YES;
+				CURRENT_PROJECT_VERSION = 28;
 				DEVELOPMENT_TEAM = 5C758YKFY3;
 				INFOPLIST_FILE = "DRSTm Extension/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.niceb5y.DRST-manager.watchkitapp.watchkitextension";
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
@@ -825,13 +850,20 @@
 				CODE_SIGN_ENTITLEMENTS = "DRSTm Widget/DRST manager.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 28;
 				INFOPLIST_FILE = "DRSTm Widget/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.niceb5y.DRST-manager.DRSTm-Widget";
 				PRODUCT_NAME = "DRST manager";
 				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 			};
@@ -845,13 +877,20 @@
 				CODE_SIGN_ENTITLEMENTS = "DRSTm Widget/DRST manager.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 28;
 				INFOPLIST_FILE = "DRSTm Widget/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.niceb5y.DRST-manager.DRSTm-Widget";
 				PRODUCT_NAME = "DRST manager";
 				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
@@ -937,7 +976,8 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -952,13 +992,19 @@
 				CODE_SIGN_ENTITLEMENTS = "DRST manager/DRSTm.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 28;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "DRST manager/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.niceb5y.DRST-manager";
 				PRODUCT_NAME = DRSTm;
 				PROVISIONING_PROFILE = "";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_OBJC_BRIDGING_HEADER = "DRST manager/DRST manager-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -974,13 +1020,19 @@
 				CODE_SIGN_ENTITLEMENTS = "DRST manager/DRSTm.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 28;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "DRST manager/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.niceb5y.DRST-manager";
 				PRODUCT_NAME = DRSTm;
 				PROVISIONING_PROFILE = "";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_OBJC_BRIDGING_HEADER = "DRST manager/DRST manager-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 			};
@@ -992,7 +1044,11 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = DRSTmTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.niceb5y.DRSTmTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -1007,7 +1063,11 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = DRSTmTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.niceb5y.DRSTmTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;

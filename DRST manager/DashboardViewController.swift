@@ -55,6 +55,8 @@ class DashboardViewController: UIViewController {
 	
 	@IBAction func segmentedButtonTouched(_ sender: AnyObject) {
 		deviceIndex = segmentedButton.selectedSegmentIndex
+    refresh()
+    circularProgress.setNeedsDisplay()
 	}
 	
 	@IBAction func launchApp(_ sender: AnyObject) {

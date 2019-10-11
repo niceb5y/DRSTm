@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
-    <device id="retina6_1" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -21,34 +19,28 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Icon" translatesAutoresizingMaskIntoConstraints="NO" id="tqz-iz-pFS">
-                                <rect key="frame" x="132" y="323" width="150" height="150"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="150" id="aua-RU-jG0"/>
-                                    <constraint firstAttribute="width" constant="150" id="ztv-vw-4SI"/>
-                                </constraints>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DRSTm" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8WE-Hv-5nr">
-                                <rect key="frame" x="20" y="501" width="374" height="40"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="OJ5-17-wkr"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="34"/>
-                                <color key="textColor" red="0.23921568627450979" green="0.70980392156862748" blue="0.90196078431372551" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="28" translatesAutoresizingMaskIntoConstraints="NO" id="7DR-ro-nWG">
+                                <rect key="frame" x="132" y="339" width="150" height="218"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Icon" translatesAutoresizingMaskIntoConstraints="NO" id="tqz-iz-pFS">
+                                        <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DRSTm" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8WE-Hv-5nr">
+                                        <rect key="frame" x="20.5" y="178" width="109" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="hTH-0p-cof"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="34"/>
+                                        <color key="textColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="8WE-Hv-5nr" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" constant="73" id="7Cy-MI-PED"/>
-                            <constraint firstItem="8WE-Hv-5nr" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" id="NvI-U3-BRF"/>
-                            <constraint firstItem="8WE-Hv-5nr" firstAttribute="top" secondItem="tqz-iz-pFS" secondAttribute="bottom" constant="28" id="OgM-5O-emT"/>
-                            <constraint firstItem="tqz-iz-pFS" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" constant="-50" id="UME-fx-73N"/>
-                            <constraint firstItem="tqz-iz-pFS" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="dAb-bl-K4Y"/>
-                            <constraint firstItem="8WE-Hv-5nr" firstAttribute="trailing" secondItem="Ze5-6b-2t3" secondAttribute="trailingMargin" id="hUC-iC-zMd"/>
-                            <constraint firstItem="8WE-Hv-5nr" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" id="hd0-yg-0VM"/>
-                            <constraint firstItem="8WE-Hv-5nr" firstAttribute="trailing" secondItem="Ze5-6b-2t3" secondAttribute="trailingMargin" id="iW4-TD-0Cb"/>
-                            <constraint firstItem="8WE-Hv-5nr" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="olK-HP-Cr5"/>
+                            <constraint firstItem="7DR-ro-nWG" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="nep-cs-jh0"/>
+                            <constraint firstItem="7DR-ro-nWG" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="x5q-9L-qVB"/>
                         </constraints>
                     </view>
                 </viewController>
